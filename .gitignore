@@ -1,0 +1,20 @@
+# Confidential construction plans and anything derived from their images
+Plans/
+plans2/
+debug/
+*.tif
+*.TIF
+*.tiff
+*.TIFF
+*.pdf
+test_bvg.jpg
+test*.png
+
+# Local / generated
+__pycache__/
+*.pyc
+.DS_Store
+.vscode/
+.env
+url
+ebapp.py

@@ -1,0 +1,597 @@
+{
+  "n": 2,
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "macro_f1": 1.0,
+  "coverage": 1.0,
+  "counts": {
+    "correct": 2,
+    "should_assign": 2,
+    "assigned": 2,
+    "tp": 2,
+    "fp": 0,
+    "fn": 0,
+    "none_total": 0,
+    "none_correct": 0
+  },
+  "by_confidence": [
+    {
+      "level": "high",
+      "n": 2,
+      "correct": 2,
+      "accuracy": 1.0
+    }
+  ],
+  "per_station": [
+    {
+      "station": "Leinestraße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Theodor-Heuss-Platz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ],
+  "wrong": [],
+  "items": [
+    {
+      "document": "plans/00000018.TIF",
+      "truth": "Theodor-Heuss-Platz",
+      "pred": "Theodor-Heuss-Platz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans/000000018.TIF",
+      "truth": "Leinestraße",
+      "pred": "Leinestraße",
+      "level": "high",
+      "correct": true
+    }
+  ],
+  "without_ground_truth": [],
+  "ground_truth_stations_not_in_list": [],
+  "ground_truth_unused": [
+    "00000102.tif",
+    "00000128.tif",
+    "1149-0007.tif",
+    "131_012.tif",
+    "31_50_1146_a_039_0006_00_00_zg_8_04112_00042_8_0.tif",
+    "a_318_005.tif",
+    "b_115_035.tif",
+    "blatt 9_treppenanlage und strasseneinteilung a d haltestelle alex - ungültig.tif",
+    "c316_ubw13165_vorräume im bereich des flughafengeländes .tiff",
+    "d 73-006.tif",
+    "d085_19270929_unterfangung haus hermannstr 256-57 überholt.tif",
+    "d_99_023.tif",
+    "de_016.tif",
+    "de_029 nicht realisiert.tif",
+    "e11-02a_übersichtsplan anbau notausstiegsschacht.tif",
+    "e59-e60_1-1-7-1b_tk2_baii-2a_baugrubenplan.tif",
+    "e_37_006.tif",
+    "fettabscheider_blatt 1.tif",
+    "g-a_55_102_98d.tif",
+    "g_90_a.tif",
+    "glw-sm 01.tif",
+    "h_119_x.tif",
+    "m1417_ungültig.tif",
+    "mh-pg-01-a.pdf",
+    "s_100_159.tif",
+    "s_112_002.tif",
+    "s_120_002.tif",
+    "s_133_005.tif",
+    "s_146_012_neu.tif",
+    "s_220_x.tif",
+    "s_223_sk_4995.tif",
+    "s_328_a.tif",
+    "s_411_016.tif",
+    "s_504_ein_01.tif",
+    "s_507_sk_20 892.tif",
+    "s_510_023 nie gebaut.tif",
+    "s_714_006.tif",
+    "u_3_pop_b2-212_a.tif",
+    "ubwe374_bau eines lüftungsschachtes baugrubenaussteifung.tif",
+    "wp_zo_sk-014_fussstütze_ungültig.pdf"
+  ],
+  "analysis_errors": [
+    {
+      "document": "plans/31_50_1146_A_039_0006_00_00_ZG_8_04112_00042_8_0.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/00000102.TIF",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/00000128.TIF",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/131_012.TIF",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/1149-0007.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/A_318_005.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/B_115_035.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/Blatt 9_Treppenanlage und Straßeneinteilung a d Haltestelle Alex - ungültig.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/C316_UBw13165_Vorräume im Bereich des Flughafengeländes .tiff",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/D 73-006.TIF",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/D_99_023.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/D085_19270929_Unterfangung Haus Hermannstr 256-57 überholt.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/DE_016.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/DE_029 nicht realisiert.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/E_37_006.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/E11-02a_Übersichtsplan Anbau Notausstiegsschacht.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/E59-E60_1-1-7-1b_TK2_BAII-2a_Baugrubenplan.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/Fettabscheider_Blatt 1.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/G_90_a.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/G-A_55_102_98d.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/GLW-SM 01.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/H_119_x.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/M1417_ungültig.TIF",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/Mh-PG-01-a.pdf",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_100_159.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_112_002.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_120_002.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_133_005.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_146_012_neu.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_220_x.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_223_SK_4995.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_328_a.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_411_016.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_504_Ein_01.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_507_SK_20 892.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_510_023 nie gebaut.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/S_714_006.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/U_3_POP_B2-212_a.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/UBwE374_Bau eines Lüftungsschachtes Baugrubenaussteifung.tif",
+      "error": "not analyzed"
+    },
+    {
+      "document": "plans/WP_Zo_SK-014_Fußstütze_ungültig.pdf",
+      "error": "not analyzed"
+    }
+  ],
+  "metrics": true,
+  "results": [
+    {
+      "document": "plans/00000018.TIF",
+      "station": "Theodor-Heuss-Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          9536,
+          6784
+        ],
+        "to": [
+          3200,
+          2277
+        ]
+      }
+    },
+    {
+      "document": "plans/000000018.TIF",
+      "station": "Leinestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          6720,
+          4768
+        ],
+        "to": [
+          3200,
+          2270
+        ]
+      }
+    },
+    {
+      "document": "plans/31_50_1146_A_039_0006_00_00_ZG_8_04112_00042_8_0.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/00000102.TIF",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/00000128.TIF",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/131_012.TIF",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/1149-0007.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/A_318_005.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/B_115_035.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/Blatt 9_Treppenanlage und Straßeneinteilung a d Haltestelle Alex - ungültig.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/C316_UBw13165_Vorräume im Bereich des Flughafengeländes .tiff",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/D 73-006.TIF",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/D_99_023.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/D085_19270929_Unterfangung Haus Hermannstr 256-57 überholt.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/DE_016.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/DE_029 nicht realisiert.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/E_37_006.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/E11-02a_Übersichtsplan Anbau Notausstiegsschacht.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/E59-E60_1-1-7-1b_TK2_BAII-2a_Baugrubenplan.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/Fettabscheider_Blatt 1.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/G_90_a.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/G-A_55_102_98d.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/GLW-SM 01.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/H_119_x.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/M1417_ungültig.TIF",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/Mh-PG-01-a.pdf",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_100_159.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_112_002.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_120_002.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_133_005.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_146_012_neu.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_220_x.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_223_SK_4995.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_328_a.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_411_016.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_504_Ein_01.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_507_SK_20 892.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_510_023 nie gebaut.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/S_714_006.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/U_3_POP_B2-212_a.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/UBwE374_Bau eines Lüftungsschachtes Baugrubenaussteifung.tif",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    },
+    {
+      "document": "plans/WP_Zo_SK-014_Fußstütze_ungültig.pdf",
+      "station": null,
+      "confidence": null,
+      "error": "not analyzed",
+      "downscaled": null
+    }
+  ],
+  "meta": {
+    "id": 7,
+    "timestamp": "2026-09-30T12:44:10",
+    "model": "qwen3.8-27b",
+    "max_image_px": 3200,
+    "thinking": false,
+    "station_list": true,
+    "seconds": 7,
+    "stopped": true,
+    "plans_in_folder": 42,
+    "ground_truth": "groundtruth.csv",
+    "ground_truth_rows": 42
+  },
+  "saved_as": "reports/report_0007_2026-09-30_12-44-10.json"
+}

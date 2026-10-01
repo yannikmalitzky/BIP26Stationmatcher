@@ -1,0 +1,43 @@
+﻿document,prediction,confidence,ground_truth,correct,downscaled,error
+plans/00000018.TIF,Theodor-Heuss-Platz,high,Theodor-Heuss-Platz,True,9536x6784 -> 3200x2277,
+plans/000000018.TIF,Leinestraße,high,Leinestraße,True,6720x4768 -> 3200x2270,
+plans/31_50_1146_A_039_0006_00_00_ZG_8_04112_00042_8_0.tif,none,,,,,not analyzed
+plans/00000102.TIF,none,,,,,not analyzed
+plans/00000128.TIF,none,,,,,not analyzed
+plans/131_012.TIF,none,,,,,not analyzed
+plans/1149-0007.tif,none,,,,,not analyzed
+plans/A_318_005.tif,none,,,,,not analyzed
+plans/B_115_035.tif,none,,,,,not analyzed
+plans/Blatt 9_Treppenanlage und Straßeneinteilung a d Haltestelle Alex - ungültig.tif,none,,,,,not analyzed
+plans/C316_UBw13165_Vorräume im Bereich des Flughafengeländes .tiff,none,,,,,not analyzed
+plans/D 73-006.TIF,none,,,,,not analyzed
+plans/D_99_023.tif,none,,,,,not analyzed
+plans/D085_19270929_Unterfangung Haus Hermannstr 256-57 überholt.tif,none,,,,,not analyzed
+plans/DE_016.tif,none,,,,,not analyzed
+plans/DE_029 nicht realisiert.tif,none,,,,,not analyzed
+plans/E_37_006.tif,none,,,,,not analyzed
+plans/E11-02a_Übersichtsplan Anbau Notausstiegsschacht.tif,none,,,,,not analyzed
+plans/E59-E60_1-1-7-1b_TK2_BAII-2a_Baugrubenplan.tif,none,,,,,not analyzed
+plans/Fettabscheider_Blatt 1.tif,none,,,,,not analyzed
+plans/G_90_a.tif,none,,,,,not analyzed
+plans/G-A_55_102_98d.tif,none,,,,,not analyzed
+plans/GLW-SM 01.tif,none,,,,,not analyzed
+plans/H_119_x.tif,none,,,,,not analyzed
+plans/M1417_ungültig.TIF,none,,,,,not analyzed
+plans/Mh-PG-01-a.pdf,none,,,,,not analyzed
+plans/S_100_159.tif,none,,,,,not analyzed
+plans/S_112_002.tif,none,,,,,not analyzed
+plans/S_120_002.tif,none,,,,,not analyzed
+plans/S_133_005.tif,none,,,,,not analyzed
+plans/S_146_012_neu.tif,none,,,,,not analyzed
+plans/S_220_x.tif,none,,,,,not analyzed
+plans/S_223_SK_4995.tif,none,,,,,not analyzed
+plans/S_328_a.tif,none,,,,,not analyzed
+plans/S_411_016.tif,none,,,,,not analyzed
+plans/S_504_Ein_01.tif,none,,,,,not analyzed
+plans/S_507_SK_20 892.tif,none,,,,,not analyzed
+plans/S_510_023 nie gebaut.tif,none,,,,,not analyzed
+plans/S_714_006.tif,none,,,,,not analyzed
+plans/U_3_POP_B2-212_a.tif,none,,,,,not analyzed
+plans/UBwE374_Bau eines Lüftungsschachtes Baugrubenaussteifung.tif,none,,,,,not analyzed
+plans/WP_Zo_SK-014_Fußstütze_ungültig.pdf,none,,,,,not analyzed

@@ -1,0 +1,1364 @@
+{
+  "n": 42,
+  "accuracy": 0.8571428571428571,
+  "precision": 0.8421052631578947,
+  "recall": 0.8888888888888888,
+  "f1": 0.8648648648648649,
+  "macro_f1": 0.9666666666666667,
+  "coverage": 0.9047619047619048,
+  "counts": {
+    "correct": 36,
+    "should_assign": 36,
+    "assigned": 38,
+    "tp": 32,
+    "fp": 6,
+    "fn": 4,
+    "none_total": 6,
+    "none_correct": 4
+  },
+  "by_confidence": [
+    {
+      "level": "high",
+      "n": 39,
+      "correct": 35,
+      "accuracy": 0.8974358974358975
+    },
+    {
+      "level": "medium",
+      "n": 2,
+      "correct": 1,
+      "accuracy": 0.5
+    },
+    {
+      "level": "unknown",
+      "n": 1,
+      "correct": 0,
+      "accuracy": 0.0
+    }
+  ],
+  "per_station": [
+    {
+      "station": "Alexanderplatz",
+      "support": 2,
+      "predicted": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Leinestraße",
+      "support": 2,
+      "predicted": 2,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Neu-Westend",
+      "support": 2,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "station": "Otisstraße",
+      "support": 2,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 0.5,
+      "f1": 0.6666666666666666
+    },
+    {
+      "station": "Anton-Wilhelm-Amo-Straße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Birkenstraße",
+      "support": 1,
+      "predicted": 0,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null
+    },
+    {
+      "station": "Cottbusser Platz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Dahlem-dorf",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Deutsche Oper",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Eberswalder Straße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Französische Strasse",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Hermannplatz",
+      "support": 1,
+      "predicted": 0,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null
+    },
+    {
+      "station": "Innsbrucker Platz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Kaiserdamm",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Kottbusser Tor",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Krumme Lanke",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Lichtenberg",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Magdalenenstraße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Nollendorfplatz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Osloer Straße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Paradestraße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Platz der Luftbrücke",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Potsdamer Platz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Rathaus Neukölln",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Rathaus Schöneberg",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Sophie-Charlotte-Platz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Spittelmarkt",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Stadtmitte [oben]",
+      "support": 1,
+      "predicted": 2,
+      "precision": 0.5,
+      "recall": 1.0,
+      "f1": 0.6666666666666666
+    },
+    {
+      "station": "Theodor-Heuss-Platz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Wilmersdorfer Straße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Wuhletal",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Zoologischer Garten",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Bülowstraße",
+      "support": 0,
+      "predicted": 1,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null
+    },
+    {
+      "station": "Gesundbrunnen",
+      "support": 0,
+      "predicted": 1,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null
+    },
+    {
+      "station": "Hermannstraße",
+      "support": 0,
+      "predicted": 1,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null
+    },
+    {
+      "station": "Karl-Marx-Straße",
+      "support": 0,
+      "predicted": 1,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null
+    },
+    {
+      "station": "Kochstraße",
+      "support": 0,
+      "predicted": 1,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null
+    }
+  ],
+  "wrong": [
+    {
+      "document": "Plans/00000128.TIF",
+      "truth": "Otisstraße",
+      "pred": "Kochstraße",
+      "level": "medium"
+    },
+    {
+      "document": "Plans/D085_19270929_Unterfangung Haus Hermannstr 256-57 überholt.tif",
+      "truth": "Hermannplatz",
+      "pred": "Hermannstraße",
+      "level": "high"
+    },
+    {
+      "document": "Plans/E11-02a_Übersichtsplan Anbau Notausstiegsschacht.tif",
+      "truth": null,
+      "pred": "Karl-Marx-Straße",
+      "level": "unknown"
+    },
+    {
+      "document": "Plans/S_120_002.tif",
+      "truth": "Neu-Westend",
+      "pred": "Stadtmitte [oben]",
+      "level": "high"
+    },
+    {
+      "document": "Plans/S_411_016.tif",
+      "truth": null,
+      "pred": "Gesundbrunnen",
+      "level": "high"
+    },
+    {
+      "document": "Plans/S_714_006.tif",
+      "truth": "Birkenstraße",
+      "pred": "Bülowstraße",
+      "level": "high"
+    }
+  ],
+  "items": [
+    {
+      "document": "Plans/00000018.TIF",
+      "truth": "Theodor-Heuss-Platz",
+      "pred": "Theodor-Heuss-Platz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/000000018.TIF",
+      "truth": "Leinestraße",
+      "pred": "Leinestraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/31_50_1146_A_039_0006_00_00_ZG_8_04112_00042_8_0.tif",
+      "truth": "Sophie-Charlotte-Platz",
+      "pred": "Sophie-Charlotte-Platz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/00000102.TIF",
+      "truth": "Otisstraße",
+      "pred": "Otisstraße",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "Plans/00000128.TIF",
+      "truth": "Otisstraße",
+      "pred": "Kochstraße",
+      "level": "medium",
+      "correct": false
+    },
+    {
+      "document": "Plans/131_012.TIF",
+      "truth": "Deutsche Oper",
+      "pred": "Deutsche Oper",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/1149-0007.tif",
+      "truth": "Neu-Westend",
+      "pred": "Neu-Westend",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/A_318_005.tif",
+      "truth": "Spittelmarkt",
+      "pred": "Spittelmarkt",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/B_115_035.tif",
+      "truth": "Innsbrucker Platz",
+      "pred": "Innsbrucker Platz (Hauptstraße)",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/Blatt 9_Treppenanlage und Straßeneinteilung a d Haltestelle Alex - ungültig.tif",
+      "truth": "Alexanderplatz",
+      "pred": "Alexanderplatz [Bstg.D]",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/C316_UBw13165_Vorräume im Bereich des Flughafengeländes .tiff",
+      "truth": "Paradestraße",
+      "pred": "Paradestraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/D 73-006.TIF",
+      "truth": "Kottbusser Tor",
+      "pred": "Kottbusser Tor",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/D_99_023.tif",
+      "truth": "Leinestraße",
+      "pred": "Leinestraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/D085_19270929_Unterfangung Haus Hermannstr 256-57 überholt.tif",
+      "truth": "Hermannplatz",
+      "pred": "Hermannstraße",
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "Plans/DE_016.tif",
+      "truth": null,
+      "pred": null,
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/DE_029 nicht realisiert.tif",
+      "truth": "Stadtmitte [oben]",
+      "pred": "Stadtmitte [oben]",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/E_37_006.tif",
+      "truth": "Magdalenenstraße",
+      "pred": "Magdalenenstraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/E11-02a_Übersichtsplan Anbau Notausstiegsschacht.tif",
+      "truth": null,
+      "pred": "Karl-Marx-Straße",
+      "level": "unknown",
+      "correct": false
+    },
+    {
+      "document": "Plans/E59-E60_1-1-7-1b_TK2_BAII-2a_Baugrubenplan.tif",
+      "truth": null,
+      "pred": null,
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/Fettabscheider_Blatt 1.tif",
+      "truth": "Lichtenberg",
+      "pred": "Lichtenberg",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/G_90_a.tif",
+      "truth": "Osloer Straße",
+      "pred": "Osloer Straße [unten]",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/G-A_55_102_98d.tif",
+      "truth": "Platz der Luftbrücke",
+      "pred": "Platz der Luftbrücke",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/GLW-SM 01.tif",
+      "truth": "Wilmersdorfer Straße",
+      "pred": "Wilmersdorfer Straße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/H_119_x.tif",
+      "truth": "Rathaus Neukölln",
+      "pred": "Rathaus Neukölln",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/M1417_ungültig.TIF",
+      "truth": null,
+      "pred": null,
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/Mh-PG-01-a.pdf",
+      "truth": "Anton-Wilhelm-Amo-Straße",
+      "pred": "Anton-Wilhelm-Amo-Straße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_100_159.tif",
+      "truth": "Krumme Lanke",
+      "pred": "Krumme Lanke",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_112_002.tif",
+      "truth": "Eberswalder Straße",
+      "pred": "Eberswalder Straße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_120_002.tif",
+      "truth": "Neu-Westend",
+      "pred": "Stadtmitte [oben]",
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "Plans/S_133_005.tif",
+      "truth": "Kaiserdamm",
+      "pred": "Kaiserdamm",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_146_012_neu.tif",
+      "truth": "Dahlem-dorf",
+      "pred": "Dahlem-Dorf",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_220_x.tif",
+      "truth": "Nollendorfplatz",
+      "pred": "Nollendorfplatz (Schöneberger U-Bahn)",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_223_SK_4995.tif",
+      "truth": "Rathaus Schöneberg",
+      "pred": "Rathaus Schöneberg",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_328_a.tif",
+      "truth": "Französische Strasse",
+      "pred": "Französische Straße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_411_016.tif",
+      "truth": null,
+      "pred": "Gesundbrunnen",
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "Plans/S_504_Ein_01.tif",
+      "truth": "Cottbusser Platz",
+      "pred": "Cottbusser Platz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_507_SK_20 892.tif",
+      "truth": "Wuhletal",
+      "pred": "Wuhletal",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_510_023 nie gebaut.tif",
+      "truth": null,
+      "pred": null,
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/S_714_006.tif",
+      "truth": "Birkenstraße",
+      "pred": "Bülowstraße",
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "Plans/U_3_POP_B2-212_a.tif",
+      "truth": "Potsdamer Platz",
+      "pred": "Potsdamer Platz [II]",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/UBwE374_Bau eines Lüftungsschachtes Baugrubenaussteifung.tif",
+      "truth": "Alexanderplatz",
+      "pred": "Alexanderplatz [Bstg.E]",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "Plans/WP_Zo_SK-014_Fußstütze_ungültig.pdf",
+      "truth": "Zoologischer Garten",
+      "pred": "Zoologischer Garten [unten]",
+      "level": "high",
+      "correct": true
+    }
+  ],
+  "without_ground_truth": [],
+  "ground_truth_stations_not_in_list": [],
+  "ground_truth_unused": [],
+  "analysis_errors": [],
+  "metrics": true,
+  "results": [
+    {
+      "document": "Plans/00000018.TIF",
+      "station": "Theodor-Heuss-Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          9536,
+          6784
+        ],
+        "to": [
+          3200,
+          2277
+        ]
+      }
+    },
+    {
+      "document": "Plans/000000018.TIF",
+      "station": "Leinestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          6720,
+          4768
+        ],
+        "to": [
+          3200,
+          2270
+        ]
+      }
+    },
+    {
+      "document": "Plans/31_50_1146_A_039_0006_00_00_ZG_8_04112_00042_8_0.tif",
+      "station": "Sophie-Charlotte-Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          25737,
+          14177
+        ],
+        "to": [
+          3200,
+          1763
+        ]
+      }
+    },
+    {
+      "document": "Plans/00000102.TIF",
+      "station": "Otisstraße",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": {
+        "from": [
+          9440,
+          6720
+        ],
+        "to": [
+          3200,
+          2278
+        ]
+      }
+    },
+    {
+      "document": "Plans/00000128.TIF",
+      "station": "Kochstraße (Checkpoint Charlie)",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": {
+        "from": [
+          6720,
+          4768
+        ],
+        "to": [
+          3200,
+          2270
+        ]
+      }
+    },
+    {
+      "document": "Plans/131_012.TIF",
+      "station": "Deutsche Oper",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          6112,
+          9354
+        ],
+        "to": [
+          2091,
+          3200
+        ]
+      }
+    },
+    {
+      "document": "Plans/1149-0007.tif",
+      "station": "Neu-Westend",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          7901,
+          3552
+        ],
+        "to": [
+          3200,
+          1439
+        ]
+      }
+    },
+    {
+      "document": "Plans/A_318_005.tif",
+      "station": "Spittelmarkt",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          16852,
+          4880
+        ],
+        "to": [
+          3200,
+          927
+        ]
+      }
+    },
+    {
+      "document": "Plans/B_115_035.tif",
+      "station": "Innsbrucker Platz (Hauptstraße)",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          24763,
+          12468
+        ],
+        "to": [
+          3200,
+          1611
+        ]
+      }
+    },
+    {
+      "document": "Plans/Blatt 9_Treppenanlage und Straßeneinteilung a d Haltestelle Alex - ungültig.tif",
+      "station": "Alexanderplatz [Bstg.D]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          5040,
+          3906
+        ],
+        "to": [
+          3200,
+          2480
+        ]
+      }
+    },
+    {
+      "document": "Plans/C316_UBw13165_Vorräume im Bereich des Flughafengeländes .tiff",
+      "station": "Paradestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          9979,
+          7019
+        ],
+        "to": [
+          3200,
+          2251
+        ]
+      }
+    },
+    {
+      "document": "Plans/D 73-006.TIF",
+      "station": "Kottbusser Tor",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          6720,
+          4768
+        ],
+        "to": [
+          3200,
+          2270
+        ]
+      }
+    },
+    {
+      "document": "Plans/D_99_023.tif",
+      "station": "Leinestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          19028,
+          13566
+        ],
+        "to": [
+          3200,
+          2281
+        ]
+      }
+    },
+    {
+      "document": "Plans/D085_19270929_Unterfangung Haus Hermannstr 256-57 überholt.tif",
+      "station": "Hermannstraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          8349,
+          4960
+        ],
+        "to": [
+          3200,
+          1901
+        ]
+      }
+    },
+    {
+      "document": "Plans/DE_016.tif",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          24206,
+          13772
+        ],
+        "to": [
+          3200,
+          1821
+        ]
+      }
+    },
+    {
+      "document": "Plans/DE_029 nicht realisiert.tif",
+      "station": "Bahnhof Friedrichstraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          15850,
+          6829
+        ],
+        "to": [
+          3200,
+          1379
+        ]
+      }
+    },
+    {
+      "document": "Plans/E_37_006.tif",
+      "station": "Magdalenenstraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          10558,
+          6140
+        ],
+        "to": [
+          3200,
+          1861
+        ]
+      }
+    },
+    {
+      "document": "Plans/E11-02a_Übersichtsplan Anbau Notausstiegsschacht.tif",
+      "station": "Karl-Marx-Straße",
+      "confidence": null,
+      "error": null,
+      "downscaled": {
+        "from": [
+          9925,
+          14288
+        ],
+        "to": [
+          2223,
+          3200
+        ]
+      }
+    },
+    {
+      "document": "Plans/E59-E60_1-1-7-1b_TK2_BAII-2a_Baugrubenplan.tif",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          6966,
+          5889
+        ],
+        "to": [
+          3200,
+          2705
+        ]
+      }
+    },
+    {
+      "document": "Plans/Fettabscheider_Blatt 1.tif",
+      "station": "Lichtenberg",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          3840,
+          2568
+        ],
+        "to": [
+          3200,
+          2140
+        ]
+      }
+    },
+    {
+      "document": "Plans/G_90_a.tif",
+      "station": "Osloer Straße [unten]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          11050,
+          8514
+        ],
+        "to": [
+          3200,
+          2466
+        ]
+      }
+    },
+    {
+      "document": "Plans/G-A_55_102_98d.tif",
+      "station": "Platz der Luftbrücke",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          14141,
+          9977
+        ],
+        "to": [
+          3200,
+          2258
+        ]
+      }
+    },
+    {
+      "document": "Plans/GLW-SM 01.tif",
+      "station": "Wilmersdorfer Straße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          6670,
+          4844
+        ],
+        "to": [
+          3200,
+          2324
+        ]
+      }
+    },
+    {
+      "document": "Plans/H_119_x.tif",
+      "station": "Rathaus Neukölln",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          7081,
+          5003
+        ],
+        "to": [
+          3200,
+          2261
+        ]
+      }
+    },
+    {
+      "document": "Plans/M1417_ungültig.TIF",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          4987,
+          3893
+        ],
+        "to": [
+          3200,
+          2498
+        ]
+      }
+    },
+    {
+      "document": "Plans/Mh-PG-01-a.pdf",
+      "station": "Anton-Wilhelm-Amo-Straße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          7022,
+          2481
+        ],
+        "to": [
+          3200,
+          1131
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_100_159.tif",
+      "station": "Krumme Lanke",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          19454,
+          5033
+        ],
+        "to": [
+          3200,
+          828
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_112_002.tif",
+      "station": "Eberswalder Straße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          28516,
+          7564
+        ],
+        "to": [
+          3200,
+          849
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_120_002.tif",
+      "station": "Stadtmitte",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          20836,
+          7748
+        ],
+        "to": [
+          3200,
+          1190
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_133_005.tif",
+      "station": "Kaiserdamm",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          17227,
+          8689
+        ],
+        "to": [
+          3200,
+          1614
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_146_012_neu.tif",
+      "station": "Dahlem-Dorf",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          4690,
+          5899
+        ],
+        "to": [
+          2544,
+          3200
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_220_x.tif",
+      "station": "Nollendorfplatz (Schöneberger U-Bahn)",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          16596,
+          10693
+        ],
+        "to": [
+          3200,
+          2062
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_223_SK_4995.tif",
+      "station": "Rathaus Schöneberg",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          10082,
+          3610
+        ],
+        "to": [
+          3200,
+          1146
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_328_a.tif",
+      "station": "Französische Straße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          18944,
+          8123
+        ],
+        "to": [
+          3200,
+          1372
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_411_016.tif",
+      "station": "Gesundbrunnen",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          26628,
+          10595
+        ],
+        "to": [
+          3200,
+          1273
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_504_Ein_01.tif",
+      "station": "Cottbusser Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          10273,
+          5494
+        ],
+        "to": [
+          3200,
+          1711
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_507_SK_20 892.tif",
+      "station": "Wuhletal",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          7051,
+          5024
+        ],
+        "to": [
+          3200,
+          2280
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_510_023 nie gebaut.tif",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          14625,
+          9564
+        ],
+        "to": [
+          3200,
+          2093
+        ]
+      }
+    },
+    {
+      "document": "Plans/S_714_006.tif",
+      "station": "Bülowstraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          23362,
+          13706
+        ],
+        "to": [
+          3200,
+          1877
+        ]
+      }
+    },
+    {
+      "document": "Plans/U_3_POP_B2-212_a.tif",
+      "station": "Potsdamer Platz [II]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          19091,
+          13434
+        ],
+        "to": [
+          3200,
+          2252
+        ]
+      }
+    },
+    {
+      "document": "Plans/UBwE374_Bau eines Lüftungsschachtes Baugrubenaussteifung.tif",
+      "station": "Alexanderplatz [Bstg.E]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          11265,
+          8397
+        ],
+        "to": [
+          3200,
+          2385
+        ]
+      }
+    },
+    {
+      "document": "Plans/WP_Zo_SK-014_Fußstütze_ungültig.pdf",
+      "station": "Zoologischer Garten [unten]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": {
+        "from": [
+          5315,
+          3692
+        ],
+        "to": [
+          3200,
+          2223
+        ]
+      }
+    }
+  ],
+  "meta": {
+    "id": 2,
+    "timestamp": "2026-09-30T11:25:36",
+    "model": "qwen3.8-27b",
+    "max_image_px": 3200,
+    "thinking": false,
+    "station_list": true,
+    "seconds": 431,
+    "stopped": false,
+    "plans_in_folder": 42,
+    "ground_truth": "groundtruth.csv",
+    "ground_truth_rows": 42
+  },
+  "saved_as": "reports/report_0002_2026-09-30_11-25-36.json"
+}

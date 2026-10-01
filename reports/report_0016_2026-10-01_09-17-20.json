@@ -1,0 +1,3251 @@
+{
+  "n": 92,
+  "accuracy": 0.7717391304347826,
+  "precision": 0.9041095890410958,
+  "recall": 0.7674418604651163,
+  "f1": 0.8301886792452831,
+  "macro_f1": 0.9376344086021505,
+  "coverage": 0.7934782608695652,
+  "counts": {
+    "correct": 71,
+    "should_assign": 86,
+    "assigned": 73,
+    "tp": 66,
+    "fp": 7,
+    "fn": 20,
+    "none_total": 6,
+    "none_correct": 5
+  },
+  "by_confidence": [
+    {
+      "level": "high",
+      "n": 77,
+      "correct": 59,
+      "accuracy": 0.7662337662337663
+    },
+    {
+      "level": "medium",
+      "n": 12,
+      "correct": 11,
+      "accuracy": 0.9166666666666666
+    },
+    {
+      "level": "low",
+      "n": 3,
+      "correct": 1,
+      "accuracy": 0.3333333333333333
+    }
+  ],
+  "per_station": [
+    {
+      "station": "Otisstraße",
+      "support": 12,
+      "predicted": 8,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8
+    },
+    {
+      "station": "Alexanderplatz",
+      "support": 7,
+      "predicted": 7,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Leinestraße",
+      "support": 7,
+      "predicted": 2,
+      "precision": 1.0,
+      "recall": 0.2857142857142857,
+      "f1": 0.4444444444444445
+    },
+    {
+      "station": "Paradestraße",
+      "support": 7,
+      "predicted": 5,
+      "precision": 1.0,
+      "recall": 0.7142857142857143,
+      "f1": 0.8333333333333333
+    },
+    {
+      "station": "Bismarckstraße",
+      "support": 6,
+      "predicted": 4,
+      "precision": 1.0,
+      "recall": 0.6666666666666666,
+      "f1": 0.8
+    },
+    {
+      "station": "Innsbrucker Platz",
+      "support": 6,
+      "predicted": 0,
+      "precision": null,
+      "recall": 0.0,
+      "f1": null
+    },
+    {
+      "station": "Neu-Westend",
+      "support": 6,
+      "predicted": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Spittelmarkt",
+      "support": 6,
+      "predicted": 6,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Sophie-Charlotte-Platz",
+      "support": 5,
+      "predicted": 4,
+      "precision": 1.0,
+      "recall": 0.8,
+      "f1": 0.888888888888889
+    },
+    {
+      "station": "Friedrichstraße",
+      "support": 2,
+      "predicted": 3,
+      "precision": 0.6666666666666666,
+      "recall": 1.0,
+      "f1": 0.8
+    },
+    {
+      "station": "Anton-Wilhelm-Amo-Straße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Birkenstraße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Cottbusser Platz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Dahlem-dorf",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Eberswalder Straße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Französische Strasse",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Gesundbrunnen",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Hermannplatz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Kaiserdamm",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Kottbusser Tor",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Krumme Lanke",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Lichtenberg",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Magdalenenstraße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Nollendorfplatz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Osloer Straße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Platz der Luftbrücke",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Potsdamer Platz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Rathaus Neukölln",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Rathaus Schöneberg",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Theodor-Heuss-Platz",
+      "support": 1,
+      "predicted": 3,
+      "precision": 0.3333333333333333,
+      "recall": 1.0,
+      "f1": 0.5
+    },
+    {
+      "station": "Wuhletal",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Zoologischer Garten",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Deutsche Oper",
+      "support": 0,
+      "predicted": 2,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null
+    },
+    {
+      "station": "Hauptbahnhof",
+      "support": 0,
+      "predicted": 1,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null
+    },
+    {
+      "station": "Karl-Marx-Straße",
+      "support": 0,
+      "predicted": 1,
+      "precision": 0.0,
+      "recall": null,
+      "f1": null
+    }
+  ],
+  "wrong": [
+    {
+      "document": "plans2/B_115_035.tif",
+      "truth": "Innsbrucker Platz",
+      "pred": "Theodor-Heuss-Platz",
+      "level": "high"
+    },
+    {
+      "document": "plans2/E11-02a_Übersichtsplan Anbau Notausstiegsschacht.tif",
+      "truth": null,
+      "pred": "Karl-Marx-Straße",
+      "level": "high"
+    },
+    {
+      "document": "plans2/test1.png",
+      "truth": "Leinestraße",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test2.png",
+      "truth": "Leinestraße",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test3.png",
+      "truth": "Leinestraße",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test4.png",
+      "truth": "Leinestraße",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test5.png",
+      "truth": "Leinestraße",
+      "pred": "Friedrichstraße",
+      "level": "high"
+    },
+    {
+      "document": "plans2/test9.tif",
+      "truth": "Paradestraße",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test10.tif",
+      "truth": "Sophie-Charlotte-Platz",
+      "pred": "Hauptbahnhof",
+      "level": "medium"
+    },
+    {
+      "document": "plans2/test11.png",
+      "truth": "Otisstraße",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test16.png",
+      "truth": "Otisstraße",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test19.png",
+      "truth": "Otisstraße",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test20.png",
+      "truth": "Otisstraße",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test21.png",
+      "truth": "Bismarckstraße",
+      "pred": "Deutsche Oper",
+      "level": "high"
+    },
+    {
+      "document": "plans2/test22.png",
+      "truth": "Bismarckstraße",
+      "pred": "Deutsche Oper",
+      "level": "high"
+    },
+    {
+      "document": "plans2/test36.png",
+      "truth": "Innsbrucker Platz",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test37.png",
+      "truth": "Innsbrucker Platz",
+      "pred": "Theodor-Heuss-Platz",
+      "level": "high"
+    },
+    {
+      "document": "plans2/test38.png",
+      "truth": "Innsbrucker Platz",
+      "pred": null,
+      "level": "low"
+    },
+    {
+      "document": "plans2/test39.png",
+      "truth": "Innsbrucker Platz",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test40.png",
+      "truth": "Innsbrucker Platz",
+      "pred": null,
+      "level": "high"
+    },
+    {
+      "document": "plans2/test50.tiff",
+      "truth": "Paradestraße",
+      "pred": null,
+      "level": "low"
+    }
+  ],
+  "items": [
+    {
+      "document": "plans2/00000018.TIF",
+      "truth": "Theodor-Heuss-Platz",
+      "pred": "Theodor-Heuss-Platz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/000000018.TIF",
+      "truth": "Leinestraße",
+      "pred": "Leinestraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/31_50_1146_A_039_0006_00_00_ZG_8_04112_00042_8_0.tif",
+      "truth": "Sophie-Charlotte-Platz",
+      "pred": "Sophie-Charlotte-Platz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/00000102.TIF",
+      "truth": "Otisstraße",
+      "pred": "Otisstraße",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/00000128.TIF",
+      "truth": "Otisstraße",
+      "pred": "Otisstraße",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/131_012.TIF",
+      "truth": "Bismarckstraße",
+      "pred": "Bismarckstraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/1149-0007.tif",
+      "truth": "Neu-Westend",
+      "pred": "Neu-Westend",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/A_318_005.tif",
+      "truth": "Spittelmarkt",
+      "pred": "Spittelmarkt",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/B_115_035.tif",
+      "truth": "Innsbrucker Platz",
+      "pred": "Theodor-Heuss-Platz",
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/Blatt 9_Treppenanlage und Straßeneinteilung a d Haltestelle Alex - ungültig.tif",
+      "truth": "Alexanderplatz",
+      "pred": "Alexanderplatz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/C316_UBw13165_Vorräume im Bereich des Flughafengeländes .tiff",
+      "truth": "Paradestraße",
+      "pred": "Paradestraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/D 73-006.TIF",
+      "truth": "Kottbusser Tor",
+      "pred": "Kottbusser Tor",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/D_99_023.tif",
+      "truth": "Leinestraße",
+      "pred": "Leinestraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/D085_19270929_Unterfangung Haus Hermannstr 256-57 überholt.tif",
+      "truth": "Hermannplatz",
+      "pred": "Hermannplatz",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/DE_016.tif",
+      "truth": null,
+      "pred": null,
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/DE_029 nicht realisiert.tif",
+      "truth": "Friedrichstraße",
+      "pred": "Friedrichstraße",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/E_37_006.tif",
+      "truth": "Magdalenenstraße",
+      "pred": "Magdalenenstraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/E11-02a_Übersichtsplan Anbau Notausstiegsschacht.tif",
+      "truth": null,
+      "pred": "Karl-Marx-Straße",
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/E59-E60_1-1-7-1b_TK2_BAII-2a_Baugrubenplan.tif",
+      "truth": null,
+      "pred": null,
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/Fettabscheider_Blatt 1.tif",
+      "truth": "Lichtenberg",
+      "pred": "Lichtenberg",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/G_90_a.tif",
+      "truth": "Osloer Straße",
+      "pred": "Osloer Straße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/G-A_55_102_98d.tif",
+      "truth": "Platz der Luftbrücke",
+      "pred": "Platz der Luftbrücke",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/GLW-SM 01.tif",
+      "truth": null,
+      "pred": null,
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/H_119_x.tif",
+      "truth": "Rathaus Neukölln",
+      "pred": "Rathaus Neukölln",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/M1417_ungültig.TIF",
+      "truth": null,
+      "pred": null,
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/Mh-PG-01-a.pdf",
+      "truth": "Anton-Wilhelm-Amo-Straße",
+      "pred": "Anton-Wilhelm-Amo-Straße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_100_159.tif",
+      "truth": "Krumme Lanke",
+      "pred": "Krumme Lanke",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_112_002.tif",
+      "truth": "Eberswalder Straße",
+      "pred": "Eberswalder Straße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_120_002.tif",
+      "truth": "Friedrichstraße",
+      "pred": "Friedrichstraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_133_005.tif",
+      "truth": "Kaiserdamm",
+      "pred": "Kaiserdamm",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_146_012_neu.tif",
+      "truth": "Dahlem-dorf",
+      "pred": "Dahlem-Dorf",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_220_x.tif",
+      "truth": "Nollendorfplatz",
+      "pred": "Nollendorfplatz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_223_SK_4995.tif",
+      "truth": "Rathaus Schöneberg",
+      "pred": "Rathaus Schöneberg",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_328_a.tif",
+      "truth": "Französische Strasse",
+      "pred": "Französische Straße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_411_016.tif",
+      "truth": "Gesundbrunnen",
+      "pred": "Gesundbrunnen",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_504_Ein_01.tif",
+      "truth": "Cottbusser Platz",
+      "pred": "Cottbusser Platz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_507_SK_20 892.tif",
+      "truth": "Wuhletal",
+      "pred": "Wuhletal",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_510_023 nie gebaut.tif",
+      "truth": null,
+      "pred": null,
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/S_714_006.tif",
+      "truth": "Birkenstraße",
+      "pred": "Birkenstraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test1.png",
+      "truth": "Leinestraße",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test2.png",
+      "truth": "Leinestraße",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test3.png",
+      "truth": "Leinestraße",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test4.png",
+      "truth": "Leinestraße",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test5.png",
+      "truth": "Leinestraße",
+      "pred": "Friedrichstraße",
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test6.tif",
+      "truth": "Sophie-Charlotte-Platz",
+      "pred": "Sophie-Charlotte-Platz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test7.tif",
+      "truth": "Sophie-Charlotte-Platz",
+      "pred": "Sophie-Charlotte-Platz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test8.tif",
+      "truth": "Sophie-Charlotte-Platz",
+      "pred": "Sophie-Charlotte-Platz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test9.tif",
+      "truth": "Paradestraße",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test10.tif",
+      "truth": "Sophie-Charlotte-Platz",
+      "pred": "Hauptbahnhof",
+      "level": "medium",
+      "correct": false
+    },
+    {
+      "document": "plans2/test11.png",
+      "truth": "Otisstraße",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test12.png",
+      "truth": "Otisstraße",
+      "pred": "Otisstraße",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/test13.png",
+      "truth": "Otisstraße",
+      "pred": "Otisstraße",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/test14.png",
+      "truth": "Otisstraße",
+      "pred": "Otisstraße",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/test15.png",
+      "truth": "Otisstraße",
+      "pred": "Otisstraße",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/test16.png",
+      "truth": "Otisstraße",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test17.png",
+      "truth": "Otisstraße",
+      "pred": "Otisstraße",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/test18.png",
+      "truth": "Otisstraße",
+      "pred": "Otisstraße",
+      "level": "medium",
+      "correct": true
+    },
+    {
+      "document": "plans2/test19.png",
+      "truth": "Otisstraße",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test20.png",
+      "truth": "Otisstraße",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test21.png",
+      "truth": "Bismarckstraße",
+      "pred": "Deutsche Oper",
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test22.png",
+      "truth": "Bismarckstraße",
+      "pred": "Deutsche Oper",
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test23.png",
+      "truth": "Bismarckstraße",
+      "pred": "Bismarckstraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test24.png",
+      "truth": "Bismarckstraße",
+      "pred": "Bismarckstraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test25.png",
+      "truth": "Bismarckstraße",
+      "pred": "Bismarckstraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test26.tiff",
+      "truth": "Neu-Westend",
+      "pred": "Neu-Westend",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test27.tiff",
+      "truth": "Neu-Westend",
+      "pred": "Neu-Westend",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test28.tiff",
+      "truth": "Neu-Westend",
+      "pred": "Neu-Westend",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test29.tiff",
+      "truth": "Neu-Westend",
+      "pred": "Neu-Westend",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test30.tiff",
+      "truth": "Neu-Westend",
+      "pred": "Neu-Westend",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test31.png",
+      "truth": "Spittelmarkt",
+      "pred": "Spittelmarkt",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test32.png",
+      "truth": "Spittelmarkt",
+      "pred": "Spittelmarkt",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test33.png",
+      "truth": "Spittelmarkt",
+      "pred": "Spittelmarkt",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test34.png",
+      "truth": "Spittelmarkt",
+      "pred": "Spittelmarkt",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test35.png",
+      "truth": "Spittelmarkt",
+      "pred": "Spittelmarkt",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test36.png",
+      "truth": "Innsbrucker Platz",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test37.png",
+      "truth": "Innsbrucker Platz",
+      "pred": "Theodor-Heuss-Platz",
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test38.png",
+      "truth": "Innsbrucker Platz",
+      "pred": null,
+      "level": "low",
+      "correct": false
+    },
+    {
+      "document": "plans2/test39.png",
+      "truth": "Innsbrucker Platz",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test40.png",
+      "truth": "Innsbrucker Platz",
+      "pred": null,
+      "level": "high",
+      "correct": false
+    },
+    {
+      "document": "plans2/test41.tiff",
+      "truth": "Alexanderplatz",
+      "pred": "Alexanderplatz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test42.tiff",
+      "truth": "Alexanderplatz",
+      "pred": "Alexanderplatz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test43.tiff",
+      "truth": "Alexanderplatz",
+      "pred": "Alexanderplatz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test44.tiff",
+      "truth": "Alexanderplatz",
+      "pred": "Alexanderplatz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test45.tiff",
+      "truth": "Alexanderplatz",
+      "pred": "Alexanderplatz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test46.tiff",
+      "truth": "Paradestraße",
+      "pred": "Paradestraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test47.tiff",
+      "truth": "Paradestraße",
+      "pred": "Paradestraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test48.tiff",
+      "truth": "Paradestraße",
+      "pred": "Paradestraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test49.tiff",
+      "truth": "Paradestraße",
+      "pred": "Paradestraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/test50.tiff",
+      "truth": "Paradestraße",
+      "pred": null,
+      "level": "low",
+      "correct": false
+    },
+    {
+      "document": "plans2/U_3_POP_B2-212_a.tif",
+      "truth": "Potsdamer Platz",
+      "pred": "Potsdamer Platz",
+      "level": "low",
+      "correct": true
+    },
+    {
+      "document": "plans2/UBwE374_Bau eines Lüftungsschachtes Baugrubenaussteifung.tif",
+      "truth": "Alexanderplatz",
+      "pred": "Alexanderplatz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "plans2/WP_Zo_SK-014_Fußstütze_ungültig.pdf",
+      "truth": "Zoologischer Garten",
+      "pred": "Zoologischer Garten",
+      "level": "high",
+      "correct": true
+    }
+  ],
+  "without_ground_truth": [],
+  "ground_truth_stations_not_in_list": [],
+  "ground_truth_unused": [
+    "test69tiff"
+  ],
+  "analysis_errors": [],
+  "metrics": true,
+  "results": [
+    {
+      "document": "plans2/00000018.TIF",
+      "station": "Theodor-Heuss-Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 19,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 1,
+        "size": [
+          9536,
+          6784
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-99 %, y 60-85 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a revision drawing of a door/door frame (Abortanlage, toilet facility) for a station hall\n**Recognized text:** Title text (right margin, rotated): \"Revisionszeichnung – für die Abortanlage der Haltestelle Reichskanzlerplatz.\"; \"Ansicht A.\" / \"Ansicht B.\"; labels \"Tür\", \"Oberlicht kann später eingesetzt werden\", \"Entlüftungsrohre\", \"Für Abflussleitung\"; bottom-left stamp \"Bauamt A 48 / Laufende Nr. 21 / Berlin im Nov. 1910\"; \"A 48 - 018\"\n**Plan date:** Nov. 1910 (bottom-left stamp \"Berlin im Nov. 1910\")\n**Title:** \"Revisionszeichnung – für die Abortanlage der Haltestelle Reichskanzlerplatz.\" (right margin)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Theodor-Heuss-Platz\n**Confidence:** high – title names the station (as Reichskanzlerplatz, the 1910 name, renamed to Theodor-Heuss-Platz in 1963)"
+    },
+    {
+      "document": "plans2/000000018.TIF",
+      "station": "Leinestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 71,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 5,
+        "size": [
+          6720,
+          4768
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-100 %, y 82-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – stair railings and ladder details for a U-Bahn station (Aufstellanlage / Treppengeländer)\n**Recognized text:** Title block (bottom right): \"Aufstellanlage / U-Bhf. Leinestraße, südli... / Treppengeländer und Steigeleitern f. Laufsteg 1-5\"; \"URw 16051\"; \"Bauw. D102-103\"; \"Berliner Verkehrs-Betriebe (BVG)\"; date \"14.6.79\"; drawing area: \"Bem.: Sämtl. Geländer an der Gleis 8-Seite anordnen!\"\n**Plan date:** 14.6.79 (1979), in the title block \"bearbeitet\" field\n**Title:** \"Aufstellanlage U-Bhf. Leinestraße, südli... Treppengeländer und Steigeleitern f. Laufsteg 1-5\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Leinestraße\n**Confidence:** high – station \"U-Bhf. Leinestraße\" is named in the title block"
+    },
+    {
+      "document": "plans2/31_50_1146_A_039_0006_00_00_ZG_8_04112_00042_8_0.tif",
+      "station": "Sophie-Charlotte-Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 26,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 3,
+        "size": [
+          12869,
+          7089
+        ],
+        "title_block": true,
+        "title_block_box": "x 68-99 %, y 79-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – reconstruction plans (floor plans, elevations, sections) of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"BVG BERLINER VERKEHRS-BETRIEBE\", \"REKONSTRUKTION U-BAHNHOF SOPHIE-CHARLOTTE-PLATZ\", \"PLANUNG GRUNDRISS ANSICHTEN SCHNITTE\", \"BL.NR. 12\", \"M 1:100\", \"ARCHITEKT DIPL.ING.W.R.BORCHARDT LINDENALLEE 28 1 BERLIN 19\", \"13.11.55 GEÄNDERT AM 13.1.57; 27.1.57, 19.3.87, 3.4.87 22.4.87\"; drawing area: \"SCHNITT L\", \"GLEIS 1\", \"PROV. ARBEITSSTROMSTD.\"\n**Plan date:** 13.11.55 (title block), with revisions up to 22.4.87\n**Title:** REKONSTRUKTION U-BAHNHOF SOPHIE-CHARLOTTE-PLATZ (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Sophie-Charlotte-Platz\n**Confidence:** high – station name explicitly stated in the title block"
+    },
+    {
+      "document": "plans2/00000102.TIF",
+      "station": "Otisstraße",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 100,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 4,
+        "size": [
+          9440,
+          6720
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-99 %, y 71-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – the plan shows the U-Bahn overpass/bridge (U-Bahnüberführung) at Seidelstraße, a line structure, not a standalone facility.\n**Recognized text:** Title block (bottom right): \"U-Bahnüberführung Seidelstraße im Zuge der Linie C¹\", \"Arbeitsgemeinschaft U-Bahnbrücke Seidelstraße\", \"Bestandsplan Nr. C VII-35.3\", \"Zeichnung Nr. 2636/47\"; drawing area: \"Seidel\", \"nach Tegel\", \"nach Berlin\", \"Brückenechse\", \"Senkrechse\".\n**Plan date:** 1958 (title block \"gefertigt: ... 3.3.1958\"; note \"Berlin, den ... 1958\").\n**Title:** \"U-Bahnüberführung Seidelstraße im Zuge der Linie C¹\" (title block, bottom right).\n**Match type:** nearby (derived from street name Seidelstraße).\n**Nearby stations:** Otisstraße (U6, on Seidelstraße, ~200-400 m); rejected: Holzhauser Straße and Scharnweberstraße (further along the line, not at the Seidelstraße crossing).\n**Station:** Otisstraße\n**Confidence:** medium – the bridge is named after Seidelstraße, the street on which the Otisstraße (formerly Seidelstraße) station sits; no station named in the title."
+    },
+    {
+      "document": "plans2/00000128.TIF",
+      "station": "Otisstraße",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 36,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 10,
+        "size": [
+          6720,
+          4768
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 83-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – U-Bahn bridge over Seidelstraße (reinforcement of the retaining wall, Berlin side)\n**Recognized text:** Title block (bottom right): \"U-Bahnbrücke über die Seidelstr / Erhöhung der Stützmauer / Berliner Seite\"; \"Bestandsplan: Nr. C III r 35.29\"; drawing no. \"C 519-029\"; \"Wayss & Freytag A.-G. Niederlassung Berlin\"; \"Der Senator für Bau- u. Wohnungswesen\"; \"Berlin, den ... 1957\"; \"Geferdigt 2.5.58\"\n**Plan date:** 1957 (approval date \"Berlin, den ... 1957\"); completion 2.5.58\n**Title:** \"U-Bahnbrücke über die Seidelstr – Erhöhung der Stützmauer – Berliner Seite\" (title block, bottom right)\n**Match type:** nearby (derived from street name)\n**Nearby stations:** Seidelstraße (now Otisstraße, U6) – the bridge crosses the street the station is named after, ~0-100 m; next candidates along U6 (e.g. Alt-Tegel, Borsigberke) are several hundred meters away and rejected\n**Station:** Otisstraße\n**Confidence:** medium – the bridge is named after Seidelstraße, the street of the station (renamed Otisstraße in 2013), but the title does not name the station itself"
+    },
+    {
+      "document": "plans2/131_012.TIF",
+      "station": "Bismarckstraße [II] [unten]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 5,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 5,
+        "size": [
+          6112,
+          9354
+        ],
+        "title_block": true,
+        "title_block_box": "x 3-40 %, y 82-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a site/storage plan (Lageplan) for the installation of a passenger lift at a U-Bahn station\n**Recognized text:** Title block (bottom left): \"EINBAU EINES PERSONENAUFZUGES IM U-BHF BISMARCKSTRASSE\"; drawing area: \"BISMARCKSTRASSE\", \"WILMERSDORFER STRASSE\", \"VORHANDENE BEBAUUNG\", \"AUFZUG 1/2/3\"; note (left): \"Die Übereinstimmung mit der Ausführung bescheinigt: Berlin 33, den 10.10.1990\"\n**Plan date:** 10.10.1990 (note in left margin); revision table dates 08.11.1989 / 08.11.89\n**Title:** \"EINBAU EINES PERSONENAUFZUGES IM U-BHF BISMARCKSTRASSE\" (title block, bottom left)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Bismarckstraße [II] [unten]\n**Confidence:** high – the title block explicitly names U-Bhf Bismarckstraße; the 1990 date and the Wilmersdorfer Straße/Bismarckstraße location correspond to the U7 platform (Bismarckstraße [II] [unten])\n\nNote: The title names \"Bismarckstraße\". In the list, \"Bismarckstraße [I]\" is a former name of Deutsche Oper (U2), while the U7 station at the Bismarckstraße/Wilmersdorfer Straße intersection is \"Bismarckstraße [II] [unten]\" (opened 28.04.1978). The plan's location (Wilmersdorfer Straße crossing) and 1990 date match the U7 station, so the current name \"Bismarckstraße [II] [unten]\" is used."
+    },
+    {
+      "document": "plans2/1149-0007.tif",
+      "station": "Neu-Westend",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 43,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 3,
+        "size": [
+          7901,
+          3552
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-99 %, y 69-90 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – plan of the U-Bahn station Neu-Westend (track/tunnel, intermediate and ground levels, incl. exit Nd I and technical rooms)\n**Recognized text:** Title block (bottom right): \"U-Bahn Linie U1 (A1) / Bhf. Neu-Westend (Nd)\"; \"Bauteil A 55 / Ausgang Nd I / Grundriß Gleis-/Tunnel-, Zwischen-, Geländeebene\"; overview map labels \"Bhf. Neu-Westend (Nd/1149)\"; drawing area: \"Olympische Straße\", \"Preußenallee\", \"6 KV-Trafo\", \"Pumpenraum\", \"Kassettenraum\"\n**Plan date:** June 1987/90 (title block, \"Berlin, im Juni 1987/90\")\n**Title:** \"U-Bahn Linie U1 (A1) Bhf. Neu-Westend (Nd)\" in the title block\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Neu-Westend\n**Confidence:** high – station name \"Bhf. Neu-Westend (Nd)\" explicitly in the title block"
+    },
+    {
+      "document": "plans2/A_318_005.tif",
+      "station": "Spittelmarkt",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 20,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 2,
+        "size": [
+          16852,
+          4880
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 67-99 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – Sanitary installation floor plan (Grundriss) for the side rooms / exit of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"VEB BAUHOF BAD DOBERAN\", \"Rekonstruktion U-Bhf. 'Spittelmarkt'\", \"Nebenräume - Ausgang Spittelmarkt\", \"TP: Sanitäre Installation\", \"Grundriss\", \"S 1\", \"A318-005\"; drawing area: \"Ausgang Spittelmarkt\", \"Gleis 1\", \"Gleis 2\"; notes: \"Bemerkung...\"\n**Plan date:** 25.6.86 (Zeichner date in title block); project dates 03.07.86 / 04.07.86\n**Title:** Rekonstruktion U-Bhf. \"Spittelmarkt\" – Nebenräume - Ausgang Spittelmarkt (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Spittelmarkt\n**Confidence:** high – station name \"Spittelmarkt\" is explicitly in the title block"
+    },
+    {
+      "document": "plans2/B_115_035.tif",
+      "station": "Theodor-Heuss-Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 90,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 1,
+        "size": [
+          12382,
+          6234
+        ],
+        "title_block": true,
+        "title_block_box": "x 62-98 %, y 68-92 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a floor plan of a U-Bahn station building (platform hall, staircases, technical rooms)\n**Recognized text:** \"NEUBAU U-BAHNZUFAHRT THIESSBRÜCKER PLATZ\" (title block, bottom right); \"GRUNDRISS M 7820\" (title block); \"U-Bw 12861\" (bottom left and bottom right); \"DER SENATOR FÜR BAU- UND WOHNUNGSWESEN ABT. VI (HOCH) C\" (title block)\n**Plan date:** not found (drawing number M 7820 suggests 1978, but no explicit date is visible)\n**Title:** NEUBAU U-BAHNZUFAHRT THIESSBRÜCKER PLATZ (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Theodor-Heuss-Platz\n**Confidence:** high – the title names the station's former name \"Thießbrücker Platz\" (misspelled \"Thießbrücker\"), which corresponds to the current station Theodor-Heuss-Platz (renamed 18.12.1963)."
+    },
+    {
+      "document": "plans2/Blatt 9_Treppenanlage und Straßeneinteilung a d Haltestelle Alex - ungültig.tif",
+      "station": "Alexanderplatz [Bstg.A]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 25,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          5040,
+          3906
+        ],
+        "title_block": true,
+        "title_block_box": "x 62-93 %, y 71-88 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a plan of the track separation (Trennanlage) and street layout at the Alexanderplatz station\n**Recognized text:** \"Elektrische Hoch- u. Untergrundbahn\" (top left); \"Trennanlage und Straßeneinteilung an der Haltestelle Alexanderplatz\" (center, plan header); \"Blatt 9\" (top right); street names \"Alexanderplatz\", \"Alexanderstr.\", \"Königsbrücke\", \"Schützenstr.\", \"Keibelstr.\", \"Friedrichstr.\", \"Grunerstr.\", \"Dircksenstr.\", \"Prenzlauer Str.\" (drawing area); \"Maßstab 1:1000\" (bottom left)\n**Plan date:** not found\n**Title:** \"Trennanlage und Straßeneinteilung an der Haltestelle Alexanderplatz\" (center of the sheet, plan header)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Alexanderplatz [Bstg.A]\n**Confidence:** high – the title explicitly names the Haltestelle Alexanderplatz, and the plan shows the U-Bahn line (U2) running through the square"
+    },
+    {
+      "document": "plans2/C316_UBw13165_Vorräume im Bereich des Flughafengeländes .tiff",
+      "station": "Paradestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 80,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 3,
+        "size": [
+          9979,
+          7019
+        ],
+        "title_block": true,
+        "title_block_box": "x 63-100 %, y 53-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – floor plan of a U-Bahn station building (entrance hall, stairs, gatehouse) with sections\n**Recognized text:** Title block (bottom right): \"U.-Bhf. Paradestr. / Vordäume / im Bereich des / Flughafengeländes\", \"Ubw 13165\", \"Bauw. C 316\", \"Berliner Verkehrs-Betriebe (BVG)\"; drawing area: \"Parkplatz\", \"Grünanlage\", \"Pfortnerhaus\", \"Eugensfeldstr.\", \"Treppe\", \"Kammer\", \"Mietfläche für Behala\"\n**Plan date:** not found (no legible date in the title block)\n**Title:** \"U.-Bhf. Paradestr. Vordäume im Bereich des Flughafengeländes\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Paradestraße\n**Confidence:** high – the title block explicitly names the station \"U.-Bhf. Paradestr.\""
+    },
+    {
+      "document": "plans2/D 73-006.TIF",
+      "station": "Kottbusser Tor [unten]",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 62,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 2,
+        "size": [
+          6720,
+          4768
+        ],
+        "title_block": true,
+        "title_block_box": "x 47-85 %, y 64-96 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – ventilation/emergency-exit shaft (Luftschacht) of the U-Bahn line, a line structure\n**Recognized text:** Top-left header \"Schnellbahn Gesundbrunnen-Neukölln\"; top-center title \"Luftschacht Los XII vor dem Hause 15 in der Köttbusstr. Massstab 1:50\"; bottom-right block \"D 73-006 Plankammer Lid. Nr. 26\" and a note \"Luftschacht in der Köttbusstr. vor dem Hause Nr. 15 – Los XII\"\n**Plan date:** not found (only a scale \"1:50\" and drawing number; no clear date)\n**Title:** \"Luftschacht Los XII vor dem Hause 15 in der Köttbusstr.\" (top-center plan header)\n**Match type:** nearby (derived from street name)\n**Nearby stations:** Kottbusser Tor [unten] (U8, ~150-250 m, the shaft sits in Kottbusser Str. just south of the Kottbusser Tor intersection); rejected Kottbusser Tor [II] [oben] (U1/U3, ~300 m, on the parallel line) and Hermannplatz (U7/U8, ~400 m, further south)\n**Station:** Kottbusser Tor [unten]\n**Confidence:** medium – street name (Kö[t]tbusstr.) locates the shaft at the Kottbusser Tor area, but the title names no station and the line is not explicitly stated"
+    },
+    {
+      "document": "plans2/D_99_023.tif",
+      "station": "Leinestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 18,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 1,
+        "size": [
+          9514,
+          6783
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 64-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – toilet renovation plan (Toilettenumbau) for rooms 16 and 34 of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"U-BHF. LEINESTR.\", \"TOILETTENUMBAU RAUM 16 + 34\", \"UBw 16653\", \"Bauw. D99-100\"; drawing area: \"RAUM 16 WC-DAMEN\", \"RAUM 34 WC-HERREN\", \"Richtung Boddinstr.\"; Lageplan: \"BHF. LEINESTR.\"\n**Plan date:** 31.1.85 (gezeichnet), 6.2.85 (geprüft), 5.3.85 (Änderung) in the title block\n**Title:** \"U-BHF. LEINESTR. – TOILETTENUMBAU RAUM 16 + 34\" in the title block (bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Leinestraße\n**Confidence:** high – station name \"U-BHF. LEINESTR.\" is explicit in the title block and Lageplan"
+    },
+    {
+      "document": "plans2/D085_19270929_Unterfangung Haus Hermannstr 256-57 überholt.tif",
+      "station": "Hermannplatz [unten]",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 22,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 2,
+        "size": [
+          8349,
+          4960
+        ],
+        "title_block": true,
+        "title_block_box": "x 68-99 %, y 60-86 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – underpinning/shoring plan for a neighboring house (Berliner Str. 4, corner Hermannstr.) affected by U-Bahn construction\n**Recognized text:** Top header: \"ZEICHNUNG ZUR UNTERFANGUNG DES HAUSES - BERLINER-STR. 4, ECHE. HERMANNSTR. 256/57\"; floor labels (ERDGESCHOSS, KELLERGRUNDRISS, 3./4. OBERGESCHOSS); bottom-right: \"BERLIN, DEN 29. SEPTEMBER 1927\", \"ASMUS BUMANN, Tief-, Beton- u. Hochbau, CHARLOTTENBURG 2, Fraunhoferstr. 15\"\n**Plan date:** 29. September 1927 (bottom right)\n**Title:** \"Zeichnung zur Unterfangung des Hauses - Berliner-Str. 4, Ecke Hermannstr.\" (top header)\n**Match type:** nearby (derived from street names)\n**Nearby stations:** Hermannplatz (corner of Berliner Str./Hermannstr., ~100 m); rejected: Hermannstraße (U8, further east along Hermannstr.); Gneisenaustraße (U7, further west)\n**Station:** Hermannplatz [unten]\n**Confidence:** medium – house at the Berliner Str./Hermannstr. corner is closest to the Hermannplatz station (U7, opened 1926)"
+    },
+    {
+      "document": "plans2/DE_016.tif",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 30,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 1,
+        "size": [
+          12103,
+          6886
+        ],
+        "title_block": true,
+        "title_block_box": "x 59-98 %, y 65-97 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – a standalone tunnel structure (the Spree tunnel / Spreetunnel)\n**Recognized text:** Title at top center: \"Anordnung der Deckenträger und Wandstützen im Spreetunnel\"; \"von St. Zeich. 583+225 bis 602+360\"; \"Majstab 1:200\"; drawing area labels \"Brandenburger-Ufer\", \"Hausflucht\", \"Brücken\", \"Straße\"; bottom right \"Berlin, den 31. März 1916\", \"DE-016\", \"ALLGEMEINE ELEKTRIZITÄTS-GESELLSCHAFT BAULEITUNG DER A.E.G.-SCHNELLBAHN\"\n**Plan date:** 31. März 1916 (bottom right)\n**Title:** \"Anordnung der Deckenträger und Wandstützen im Spreetunnel\" (top center)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the title explicitly names the Spree tunnel, a self-contained tunnel structure of its own, not part of a station"
+    },
+    {
+      "document": "plans2/DE_029 nicht realisiert.tif",
+      "station": "Friedrichstraße",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 11,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 4,
+        "size": [
+          15850,
+          6829
+        ],
+        "title_block": true,
+        "title_block_box": "x 81-100 %, y 83-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a longitudinal profile/plan of a U-Bahn line section (track with levels) along Friedrichstraße, not a standalone facility\n**Recognized text:** \"Neue\" and \"Friedrichstraße\" (street labels, top of drawing area); \"Warenhaus Wertheim\", \"Geheimes Staats Archiv\", \"Rauch Museum\", \"Land- und Amts-Gericht\" (building labels in drawing area); \"IV D 58 Blatt 27\" (top right); \"Planhammer / Lid. Nr. 2991 / Schenk K / Bl. Nr. II\" (title block, bottom right); \"Angefertigt Berlin, im April 1912 / Städt. Vermessungsamt\" (bottom left)\n**Plan date:** April 1912 (bottom left, \"Angefertigt Berlin, im April 1912\")\n**Title:** \"Planhammer, Lid. Nr. 2991\" (title block, bottom right) – a generic plan number, no station named\n**Match type:** nearby (derived from street names)\n**Nearby stations:** Friedrichstraße (U6, directly on Friedrichstraße) – primary; Stadtmitte [unten] (U6, at Friedrichstraße/Leipziger Straße) – rejected as the section shown is the straight Friedrichstraße stretch with Wertheim/Rauch Museum, not the city-center junction\n**Station:** Friedrichstraße\n**Confidence:** medium – line section clearly on Friedrichstraße (U6), but no station named in title; assigned to the station on that street\n\nNote: The plan shows the U-Bahn line running along Friedrichstraße (the U6 Stadtbahn line, opened 1923 per the list, but the survey/plan predates it, dated 1912). The street Friedrichstraße is the location; the station named after it is \"Friedrichstraße\" (U6). The title block gives only a plan number, so this is a nearby match by street name."
+    },
+    {
+      "document": "plans2/E_37_006.tif",
+      "station": "Magdalenenstraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 56,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 4,
+        "size": [
+          10558,
+          6140
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-99 %, y 80-99 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – plan of the side rooms (Nebenzimmer) at a U-Bahn station\n**Recognized text:** \"Bahnhof Magdalenenstraße / Zwikel I Nebenzimmer / Grundriss u. Längsschnitt\" (title block, bottom right); \"Linie: E 37\" (title block); \"Gleis 1 Richtung Alexanderplatz\" and \"Gleis 2 Richtung Hönow\" (top of drawing area)\n**Plan date:** Jan. 1985 (title block, \"Im Original gezeichnet\")\n**Title:** Bahnhof Magdalenenstraße, Zwikel I Nebenzimmer, Grundriss u. Längsschnitt (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Magdalenenstraße\n**Confidence:** high – station name explicitly stated in the title block"
+    },
+    {
+      "document": "plans2/E11-02a_Übersichtsplan Anbau Notausstiegsschacht.tif",
+      "station": "Karl-Marx-Straße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 57,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 1,
+        "size": [
+          4963,
+          7144
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-94 %, y 71-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – plan of a U-Bahn station structure (footpassenger tunnel / exit stairs, \"Bereit Fußgängertunnel (außer Betrieb)\", \"Ausgang Treppe C zur Karl-Marx-Allee\")\n**Recognized text:** Title block (top right, rotated): \"U-Bahnhof Karl-Marx-Allee, Linie U5, Baustelle: Karl-Marx-Allee, 10179 Berlin, Baugruppe 1, 10179 Berlin\"; drawing area: \"Ausgang Treppe C zur Karl-Marx-Allee\", \"Richtung Alexanderplatz\", \"Bereit Fußgängertunnel (außer Betrieb)\"\n**Plan date:** 19.03.2020 (in title block, \"Datum\")\n**Title:** \"U-Bahnhof Karl-Marx-Allee\" (in the title block, top right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Karl-Marx-Straße\n**Confidence:** high – title block explicitly names the station (Karl-Marx-Allee, the former name of Karl-Marx-Straße, U5)"
+    },
+    {
+      "document": "plans2/E59-E60_1-1-7-1b_TK2_BAII-2a_Baugrubenplan.tif",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 201,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 14,
+        "size": [
+          6966,
+          5889
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-95 %, y 73-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – a generic excavation pit plan (Baugrubenplan) for the U-Bahn line E construction, with no station or specific location named\n**Recognized text:** Title block (bottom right): \"VEB Autobahnbakombinat\", \"U-Bahnbau Linie E\", \"TK 2 - BA II.2a\", \"Baugrubenplan\", \"10/85\"; drawing area: \"Variante zur Baugrubeneinfassung\", \"Gleis 1\", \"Gleis 2\", \"Schachtung für Spann in Abschnittsmühle\", coordinate table \"Baugrubensohle\"\n**Plan date:** 10/85 (in the title block)\n**Title:** \"Baugrubenplan\" (in the title block, bottom right)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan is a generic excavation pit drawing for the line with no station name or locatable street/address given"
+    },
+    {
+      "document": "plans2/Fettabscheider_Blatt 1.tif",
+      "station": "Lichtenberg",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 4,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          3840,
+          2568
+        ],
+        "title_block": true,
+        "title_block_box": "x 79-97 %, y 79-95 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – plan of a grease trap (Fettabscheider) and sludge pit (Schlammfang) for the Mitropa restaurant inside a U-Bahn station\n**Recognized text:** Title block (bottom right): \"STA – LICHTENBERG / Fettabscheider 3l/s / Mitropa – Gaststätte / im U-Bahnhof Lichtenberg / Grundriß und Schemaschnitt / Maßstab 1:10 / Blatt Nr. 1\"; drawing labels: \"Fettabscheider\", \"Schlammfang\", \"Entlüftung\", \"Zulauf\", \"Ablauf\"\n**Plan date:** 10.2.1973 (in the title block, bottom right)\n**Title:** \"STA – LICHTENBERG – Fettabscheider 3l/s, Mitropa-Gaststätte im U-Bahnhof Lichtenberg\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Lichtenberg\n**Confidence:** high – the title block explicitly names \"U-Bahnhof Lichtenberg\"\n\n"
+    },
+    {
+      "document": "plans2/G_90_a.tif",
+      "station": "Osloer Straße [unten]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 73,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 1,
+        "size": [
+          11050,
+          8514
+        ],
+        "title_block": true,
+        "title_block_box": "x 73-99 %, y 81-99 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – floor plan, section and detail of a \"Raum für Betriebs- und Verkehrsmanager\" (operations/traffic manager room) at a U-Bahn station\n**Recognized text:** Title block (bottom right): \"U-Bahnhof Osloer Straße / Raum für Betriebs- und Verkehrsmanager\"; drawing area (bottom left): \"U-Bhf. Osloer Str. Zwischengeschoß\"; notes (right): \"Raum für Betriebs- und Verkehrsmanager\" with construction details; scale 1:25; BVG stamp\n**Plan date:** March 1997 (title block: bearbeitet März 97, geprüft 3.97)\n**Title:** \"U-Bahnhof Osloer Straße – Raum für Betriebs- und Verkehrsmanager\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Osloer Straße [unten]\n**Confidence:** high – station name \"Osloer Straße\" is explicitly in the title block; the 1997 plan refers to the U8 platform (opened 1977)"
+    },
+    {
+      "document": "plans2/G-A_55_102_98d.tif",
+      "station": "Platz der Luftbrücke",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 59,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 4,
+        "size": [
+          7071,
+          4989
+        ],
+        "title_block": true,
+        "title_block_box": "x 72-100 %, y 82-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – execution plan (floor plans and sections) of the northern entrance and northern fore-hall of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"Projekt: U-Bahnhof Platz der Luftbrücke\", \"Nördliche Zugänge / Nördliche Vorhalle – Grundrisse, Schnitte\", \"AUSFÜHRUNGSPLANUNG\", \"BVG\", \"Zeichnung Nr. G/A-55-102-98 d\"; drawing area: \"GRUNDRISS VORHALLE – NORD I\", \"NÖRDLICHER ZUGANG I\", \"BAHNSTIEGTREPPE – NORD\", \"GRUNDRISS VORHALLE NORD\", \"GRUNDRISS STRASSENEBENE\", \"DRAUFSICHT\", various \"SCHNITT\" views; architect \"Ralf Schüler & Ursulina Schüler-Witte, Caspar-Theyß-Straße 18, 14193 Berlin\"\n**Plan date:** 1998 (year in title block; \"bearbeitet/gezeichnet 23.07.\" 1998; stamp \"18.11.99\")\n**Title:** \"U-Bahnhof Platz der Luftbrücke – Nördliche Zugänge / Nördliche Vorhalle – Grundrisse, Schnitte\" (in the title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Platz der Luftbrücke\n**Confidence:** high – station name \"Platz der Luftbrücke\" is explicitly stated in the title block and matches the list entry (U6)"
+    },
+    {
+      "document": "plans2/GLW-SM 01.tif",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 10,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 1,
+        "size": [
+          4844,
+          6670
+        ],
+        "title_block": true,
+        "title_block_box": "x 52-89 %, y 65-91 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – the plan depicts a rectifier substation (Gleichrichterwerk), a standalone facility\n**Recognized text:** Title block (top right): \"Umbau Gleichrichterwerk Wilmersdorf\", \"Berliner Verkehrs-Betriebe (BVG)\", \"Potsdamer Straße 188 / 1000 Berlin 30\", \"Arg. Gleichrichterwerk Wilmersdorf\", \"Culemstraße 27, 1000 Berlin 27\"; drawing labels \"Grundriß M 1:25\", \"Schnitt A-A M:1:25\", \"Schnitt B-B M:1:25\", \"Detail Wandanschluß M:1:5\"\n**Plan date:** 28.07.71 (in the title block revision table)\n**Title:** \"Umbau Gleichrichterwerk Wilmersdorf\" (in the title block, top right)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the title explicitly names a rectifier substation (Gleichrichterwerk), a standalone facility not part of any station"
+    },
+    {
+      "document": "plans2/H_119_x.tif",
+      "station": "Rathaus Neukölln",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 30,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 2,
+        "size": [
+          7081,
+          5003
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-98 %, y 86-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – technical room (\"LISI\"-Raum) installation at a U-Bahn station\n**Recognized text:** Title block (bottom right): \"U-Bhf. Rathaus Neukölln / Einbau 'LISI'-Raum\"; drawing area: \"Gleis 1 nach Rudow\", \"Gleis 2 nach Spandau\", \"LISI-Raum 10,1 m²\", \"HVT-Raum geplant\"\n**Plan date:** 22.11.93 (bearbeitet, title block); geprüft 25.1.94\n**Title:** U-Bhf. Rathaus Neukölln – Einbau 'LISI'-Raum (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Rathaus Neukölln\n**Confidence:** high – station name explicitly in the title block"
+    },
+    {
+      "document": "plans2/M1417_ungültig.TIF",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 1,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          4987,
+          3893
+        ],
+        "title_block": true,
+        "title_block_box": "x 35-72 %, y 41-81 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – a generic standard cross-section (Normalquerschnitt) of the two-track tunnel of the A–Fr. line, not tied to a specific location\n**Recognized text:** \"Hochbahngesellschaft, Berlin.\" (top left); \"Normalquerschnitt I-I.\" (top center); \"für den zweigleisigen Tunnel der A-Fr. Linie.\" (top center); \"Los\" (top center); \"Str. K.\" (small label in drawing area); \"Maßstab 1:50\" (bottom center); \"M. 1417\" (bottom left)\n**Plan date:** not found\n**Title:** \"Normalquerschnitt I-I. für den zweigleisigen Tunnel der A-Fr. Linie.\" (top center)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan is a generic standard tunnel cross-section for the whole line with no location-specific information"
+    },
+    {
+      "document": "plans2/Mh-PG-01-a.pdf",
+      "station": "Anton-Wilhelm-Amo-Straße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 38,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 3,
+        "size": [
+          9363,
+          3308
+        ],
+        "title_block": true,
+        "title_block_box": "x 62-97 %, y 56-85 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – site plan (Lageplan) with existing utilities for installing an elevator at a U-Bahn station\n**Recognized text:** Title block (bottom right): \"Projekt: U-Bhf. Mohrenstraße (Mh)\", \"Einbau eines Aufzugs\", \"Lageplan mit Leitungsbestand\", \"Bahnhof Mohrenstraße (Mh)\", \"Linie U2\"; drawing area: \"Mohrenstraße\", \"Zietenplatz\", \"Glinkastraße\", \"Wilhelmstraße\", \"Mauerallee\", \"Bahnhofsmittel\"; legend top-left; dates 03.05.2011 / 13.06.2011\n**Plan date:** 03.05.2011 (title block, bearbeitet/gezeichnet/geprüft)\n**Title:** U-Bhf. Mohrenstraße (Mh) – Einbau eines Aufzugs – Lageplan mit Leitungsbestand (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Anton-Wilhelm-Amo-Straße\n**Confidence:** high – title block explicitly names the station (Mohrenstraße, U2), which is the former name of Anton-Wilhelm-Amo-Straße per the list\n\n"
+    },
+    {
+      "document": "plans2/S_100_159.tif",
+      "station": "Krumme Lanke",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 25,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 0,
+        "size": [
+          19454,
+          5033
+        ],
+        "title_block": true,
+        "title_block_box": "x 79-100 %, y 76-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – slope/embankment (Böschung) maintenance plan for an open track section of the U-Bahn line\n**Recognized text:** Title block (bottom right): \"Böschungssanierung im Bereich Bhf Krumme Lanke von Km 10.3+40-11.1+70,0\"; \"U-Bw 16.8.11\"; \"BERLINER VERKEHRS-BETRIEBE (BVG)\"; drawing no. \"E100-159\". Drawing area: street names \"Argentinische Allee\", \"Alt-Altstraße\", \"Wilsdr. Str.\", \"Potsdamer Str.\", \"Friedrich-Wilhelm-Str.\", \"Reg. Stellwerk\", \"Brückennr.\"\n**Plan date:** 10.6.86 (bearbeitet) and 1.9.86 (geprüft) in the title block\n**Title:** \"Böschungssanierung im Bereich Bhf Krumme Lanke von Km 10.3+40-11.1+70,0\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Krumme Lanke\n**Confidence:** high – the title block explicitly names \"Bhf Krumme Lanke\" as the location of the work"
+    },
+    {
+      "document": "plans2/S_112_002.tif",
+      "station": "Eberswalder Straße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 14,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 8,
+        "size": [
+          14258,
+          3782
+        ],
+        "title_block": true,
+        "title_block_box": "x 80-100 %, y 69-96 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a utility/conduit plan (gas, water, drainage lines) for a U-Bahn station\n**Recognized text:** \"Bahnhof Danziger Straße. / Nur als Leitungsplan maßgebend.\" (plan header, top center); \"Bestands-Zeichnung\" (top right); \"Bestandszeichnung / Bauwert A 339\" (bottom right); \"Berlin, den 11. Januar 1915\" (bottom right); \"Eberswalder - Str.\" (bottom margin); legend \"Gasleitung / Wasserleitung / Abflußleitung\" (drawing area)\n**Plan date:** 11. Januar 1915 (bottom right title block)\n**Title:** Bahnhof Danziger Straße (plan header, top center)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Eberswalder Straße\n**Confidence:** high – title names \"Danziger Straße\", the former name (opened 27.07.1913) of today's Eberswalder Straße, confirmed by the \"Eberswalder-Str.\" margin note and the 1915 date"
+    },
+    {
+      "document": "plans2/S_120_002.tif",
+      "station": "Friedrichstraße [II]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 12,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          10418,
+          3874
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-90 %, y 65-81 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – plan of the utility lines (gas, water, sewer, fire-alarm cable) in the U-Bahn station Friedrichstraße\n**Recognized text:** \"Elektr. Hoch- u. Untergrundbahn Berlin\" (top left); \"Lage der Leitungen in der Haltestelle Friedrichstraße.\" (center header); \"Charlotten-\" (street label, left); \"Revz. Leing. Spt. 15\" and \"Winkl. März 1910\" (bottom right); legend \"Zeichenerklärung\" (bottom right)\n**Plan date:** März 1910 (bottom right, \"Winkl. März 1910\")\n**Title:** \"Lage der Leitungen in der Haltestelle Friedrichstraße.\" (center header)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Friedrichstraße [II]\n**Confidence:** high – station \"Friedrichstraße\" named in the title; 1910 date fits the U6 Stadtbahn station (Friedrichstraße [II])\n\n"
+    },
+    {
+      "document": "plans2/S_133_005.tif",
+      "station": "Kaiserdamm",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 24,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 12,
+        "size": [
+          8614,
+          4345
+        ],
+        "title_block": true,
+        "title_block_box": "x 79-100 %, y 77-98 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – station hall / platform plan (Bahnhofspan) of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"U - BHF. KAISERDAMM / BAHNHOFSPAN\", \"UBw 14746a\", \"Bauw. A 44/45\", \"BERLINER VERKEHRS-BETRIEBE (BVG)\"; drawing area: \"FAHRRICHTUNG: RUHLEBEN\", \"FAHRRICHTUNG: ZOO\", \"Bahnsleiglänge = 115.0m\", legend of rooms (Traforaum, Fahrstuftraum, etc.)\n**Plan date:** 26.2.70 (bearbeitet field, title block); change note 18.1.72\n**Title:** \"U - BHF. KAISERDAMM BAHNHOFSPAN\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Kaiserdamm\n**Confidence:** high – station name \"KAISERDAMM\" is explicitly in the title block, matching the list entry (U2, current name Kaiserdamm)"
+    },
+    {
+      "document": "plans2/S_146_012_neu.tif",
+      "station": "Dahlem-Dorf",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 10,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          4690,
+          5899
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-95 %, y 85-98 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a location plan (Lageplan) of the Königin-Luise-Strassenbrücke (a U-Bahn line structure/bridge) at the Schmutzplatz intersection, with the U-Bahnhof shown in the drawing.\n**Recognized text:** Title top-left \"Lageplan der Königin-Luise-Strassenbrücke M. 1:500\"; drawing labels \"Königin-Luise-Straße\", \"Schmutzplatz\", \"U-Bahnhof Dahlem-Dorf\", \"Brümmestr.\", \"Jlhisstr.\", \"Archivstr.\"; bottom notes \"Höhenboizen Nr.1334 ... Königin-Luise-Str. 49/57 Amtsstelle Dahlem\", \"1001 B5\", \"E146-012\", \"Zauwerk\".\n**Plan date:** not found (no clear date; \"Zauwerk\" stamp only)\n**Title:** \"Lageplan der Königin-Luise-Strassenbrücke\" (top-left plan header)\n**Match type:** nearby (derived from street names and the labeled U-Bahnhof)\n**Nearby stations:** Dahlem-Dorf (labeled U-Bahnhof, ~0-100 m); rejected: none other plausible (Krumme Lanke/Onkel Toms Hütte are further along U3)\n**Station:** Dahlem-Dorf\n**Confidence:** high – the plan explicitly labels \"U-Bahnhof Dahlem-Dorf\" at the bridge location"
+    },
+    {
+      "document": "plans2/S_220_x.tif",
+      "station": "Nollendorfplatz [mitte]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 79,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 1,
+        "size": [
+          8298,
+          5347
+        ],
+        "title_block": true,
+        "title_block_box": "x 63-87 %, y 71-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – the plan shows the fountain and pond-basin installation (Brunnen- und Teichbeckenanlage) on Nollendorfplatz, i.e. a station-area structure.\n**Recognized text:** \"Bockbaufgesellschaft Berlin\" (top left); \"Nollendorfplatz\" (left overview); \"Kleiststraße\", \"Motzstraße\" (left); \"Brunner- und Teichbeckenanlage auf dem Nollendorfplatz. Uebersicht und Grundriss\" (bottom center); \"Beckenrand O.K. +34,15 / Wasserspiegel +33,85 / Beckensohle O.K. +33,42\" (right plan); \"Luftschacht\" (right).\n**Plan date:** not found (no date field visible).\n**Title:** \"Brunner- und Teichbeckenanlage auf dem Nollendorfplatz. Uebersicht und Grundriss\" (bottom center of the sheet).\n**Match type:** direct (station named in the title).\n**Nearby stations:** n/a\n**Station:** Nollendorfplatz [mitte]\n**Confidence:** high – the title explicitly names Nollendorfplatz, the location of the depicted fountain/pond installation."
+    },
+    {
+      "document": "plans2/S_223_SK_4995.tif",
+      "station": "Rathaus Schöneberg",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 30,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 2,
+        "size": [
+          10082,
+          3610
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 81-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – tile/brick wall elevation views (Ansicht A/B) for the station's renovation\n**Recognized text:** Title block (bottom right): \"U-BHF RATHAUS SCHÖNEBERG / INSTANDSETZUNG\", \"SK 4995\", \"BERLINER VERKEHRS-BETRIEBE (BVG)\"; drawing area: \"ANSICHT B\", \"ANSICHT A\", \"FÜLISEN\", \"GLEIS 1\", \"GLEIS 2\", \"WAND GLEIS 2 SEITE\", \"WERBEVITRINE NEU\", \"FANESCHIEBEN AUTOM. VORH.\"\n**Plan date:** 4.9.95 (bearbeitet), geprüft 1.96, stat. gepr. 5.2.96 in the title block\n**Title:** \"U-BHF RATHAUS SCHÖNEBERG INSTANDSETZUNG\" in the title block (bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Rathaus Schöneberg\n**Confidence:** high – station name explicitly stated in the title block"
+    },
+    {
+      "document": "plans2/S_328_a.tif",
+      "station": "Französische Straße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 38,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 5,
+        "size": [
+          9472,
+          4062
+        ],
+        "title_block": true,
+        "title_block_box": "x 33-100 %, y 0-43 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – floor plan (Grundriss) of a U-Bahn station platform and technical rooms (platform extension / Bahnsteigverlängerung)\n**Recognized text:** Title block (bottom right): \"U - Bhf. Französische Strasse Linie 6\", \"Bahnsteigverlängerung, Errichten techn. Betriebsräume\", \"Grundriss\", scale 1:100, drawing no. E 001; overview map shows \"Französische Straße\" and \"Friedrichstraße\"; date fields \"Gezeichnet 18.02.1994\", \"Bearbeitet 18.02.1994\"; planning office Figallo, Rottwinkel (AIV) & Partner\n**Plan date:** 18.02.1994 (title block, Gezeichnet/Bearbeitet)\n**Title:** \"U - Bhf. Französische Strasse Linie 6 – Grundriss\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Französische Straße\n**Confidence:** high – station name \"Französische Strasse\" explicitly in the title block, matching the U6 station entry"
+    },
+    {
+      "document": "plans2/S_411_016.tif",
+      "station": "Gesundbrunnen",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 56,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 2,
+        "size": [
+          13314,
+          5298
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-95 %, y 71-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a plan of the U-Bahn station (Haltestelle) with its platforms, entrance building and surrounding track/streets\n**Recognized text:** \"HALTESTELLE GESUNDBRUNNEN\" (center of drawing area); \"Staatsbahnhof Gesundbrunnen Empfangsgebäude\" (upper center); \"Blatt 5 von Strz. 11.30-13.50 bis Strz. 14.50+28.82\" (top right); \"Berlin im Mai 1918 / Allgemeine Electricitäts-Gesellschaft Bauleitung der AEG-Schnellbahn\" (bottom right); \"Durch die Eisenbahnbehörde geprüft Berlin, den 13. November 1919\" (bottom right); street labels \"Bleichstraße\", \"Badstraße\", \"Brunsstraße\", \"Gleisdreieck\"\n**Plan date:** May 1918 (bottom right); revised July 1919; approved 13 November 1919\n**Title:** \"Haltestelle Gesundbrunnen\" (labeled in the drawing area; sheet is Blatt 5 of the AEG-Schnellbahn)\n**Match type:** direct (station named in the plan)\n**Nearby stations:** n/a\n**Station:** Gesundbrunnen\n**Confidence:** high – the station name \"Gesundbrunnen\" is explicitly labeled on the plan"
+    },
+    {
+      "document": "plans2/S_504_Ein_01.tif",
+      "station": "Cottbusser Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 157,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 2,
+        "size": [
+          10273,
+          5494
+        ],
+        "title_block": true,
+        "title_block_box": "x 66-100 %, y 79-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – the plan shows the tunnel section (Hochbau) and the south entrance (Südausgang) with sand/snow trap for a U-Bahn station.\n**Recognized text:** Title block (bottom right): \"U-Bahn bau, Linie E\", \"TO 8.3.3 Bf. Cottbuser Platz (Hellersdorf)\", \"Hochbau 8.3.3.3 Einhausung der Zugänge Südausgang, Sand- u. Schneefang\", \"11 3678 2 592 / 9.10.8\", \"Erfurt Brigade Hochbau\". Drawing area: \"Tunnelachse\", \"Steinzeugrohr NW 150\", \"Baugrubensohle nachverdichten!\".\n**Plan date:** 9.10.8 (1958) in the title block; revision dates 18.11.86, 19.11.86, 21.4.86.\n**Title:** \"U-Bahn bau, Linie E – TO 8.3.3 Bf. Cottbuser Platz (Hellersdorf) – Hochbau 8.3.3.3 Einhausung der Zugänge Südausgang, Sand- u. Schneefang\" (title block, bottom right).\n**Match type:** direct (station named in the title).\n**Nearby stations:** n/a\n**Station:** Cottbusser Platz\n**Confidence:** high – the title block explicitly names the station \"Bf. Cottbuser Platz (Hellersdorf)\"."
+    },
+    {
+      "document": "plans2/S_507_SK_20 892.tif",
+      "station": "Wuhletal",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 30,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 6,
+        "size": [
+          7051,
+          5024
+        ],
+        "title_block": true,
+        "title_block_box": "x 68-100 %, y 87-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a station interior detail (east vestibule / \"östl. Vorhalle\") for installing a photo-automat, with views and notes\n**Recognized text:** Title block (bottom right): \"U-BHF WUHLTAL / EINBAU EINES FOTOAUTOMATEN\"; drawing area: \"ÖSTL. VORHALLE\", \"BAHNSTEIG\", \"ANSICHT A/B\", \"DRAUFSICHT\"; notes \"BEMERKUNGEN\" (tile removal, wall masonry, IPB 100 beam); \"§507 SK 20892\"\n**Plan date:** 20.8.92 (Bearbeitet / Bau 13 fields in title block)\n**Title:** \"U-BHF WUHLTAL – EINBAU EINES FOTOAUTOMATEN\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Wuhletal\n**Confidence:** high – station name \"U-BHF WUHLTAL\" is explicit in the title block"
+    },
+    {
+      "document": "plans2/S_510_023 nie gebaut.tif",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 7,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 7,
+        "size": [
+          7313,
+          4782
+        ],
+        "title_block": true,
+        "title_block_box": "x 84-99 %, y 84-99 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – the plan depicts a rectifier substation (Gleichrichterwerk) with its functional building, a standalone facility\n**Recognized text:** Title block (bottom right): \"U-Bahn Neubaustrecke Friedrichsfelde - Tierpark\", \"Standort Gleichrichterwerk\", \"UBw E/461a\", \"VEB KOMBINAT BERLINER VERKEHRS-BETRIEBE (BVG)\"; drawing area: \"Gleichrichterwerk Tk\", \"Funktionsgebäude\", \"Siebkesselhaus\", \"Fahrradraum\", \"Tierpark\" (street name)\n**Plan date:** 17.4.69 (in the \"gezeichnet\" field of the title block)\n**Title:** \"Standort Gleichrichterwerk\" (in the title block, bottom right)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the title explicitly names a rectifier substation (Gleichrichterwerk), which is a standalone facility not assigned to a station"
+    },
+    {
+      "document": "plans2/S_714_006.tif",
+      "station": "Birkenstraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 28,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 3,
+        "size": [
+          11681,
+          6853
+        ],
+        "title_block": true,
+        "title_block_box": "x 75-100 %, y 82-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – U-Bahn station building (ticket hall, platform, technical rooms)\n**Recognized text:** Title block (bottom right): \"BESTANDSPLAN U-BHF LINIE 6 / U-BHF BIRKENSTRASSE / GRUNDRISS, SCHNITTE UND SCHALTERHALLE\"; drawing area: \"RICHTUNG WEDDING\", \"RICHTUNG TEGELTZE\", \"SCHALTERHALLE & AUSGÄNGE\", \"BETRIEBSRÄUME\" legend\n**Plan date:** 1961 (stamps \"1. VII. 1961\"); \"LETZTER STAND MAI 1990\"\n**Title:** U-Bhf Birkenstraße – Grundriss, Schnitte und Schalterhalle (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Birkenstraße\n**Confidence:** high – station name explicitly in the title block"
+    },
+    {
+      "document": "plans2/test1.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 36,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 1,
+        "size": [
+          4768,
+          6720
+        ],
+        "title_block": true,
+        "title_block_box": "x 66-100 %, y 87-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – a generic/standard detail drawing of handrail (Geländer) types and a steel-pipe (Stahlrohr) detail, not tied to a specific location\n**Recognized text:** \"Geländer Typ I = 5 x wie geschnürt ausführen (an Längstr. 1-5)\" and \"Geländer Typ III = 1 x ausführen (an Längstr. 6-11)\" in the drawing area; \"Detail I\", \"Stahlrohr 7 1/4\" Ø\", \"Ansicht A\", \"Schnitt a-a\" as labels; title block (bottom left) reads \"U-Bahn ... Aufstellung 099\" with drawing no. \"Blatt 16057\"\n**Plan date:** not found (title block date field illegible)\n**Title:** \"U-Bahn ... Aufstellung 099\" (title block, bottom left) – a generic U-Bahn assembly drawing, no station named\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan is a generic standard detail of handrail/pipe types with no street, address or station name to locate it"
+    },
+    {
+      "document": "plans2/test2.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 36,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 1,
+        "size": [
+          4768,
+          6720
+        ],
+        "title_block": true,
+        "title_block_box": "x 66-100 %, y 87-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – generic/standard detail drawings of handrail (Geländer) types and a steel pipe (Stahlrohr) detail, not tied to a specific location\n**Recognized text:** \"Geländer Typ I = 4x wie geschnürt ausführen (für Laufsteg 1-5)\" and \"Geländer Typ III = 1x ausführen (für Laufsteg 6-11)\" in the drawing area; \"Detail I\", \"Stahlrohr 7 1/4\" Ø\", \"Ansicht A\", \"Schnitt a-a\" as labels; title block (bottom left) reads \"U-Bahn ... Aufstellung ... Bau N 16057\"\n**Plan date:** not found (title block shows \"Bau N 16057\" but no clear date)\n**Title:** \"U-Bahn ... Aufstellung\" (title block, bottom left) – a generic U-Bahn installation/handrail drawing\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan is a generic/standard detail drawing of handrails and a pipe, with no street, address or station name to locate it"
+    },
+    {
+      "document": "plans2/test3.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 36,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 1,
+        "size": [
+          4768,
+          6720
+        ],
+        "title_block": true,
+        "title_block_box": "x 66-100 %, y 87-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – generic/standard detail drawings of handrail (Geländer) types and a steel pipe (Stahlrohr) detail, not tied to a specific location\n**Recognized text:** \"Geländer Typ I = 5 x wie geschnürt ausführen (für Leitern 1-5)\" and \"Geländer Typ III = 1 x ausführen (für Laufsteg Nr. 1)\" in the drawing area; \"Detail I\", \"Stahlrohr 1 1/4\" φ\", \"Ansicht A\", \"Schnitt a-a\" as labels; title block (bottom left) reads \"U-Bahn Berlin-Charlottenburg, Aufstellung 01/99, Bl. Nr. 16/57\"\n**Plan date:** 01/99 (revision table in title block, bottom left)\n**Title:** \"U-Bahn Berlin-Charlottenburg, Aufstellung 01/99, Bl. Nr. 16/57\" (title block, bottom left)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan is a generic/standard detail drawing of handrail types and a pipe detail with no location-specific station reference"
+    },
+    {
+      "document": "plans2/test4.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 36,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 1,
+        "size": [
+          4768,
+          6720
+        ],
+        "title_block": true,
+        "title_block_box": "x 66-100 %, y 87-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – a generic/standard detail drawing of handrail (Geländer) types and a steel-pipe (Stahlrohr) detail, not tied to a specific location\n**Recognized text:** \"Geländer Typ I = 5 x wie geschnürt ausführen (für Laufsteg 1-5)\" and \"Geländer Typ III = 1 x ausführen (für Laufsteg 6/7/8)\" in the drawing area; \"Detail I\", \"Stahlrohr 1 1/4\" φ\", \"Ansicht A\", \"Schnitt a-a\" as labels; title block (bottom left) reads \"U-Bahn Berlin-AG, Aufstellung/Ort: ...\", \"Bau N 16057\", \"Tiefbauabtl. Abteilung 5-1\"\n**Plan date:** not found (only drawing number \"Bau N 16057\" and \"9102 013\" visible)\n**Title:** \"U-Bahn Berlin-AG – Aufstellung/Ort\" (title block, bottom left); the sheet is a standard handrail detail drawing\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan is a generic standard detail (handrail types, steel pipe) with no street, address or station name tying it to a location"
+    },
+    {
+      "document": "plans2/test5.png",
+      "station": "Friedrichstraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 27,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 2,
+        "size": [
+          6720,
+          4768
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-99 %, y 50-77 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a structural detail drawing (handrails / Geländer and a stair section) for a U-Bahn station\n**Recognized text:** Title block (top-left, sheet rotated 180°): \"Anstellanlage\", \"U-Bhf. Lehrterstraße, süd\", \"Treppengeständer und Stiegengeländer f. Laufsteg 1-5\", \"Bauw. D-102-103\", \"Ubw 16051\"; drawing area: \"Ansicht A\", \"Schnitt a-a\", \"Detail I\", \"Geländer Typ I/II/III\", \"Stahlrohr 11/4\" - ca 1141\", \"5 Steig. 18,5/26 cm\"\n**Plan date:** not found (only drawing no. \"Ubw 16051\" and \"Bauw. D-102-103\" in the title block)\n**Title:** \"Anstellanlage – U-Bhf. Lehrterstraße, süd – Treppengeständer und Stiegengeländer f. Laufsteg 1-5\" (title block, top-left)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Friedrichstraße\n**Confidence:** high – the title block explicitly names \"U-Bhf. Lehrterstraße\", the former name of the station listed as \"Friedrichstraße\" (eröffnet als: Bahnhof Friedrichstraße; ab 02.1976: Friedrichstraße)"
+    },
+    {
+      "document": "plans2/test6.tif",
+      "station": "Sophie-Charlotte-Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 27,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 3,
+        "size": [
+          12869,
+          7089
+        ],
+        "title_block": true,
+        "title_block_box": "x 68-99 %, y 79-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – reconstruction plan (floor plans, elevations, sections) of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"REKONSTRUKTION / U-BAHNHOF / SOPHIE-CHARLOTTE-PLATZ\", \"PLANUNG GRUNDRISS ANSICHTEN SCHNITTE\", \"BL.NR. 12 G M 1:100\", \"ARCHITEKT DIPL.ING. W.R. BORCHARDT LINDENALLEE 28 1 BERLIN 19\", \"13.11.55 GEÄNDERT AM 13.1.57; 27.1.57, 19.3.57, 3.4.57, 22.5.57\"; drawing area: \"SCHNITT L\", \"GLEIS 1\", \"PROVISOR. ARBEITSSTROMSTD.\"\n**Plan date:** 13.11.55 (title block), with revisions up to 22.5.57\n**Title:** \"REKONSTRUKTION U-BAHNHOF SOPHIE-CHARLOTTE-PLATZ\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Sophie-Charlotte-Platz\n**Confidence:** high – station name explicitly stated in the title block"
+    },
+    {
+      "document": "plans2/test7.tif",
+      "station": "Sophie-Charlotte-Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 26,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 3,
+        "size": [
+          12869,
+          7089
+        ],
+        "title_block": true,
+        "title_block_box": "x 68-99 %, y 79-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – reconstruction plans (floor plans, elevations, sections) of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"BVG BERLINER VERKEHRS-BETRIEBE\", \"REKONSTRUKTION U-BAHNHOF SOPHIE-CHARLOTTE...\", \"PLANUNG GRUNDRISS ANSICHTEN SCHNITTE\", \"BL.NR. 12\", \"M 1:100\", \"ARCHITEKT DIPL.ING. W.R. BORCHARDT LINDENALLEE 28 1 BERLIN 19\", \"13.11.55 GEÄNDERT AM 13.1.57; 27.1.57; 19.3.57; 3.4.57; 22.4.57\". Drawing area: \"SCHNITT L\", \"GLEIS 1\", \"PROVISOR. ARBEITSSTROMSTD.\"\n**Plan date:** 13.11.55 (with revisions up to 22.4.57), in the title block\n**Title:** REKONSTRUKTION U-BAHNHOF SOPHIE-CHARLOTTE-PLATZ (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Sophie-Charlotte-Platz\n**Confidence:** high – station name explicitly stated in the title block"
+    },
+    {
+      "document": "plans2/test8.tif",
+      "station": "Sophie-Charlotte-Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 25,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 3,
+        "size": [
+          12869,
+          7089
+        ],
+        "title_block": true,
+        "title_block_box": "x 68-99 %, y 80-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – plan (Grundriss, Ansichten, Schnitte) of a U-Bahn station building/platforms\n**Recognized text:** \"SOPHIE-CHARLOTTE-PLATZ\" (stamped in drawing area, top right); \"BVG BERLINER VERKEHRS-BETRIEBE\", \"BL. NR. 12 G\", \"M 1:100\", \"ARCHITEKT DIPL.ING. W.R. BORCHARDT LINDENALLEE 28\" (title block, bottom right); \"GEÄNDERT AM 13.1.67; 27.1.67; 19.3.67; 3.4.67; 22.6.67\" (title block)\n**Plan date:** 13.11.66 (title block), with revisions up to 22.6.67\n**Title:** \"SOPHIE-CHARLOTTE-PLATZ – PLANUNG GRUNDRISS ANSICHTEN SCHNITTE\" (station name stamped in drawing area; title block gives sheet no. and scale)\n**Match type:** direct (station named in the plan)\n**Nearby stations:** n/a\n**Station:** Sophie-Charlotte-Platz\n**Confidence:** high – station name \"Sophie-Charlotte-Platz\" is explicitly named on the plan"
+    },
+    {
+      "document": "plans2/test9.tif",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 46,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 3,
+        "size": [
+          12869,
+          7089
+        ],
+        "title_block": true,
+        "title_block_box": "x 68-99 %, y 79-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – reconstruction plan (floor plans and sections) of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"REKONSTRUKTION / U-BAHNHOF / GOTTFRIED-CHLAUDE-PLATZ\", \"BLATT NR. 12\", \"M 1:100\", architect \"LINDENWALDER, BERLIN 19\", dates \"21.1.87 / 22.4.87\"; drawing area: \"SCHNITT L\", \"GLEIS 1\", \"PROVISOR. ARBEITSSTROMSTD.\"\n**Plan date:** 1987 (dates 21.1.87 and 22.4.87 in the title block)\n**Title:** \"REKONSTRUKTION U-BAHNHOF GOTTFRIED-CHLAUDE-PLATZ\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the title names the station, but \"Gottfried-Chlaude-Platz\" matches no entry in the provided station list (no such station exists), so it cannot be assigned to a listed station."
+    },
+    {
+      "document": "plans2/test10.tif",
+      "station": "Hauptbahnhof",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 27,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 3,
+        "size": [
+          12869,
+          7089
+        ],
+        "title_block": true,
+        "title_block_box": "x 68-99 %, y 79-100 %"
+      },
+      "corrections": [
+        {
+          "from": "Sophie-Charlotte-Platz",
+          "note": "spelling check: the title text is much more similar to 'Hauptbahnhof' (similarity 0.80) than to 'Sophie-Charlotte-Platz' (0.58)",
+          "to": "Hauptbahnhof",
+          "type": "spelling"
+        }
+      ],
+      "answer": "**Belongs to a station:** yes – reconstruction plans (floor plans, elevations, sections) of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"BVG BERLINER VERKEHRS-BETRIEBE\", \"REKONSTRUKTION U-BAHNHOF SOPHIE-...-PLATZ\", \"PLANUNG GRUNDRISS ANSICHTEN SCHNITTE\", \"BL.NR. 12 M 1:100\", \"ARCHITEKT DIPL.ING. W.R. BORCHARDT LINDENALLEE 28 1 BERLIN 19\", \"13.11.55 GEÄNDERT AM 13.1.57; 27.1.57; 19.3.87; 3.4.87; 22.4.87\". Drawing area: \"SCHNITT L\", \"GLEIS 1\", \"PROV. ARBEITSSTROMSTD.\"\n**Plan date:** 13.11.55 (with later revisions up to 22.4.87) in the title block\n**Title:** \"REKONSTRUKTION U-BAHNHOF SOPHIE-...-PLATZ\" in the title block (bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Hauptbahnhof\n**Confidence:** medium – spelling check: the title text is much more similar to 'Hauptbahnhof' (similarity 0.80) than to 'Sophie-Charlotte-Platz' (0.58)\n**Post-check:** spelling check: the title text is much more similar to 'Hauptbahnhof' (similarity 0.80) than to 'Sophie-Charlotte-Platz' (0.58)\n"
+    },
+    {
+      "document": "plans2/test11.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 2,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 5,
+        "size": [
+          9440,
+          5094
+        ],
+        "title_block": true,
+        "title_block_box": "x 2-32 %, y 7-31 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – a standalone rectifier substation (Gleichrichterwerk)\n**Recognized text:** \"Gleichrichterwerk\" (title block, top right); \"U-Bahn\" and \"Berlin\" (title block); \"C 21 a - 003\" (sheet number, bottom corners); \"BESIWANDSZEICHNUNG\" (stamp, bottom right)\n**Plan date:** not found\n**Title:** Gleichrichterwerk (in the title block at the top right)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan explicitly depicts a standalone rectifier substation, which is not part of any station"
+    },
+    {
+      "document": "plans2/test12.png",
+      "station": "Otisstraße",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 95,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 4,
+        "size": [
+          9440,
+          6720
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-99 %, y 71-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a bridge/line structure (U-Bahn track on a bridge) with cross-sections and a plan view, part of the line, not a standalone facility.\n**Recognized text:** \"Seidel\" (street name, lower-left of plan view); \"nach Tegel\" and \"nach Berlin\" (direction arrows, right side); \"Brückenechse\" (bridge axis, right); \"Bestandsplan Nr. C VII-353\" and \"C 519-003\" (title block, bottom right); \"Arbeitsgemeinschaft U-Bahnvorstrecke Seidelstraße\" (title block, bottom right); \"Berlin, den ... 1958\" (date note, right).\n**Plan date:** 1958 (date note in the right margin, \"Berlin, den ... 1958\").\n**Title:** \"Arbeitsgemeinschaft U-Bahnvorstrecke Seidelstraße\" / \"Bestandsplan Nr. C VII-353\" (title block, bottom right).\n**Match type:** nearby (derived from street name \"Seidelstraße\" and direction \"nach Tegel\").\n**Nearby stations:** Seidelstraße (now Otisstraße, U6) – the bridge is on the Seidelstraße line extension toward Tegel, essentially at the station; runner-up Alt-Tegel (U6) further along the same line, rejected as the structure is at the Seidelstraße location.\n**Station:** Otisstraße\n**Confidence:** medium – street name \"Seidelstraße\" and \"nach Tegel\" direction locate the bridge on the U6 line at the Seidelstraße (now Otisstraße) station."
+    },
+    {
+      "document": "plans2/test13.png",
+      "station": "Otisstraße",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 99,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 4,
+        "size": [
+          9440,
+          6720
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-99 %, y 71-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – the plan depicts the U-Bahn overpass/bridge (U-Bahnüberführung) at Seidelstraße, a line structure.\n**Recognized text:** Title block (bottom right): \"U-Bahnüberführung Seidelstraße\", \"Arbeitsgemeinschaft U-Bahnbrücke Seidelstraße\", \"Bestandsplan Nr. C VII-35.3\", \"Zeichnung Nr. 2636/47\"; drawing area: \"Seidel\" (street), \"nach Tegel\", \"nach Berlin\", \"Brückenechse\", \"Draufsicht\", \"Ansicht\", \"Schnitt N-O\".\n**Plan date:** 1958 (title block \"geprüft 3.3.1958\"; note \"Berlin, den ... 1958\").\n**Title:** \"U-Bahnüberführung Seidelstraße\" (title block, bottom right).\n**Match type:** nearby (derived from street name Seidelstraße).\n**Nearby stations:** Otisstraße (U6, at Seidelstraße, ~0-200 m); runner-up Alt-Tegel (U6, further along the line toward Tegel, ~1 km) rejected as the bridge is at Seidelstraße itself.\n**Station:** Otisstraße\n**Confidence:** medium – the bridge is named after Seidelstraße, the street of the Otisstraße station (then \"Seidelstraße\"), confirmed by the \"nach Tegel\" direction."
+    },
+    {
+      "document": "plans2/test14.png",
+      "station": "Otisstraße",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 101,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 4,
+        "size": [
+          9440,
+          6720
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-99 %, y 71-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – the plan depicts the U-Bahn overpass (U-Bahnüberführung) at Seidelstraße, a line structure (bridge) that is assigned to the nearest station.\n**Recognized text:** Title block (bottom right): \"U-Bahnüberführung Seidelstraße im Zuge der...\" and \"Arbeitsgemeinschaft U-Bahnbrücke Seidelstraße\"; drawing area: \"Seidel\" (street label), \"nach Tegel\", \"nach Berlin\", \"Brückenechse\"; sheet number \"C519-003\".\n**Plan date:** 1958 (title block \"geferligt: ... 3.3.1958\"; note \"Berlin, den ... 1958\").\n**Title:** \"U-Bahnüberführung Seidelstraße\" (title block, bottom right).\n**Match type:** nearby (derived from street name Seidelstraße).\n**Nearby stations:** Otisstraße (U6, on Seidelstraße, ~200-400 m) – chosen; Alt-Tegel (U6, further north toward Tegel, ~1 km) – rejected as more distant.\n**Station:** Otisstraße\n**Confidence:** medium – street name Seidelstraße clearly locates the bridge at the Otisstraße (Seidelstraße) station on U6."
+    },
+    {
+      "document": "plans2/test15.png",
+      "station": "Otisstraße",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 32,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 4,
+        "size": [
+          9440,
+          6720
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-98 %, y 65-82 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – the plan depicts the U-Bahn overpass (U-Bahnüberführung) at Seidelstraße, a line structure (bridge) that is assigned to the nearest station.\n**Recognized text:** Title block (bottom right): \"U-Bahnüberführung Seidelstraße im Zuge der Linie C1\", \"Arbeitsgemeinschaft U-Bahnbrücke Seidelstraße\", \"Bestandsplan Nr. C VII-35.3\", \"Zeichnung Nr. 2636/47\". Drawing area: \"Seidel\", \"nach Tegel\", \"nach Berlin\", \"Brückennachse\", \"Ansicht\", \"Draufsicht\", various \"Schnitt\" (section) labels.\n**Plan date:** 1958 (title block: \"geprüft ... 3.3.1958\"; \"Bestandsplan\" note dated 1958).\n**Title:** \"U-Bahnüberführung Seidelstraße im Zuge der Linie C1\" (in the title block, bottom right).\n**Match type:** nearby (derived from street name Seidelstraße).\n**Nearby stations:** Seidelstraße (now Otisstraße, U6) – the bridge is on Seidelstraße, the street the station is named after, essentially at the station location; runner-up Alt-Tegel (U6) is further along the line toward Tegel and was rejected as the bridge is named after Seidelstraße itself.\n**Station:** Otisstraße\n**Confidence:** medium – the bridge is named after Seidelstraße, the street of the station (renamed Otisstraße in 2013), but the title names the street/bridge rather than the station directly."
+    },
+    {
+      "document": "plans2/test16.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 9,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          6720,
+          4768
+        ],
+        "title_block": true,
+        "title_block_box": "x 34-67 %, y 95-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – a generic/standard structural detail drawing (reinforcement layout of a concrete element, \"Betonabdeckung 22 cm\", \"Stahlansatz St. I\", \"Schnitt A-B\", \"Schnitt C-D\") with no location or station indicated\n**Recognized text:** \"BETONANZEICHNUNG\" (drawing area, left); \"Schnitt A-B\", \"Schnitt C-D\", \"Betonabdeckung 22 cm\" (drawing area, center); \"Stahlansatz St. I\" table (left); \"C 212.37\", \"C 310-058\" (bottom right); \"Wassas & Freytag A.G., Niederlassung Berlin\" (title block, bottom left); \"Bestandplan: Nr. C 212 + 32.38\" (stamp, left)\n**Plan date:** not found (only a \"1952\" in a stamp, not a clear plan date)\n**Title:** \"BETONANZEICHNUNG\" (printed in the drawing area, left side)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan is a generic standard reinforcement drawing with no street, address or station name to tie it to a location"
+    },
+    {
+      "document": "plans2/test17.png",
+      "station": "Otisstraße",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 16,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 10,
+        "size": [
+          6720,
+          4768
+        ],
+        "title_block": true,
+        "title_block_box": "x 70-99 %, y 58-79 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a U-Bahn bridge (U-Bahnbrücke) over a street, with reinforcement details for raising the retaining walls\n**Recognized text:** Title block (bottom right): \"U-Bahnbrücke über die Seidelstr. / Erhöhung der Stützmauer / Berliner Seite\"; \"Bestandsplan: Nr. C II r 35.29\"; drawing no. \"C 519-029 / C 519.37\"; \"Stahlauszug St I\" table; \"Berlin, den ... 1957\"\n**Plan date:** 1957 (date field in the title block, \"Berlin, den ... 1957\")\n**Title:** \"U-Bahnbrücke über die Seidelstr. – Erhöhung der Stützmauer, Berliner Seite\" (in the title block, bottom right)\n**Match type:** nearby (derived from street name)\n**Nearby stations:** Seidelstraße (now Otisstraße, U6) – the bridge crosses Seidelstraße directly at the station; no other plausible candidate\n**Station:** Otisstraße\n**Confidence:** medium – the bridge is named after Seidelstraße, the street of the station (renamed Otisstraße in 2013), but the title names the street rather than the station itself"
+    },
+    {
+      "document": "plans2/test18.png",
+      "station": "Otisstraße",
+      "confidence": "medium",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 28,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 10,
+        "size": [
+          6720,
+          4768
+        ],
+        "title_block": true,
+        "title_block_box": "x 70-100 %, y 58-79 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a U-Bahn bridge (U-Bahnbrücke) over a street, with reinforcement details for raising the retaining wall\n**Recognized text:** Title block (bottom right): \"U-Bahnbrücke über die Seidelstr. / Erhöhung der Stützmauer / Berliner Seite\"; \"Bestandsplan: Nr. C 35.29\"; drawing no. \"C 519-029\"; \"Stahlauszug St I\" table; \"Berlin, den ... 1957\"\n**Plan date:** 1957 (date field in the title block, \"Berlin, den ... 1957\")\n**Title:** \"U-Bahnbrücke über die Seidelstr. – Erhöhung der Stützmauer – Berliner Seite\" (in the title block, bottom right)\n**Match type:** nearby (derived from street name)\n**Nearby stations:** Seidelstraße (now Otisstraße, U6) – the bridge crosses Seidelstraße directly, ~0 m; next candidates along U6 (e.g. Alt-Tegel, Borsigberke) are several hundred metres away and rejected\n**Station:** Otisstraße\n**Confidence:** medium – street name in title locates the bridge at the Seidelstraße crossing, which is the Otisstraße (formerly Seidelstraße) station\n\nNote: The title names the street \"Seidelstraße\", not a station. The U-Bahn station at this crossing was called \"Seidelstraße\" in 1957 and is listed today as \"Otisstraße\" (former name Seidelstraße, U6), so the plan is assigned to Otisstraße."
+    },
+    {
+      "document": "plans2/test19.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 35,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 10,
+        "size": [
+          6720,
+          4768
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 83-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – a generic steel-reinforcement (Stahlauszug) detail drawing of a support wall (Stützmauer) with no location-specific features\n**Recognized text:** \"Stahlauszug St I\" (top right table); \"Schnitt A-B\", \"Schnitt C-D\", \"Befestigung 25 cm\" (drawing area); \"Er... der STUTZMAUER / Berliner Seite\" (title block, bottom right); \"C 519-029 / C 519.37\" (sheet numbers, top and bottom left); \"Original\" stamp (right)\n**Plan date:** not found (only a partially legible date in the \"Bestandszeichnung\" stamp, illegible)\n**Title:** \"Er... der STUTZMAUER, Berliner Seite\" (title block, bottom right)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – generic structural detail drawing with no street, address or station name to tie it to a location"
+    },
+    {
+      "document": "plans2/test20.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 35,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 10,
+        "size": [
+          6720,
+          4768
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 83-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – a generic structural detail drawing (steel reinforcement / support-wall sections, \"Erhöhung der Stützmauer\") with no location or station indicated\n**Recognized text:** Title block (bottom right): \"Erhöhung der Stützmauer / Berliner Seite\", \"Bestandsplan: Nr. C 35.29\", \"Wayss & Freytag A.-G. Niederlassung Berlin\", \"Der Senator für Bau- u. Wohnungswesen\"; drawing area: \"Schnitt A-B\", \"Schnitt C-D\", \"Stahlauszug St I\", \"Bestandszeichnung Original\"; sheet numbers \"C 519-029\", \"C 519.37\"\n**Plan date:** 1957 (handwritten \"Berlin, den ... 1957\" near the approval stamp, right side)\n**Title:** \"Erhöhung der Stützmauer Berliner Seite\" (title block, bottom right)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan is a generic structural detail with no street, address or station name to tie it to a location"
+    },
+    {
+      "document": "plans2/test21.png",
+      "station": "Deutsche Oper",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 7,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 6,
+        "size": [
+          9354,
+          6112
+        ],
+        "title_block": true,
+        "title_block_box": "x 91-100 %, y 71-82 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a site/laying plan (Lageplan) for the U-Bahn at the Bismarckstraße / Wilmersdorfer Straße intersection (entrance structures, footpath direction, existing buildings)\n**Recognized text:** Title block (top-left, rotated): \"EINBAU EINES REGENWASSERZUEGES IM U-BHF. BISMARCKSTRASSE\"; drawing area: \"BISMARCKSTRASSE\", \"WILMERSDORFER STRASSE\", \"RICHTUNG FUSSGÄNGERZONE\", \"VORHANDENE BEBAUUNG\", \"AUFZUG 2/3\"; margin note: \"Die Übereinstimmung mit der Ausführung bescheinigt: Berlin 33. den 10.10.1990\"\n**Plan date:** 10.10.1990 (margin note, top-left area)\n**Title:** \"EINBAU EINES REGENWASSERZUEGES IM U-BHF. BISMARCKSTRASSE\" (title block, top-left)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Deutsche Oper\n**Confidence:** high – title names U-Bhf. Bismarckstraße, which is the former name of Deutsche Oper (opened 1906, renamed 1929)"
+    },
+    {
+      "document": "plans2/test22.png",
+      "station": "Deutsche Oper",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 49,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 10,
+        "size": [
+          9354,
+          6112
+        ],
+        "title_block": true,
+        "title_block_box": "x 73-100 %, y 76-94 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a site/plan drawing for the installation of a 5-person passenger lift (Einfassung eines Personenaufzuges) at a U-Bahn station, with surrounding street layout and existing buildings.\n**Recognized text:** Title block (bottom right): \"U-BF BISMARCKSTRASSE\", \"BAUHERRR: BERLINER VERKEHRS-BETRIEBE (BVB)\", \"ARCHITEKT: Dipl.-Ing. W. P. Borchardt, Lindenallee 28, Berlin 19\"; drawing area: \"VORHANDENE BEBAUUNG\", \"WILHELMSTRASSE\", \"ENTRAUCHUNGSGITTE\", \"WASSERABLAUF\", \"KIOSK\"; margin note \"Berlin 33, den 10.10.1990\".\n**Plan date:** 10.10.1990 (margin note); revision table shows 1969 and 08.11.75.\n**Title:** \"U-BF BISMARCKSTRASSE\" (in the title block, bottom right).\n**Match type:** direct (station named in the title).\n**Nearby stations:** n/a\n**Station:** Deutsche Oper\n**Confidence:** high – the title names the Bismarckstraße station, which per the list is the former name of Deutsche Oper (renamed 1934/1961), so the current name applies."
+    },
+    {
+      "document": "plans2/test23.png",
+      "station": "Bismarckstraße [II] [unten]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 27,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 4,
+        "size": [
+          9354,
+          6112
+        ],
+        "title_block": true,
+        "title_block_box": "x 73-100 %, y 79-97 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – Lageplan (location plan) for the installation of a passenger lift (EINBAU EINES PERSONENAUFZUGES) at a U-Bahn station, showing the street intersection and existing buildings.\n**Recognized text:** Title block (bottom right): \"EINBAU EINES PERSONENAUFZUGES IM U-BHF BISMARCKSTRASSE\", \"LAGEPLAN\", \"BESTANDSAUFNAHME\", \"MASZSTAB 1:100\", Blatt-Nr. \"BM LA_A\". Drawing area: \"WILMERSDORFER STRASSE\", \"BISMARCKSTRASSE\", \"VORHANDENE BEBAUUNG\", \"AUFZUG 2\", \"AUFZUG 3\".\n**Plan date:** 08.11.1989 (Bearbeitet/Geprüft in title block); confirmation note dated 10.10.1990.\n**Title:** \"EINBAU EINES PERSONENAUFZUGES IM U-BHF BISMARCKSTRASSE – LAGEPLAN\" (title block, bottom right).\n**Match type:** direct (station named in the title).\n**Nearby stations:** n/a\n**Station:** Bismarckstraße [II] [unten]\n**Confidence:** high – the title block explicitly names \"U-BHF BISMARCKSTRASSE\" at the Wilmersdorfer Straße intersection, which is the U7 (lower) Bismarckstraße [II] platform."
+    },
+    {
+      "document": "plans2/test24.png",
+      "station": "Bismarckstraße [II] [unten]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 0,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 12,
+        "size": [
+          9354,
+          6112
+        ],
+        "title_block": true,
+        "title_block_box": "x 2-26 %, y 45-67 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – Lageplan (site plan) for the construction of a passenger lift (Personenaufzug) at a U-Bahn station\n**Recognized text:** Title block (bottom right): \"EINBAU EINES PERSONENAUFZUGES IM U-BHF BISMARCKSTRASSE\", \"LAGEPLAN\", \"BESTANDSAUFNAHME\", \"MASZSTAB 1:100\", \"BEARBEITET 08.11.1989 RÖPKE\", \"GEPRÜFT 08.11.89 RADICS\", \"Abt. Tief\", \"BVG\"; drawing area: \"WILMERSDORFER STRASSE\", \"BISMARCKSTRASSE\", \"VORHANDENE BEBAUUNG\", \"AUFZUG 1\", \"AUFZUG 3\", \"ENTRAUCHUNGSGITTER 39/61\", \"IMBISS\", \"BEWAG\", \"FUSSGÄNGERÜBERWEG\", \"FUSSGÄNGERZONEN\", \"WASSERABL. 30/30\", \"RUFSÄULE\", \"EH. KIOSK GELÄND.\"\n**Plan date:** 08.11.1989 (Bearbeitet/Geprüft in title block); as-built confirmation dated 10.10.1990\n**Title:** \"EINBAU EINES PERSONENAUFZUGES IM U-BHF BISMARCKSTRASSE\" / \"LAGEPLAN\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Bismarckstraße [II] [unten]\n**Confidence:** high – title block explicitly names \"U-BHF BISMARCKSTRASSE\" and the 1989/1990 date matches the U7 platform (opened 28.04.1978) at the Wilmersdorfer Straße / Bismarckstraße intersection\n\n**Note on station selection:** The plan is dated 1989/1990. At that time the U2 station at this location was named \"Deutsche Oper (Bismarckstraße)\" (renamed from \"Städtische Oper\" in 1961), while the U7 station (opened 28.04.1978) was named \"Bismarckstraße [II] [unten]\". The title \"U-BHF BISMARCKSTRASSE\" therefore refers to the U7 station, which is the only station carrying the name \"Bismarckstraße\" at the time of the plan. The U2 station's current name is \"Deutsche Oper\"."
+    },
+    {
+      "document": "plans2/test25.png",
+      "station": "Bismarckstraße [II] [unten]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 23,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 4,
+        "size": [
+          9354,
+          6112
+        ],
+        "title_block": true,
+        "title_block_box": "x 73-100 %, y 79-97 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – site plan (Lageplan) for the installation of a passenger lift at a U-Bahn station\n**Recognized text:** Title block (bottom right): \"EINBAU EINES PERSONENAUFZUGES IM U-BHF BISMARCKSTRASSE\", \"LAGEPLAN\", \"BESTANDSAUFNAHME\", \"Abt. Tief\", \"BVG\"; drawing area: \"WILMERSDORFER STRASSE\", \"BISMARCKSTRASSE\", \"VORHANDENE BEBAUUNG\", \"AUFZUG 2\", \"AUFZUG 3\"; margin note: \"Berlin 33, den 10.10.1990\"\n**Plan date:** 10.10.1990 (margin note); revision table dates 08.11.1989 and 3.9.90\n**Title:** \"EINBAU EINES PERSONENAUFZUGES IM U-BHF BISMARCKSTRASSE\" / \"LAGEPLAN\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Bismarckstraße [II] [unten]\n**Confidence:** high – title block explicitly names U-Bhf Bismarckstraße; the 1990 date and the Wilmersdorfer Straße/Bismarckstraße intersection (U7) point to the Bismarckstraße [II] [unten] platform (U7)\n\n**Note on the match:** The title names \"U-Bhf Bismarckstraße\". The plan shows the intersection of Wilmersdorfer Straße and Bismarckstraße, which is the location of the Bismarckstraße [II] station (opened 28.04.1978, U2 above / U7 below). The older Bismarckstraße [I] station (now Deutsche Oper) is at a different location (Bismarckstraße near the opera, not at the Wilmersdorfer Straße intersection). The 1990 date and the street intersection confirm Bismarckstraße [II]. The lift installation (Personenaufzug) at this intersection corresponds to the U7 lower platform, hence Bismarckstraße [II] [unten]."
+    },
+    {
+      "document": "plans2/test26.tiff",
+      "station": "Neu-Westend",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 55,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 4,
+        "size": [
+          7901,
+          3552
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-99 %, y 69-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a U-Bahn station plan (platforms, tracks, exit \"A 55/ Ausgang\")\n**Recognized text:** Title block (bottom right): \"U-Bahn ... (AI) / Bhf. Neu-Westend (Nd)\"; overview map: \"Bhf. Neu-Westend (Nd/1149)\"; legend and notes in margins\n**Plan date:** \"Berlin, im Juni 1987 / 90\" in the title block\n**Title:** \"U-Bahn ... Bhf. Neu-Westend (Nd)\" in the title block\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Neu-Westend\n**Confidence:** high – station name \"Neu-Westend (Nd)\" explicitly in the title block and overview map"
+    },
+    {
+      "document": "plans2/test27.tiff",
+      "station": "Neu-Westend",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 43,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 3,
+        "size": [
+          7901,
+          3552
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-99 %, y 69-90 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – plan of the U-Bahn station Neu-Westend (track/tunnel, intermediate and ground level, exit Nd I)\n**Recognized text:** Title block (bottom right): \"U-Bahn Linie U1 (A1) / Bhf. Neu-Westend (Ne)\"; \"A 55 / Ausgang Nd I / Grundriß Gleis-/Tunnel-, Zwischen-, Geländeebene\"; overview map labels \"Bhf. Neu-Westend (Nd/1149)\"; drawing area: \"Olympische Straße\", \"6 KV-Trafo\", \"Pumpenraum\", \"Kassettenraum\"\n**Plan date:** 1987/90 (stamp \"Berlin, im Juni 1987/90\" in title block)\n**Title:** \"U-Bahn Linie U1 (A1) Bhf. Neu-Westend (Ne)\" in the title block\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Neu-Westend\n**Confidence:** high – station name \"Bhf. Neu-Westend\" explicitly in the title block"
+    },
+    {
+      "document": "plans2/test28.tiff",
+      "station": "Neu-Westend",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 20,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 3,
+        "size": [
+          7901,
+          3552
+        ],
+        "title_block": true,
+        "title_block_box": "x 61-86 %, y 70-88 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a plan of a U-Bahn station building (platform, technical rooms, entrance) with a location overview map.\n**Recognized text:** \"Olympische Straße\" (drawing area, top); \"BVG-Information\", \"WC\", \"Kassettenraum\", \"Pumpenraum\", \"Ba-Raum\" (drawing area); \"Bhf. Neu-Westend (Nd/1149)\" (overview map, bottom right); \"Olympische Str.\", \"Rüsterallee\", \"Platanenallee\", \"Westend-\" (overview map); \"Bau 14\" (title block).\n**Plan date:** not found (date fields in title block are blank).\n**Title:** \"Bau 14\" (title block, bottom right); the overview map labels the site \"Bhf. Neu-Westend\".\n**Match type:** direct (station named in the plan's location map).\n**Nearby stations:** n/a\n**Station:** Neu-Westend\n**Confidence:** high – the plan's own overview map explicitly names the station \"Bhf. Neu-Westend\"."
+    },
+    {
+      "document": "plans2/test29.tiff",
+      "station": "Neu-Westend",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 43,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 1,
+        "size": [
+          7901,
+          3552
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-99 %, y 69-90 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – plan of the U-Bahn station track/tunnel area and the north exit (Ausgang Nd I) with technical rooms\n**Recognized text:** Title block (bottom right): \"U-Bahn L... Neu-Westend\", \"A 55 / Ausgang Nd I\", \"Grundriß Gleis-/Tunnel-, Zwischen-, Geländeebene\", \"Bestand\"; overview map in title block: \"Bhf. Neu-Westend (Nd / 1149)\", \"Olympische Str.\", \"Marathonallee\", \"Rusternallee\", \"Platanenallee\"; drawing area: \"Olympische Straße\", \"Preußenallee\", \"Ausgang Nd I Bahnsteig\", \"Pumpenraum\", \"Kassettenraum\"\n**Plan date:** 2.3.4.27 (23.04.1927), in the lower-left margin note \"s. Skizze Einmessung der Achsen 2.3.4.27\"\n**Title:** \"U-Bahn Neu-Westend – A 55 / Ausgang Nd I, Grundriß Gleis-/Tunnel-, Zwischen-, Geländeebene\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Neu-Westend\n**Confidence:** high – station name \"Neu-Westend\" appears in the title block and overview map"
+    },
+    {
+      "document": "plans2/test30.tiff",
+      "station": "Neu-Westend",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 43,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 2,
+        "size": [
+          7901,
+          3552
+        ],
+        "title_block": true,
+        "title_block_box": "x 71-90 %, y 70-94 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a plan of a U-Bahn station building (platform, ticket hall, technical rooms) with its surroundings\n**Recognized text:** Title block (top-left, sheet rotated 180°): \"U-Bahn Linie U1 (A1) Bf. Neu-Westend (Nd)\"; \"WISSERODT Ingenieurgessellschaft, Berlin, im Juni 1987/90\"; drawing no. \"4110114971200000020000\"; drawing area: \"Prenzlauer Allee\", \"Olympische Straße\", \"Schönhauser Allee\", \"Kassentraum\", \"Pumpenraum\", \"Ba-Raum\", \"Vorraum/Müllraum\"\n**Plan date:** June 1987/90 (date field in title block)\n**Title:** \"U-Bahn Linie U1 (A1) Bf. Neu-Westend (Nd)\" in the title block\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Neu-Westend\n**Confidence:** high – station name \"Neu-Westend (Nd)\" explicitly given in the title block, matching the list entry (U2, opened 20.05.1922)"
+    },
+    {
+      "document": "plans2/test31.png",
+      "station": "Spittelmarkt",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 22,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 4,
+        "size": [
+          15000,
+          4344
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 67-98 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – Sanitary installation (Grundriss) for the side rooms / exit \"Spittelmarkt\" of a U-Bahn station (reconstruction)\n**Recognized text:** Title block (bottom right): \"VEB BAUHOF BAD DOBERAN\", \"Rekonstruktion U-Bahnhof ...\", \"Nebenräume - Ausgang Spittelmarkt\", \"TP: Sanitäre Installation\", \"Grundriss\", \"A318-005\"; drawing area: \"Ausgang Spittelmarkt\", \"Gleis 1\", \"Gleis 2\"; notes: \"Bemerkung\", \"Abluftrohre NW 60 mit Haube\"\n**Plan date:** 25.6.86 (Zeichner), 03.07.86 (Projektant), 04.07.86 (Gepr.) in the title block\n**Title:** \"Rekonstruktion U-Bahnhof ... / Nebenräume - Ausgang Spittelmarkt / TP: Sanitäre Installation / Grundriss\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Spittelmarkt\n**Confidence:** high – the title block explicitly names the station exit \"Spittelmarkt\"\n\nNote: \"Spittelmarkt\" is not present as an entry in the provided station list, so although the plan clearly belongs to the Spittelmarkt station, it cannot be matched to a listed entry."
+    },
+    {
+      "document": "plans2/test32.png",
+      "station": "Spittelmarkt",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 25,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 4,
+        "size": [
+          15000,
+          4344
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 67-98 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – sanitary installation floor plan (Grundriss) for the side rooms and the \"Spittelmarkt\" exit of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"VEB BAUHOF BAD DOBERAN\", \"Rekonstruktion U-Bhf. 'Spittelmarkt'\", \"Nebenräume - Ausgang Spittelmarkt\", \"TP: Sanitäre Installation\", \"Grundriss\", \"A318-005\"; drawing area: \"Ausgang Spittelmarkt\", \"Gleis 1\", \"Gleis 2\"\n**Plan date:** 25.6.86 (Zeichner date in title block); project dates 03.07.86 / 04.07.86\n**Title:** Rekonstruktion U-Bhf. \"Spittelmarkt\" – Nebenräume - Ausgang Spittelmarkt (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Spittelmarkt\n**Confidence:** high – the station name \"Spittelmarkt\" is explicitly named in the title block as the U-Bhf. being reconstructed"
+    },
+    {
+      "document": "plans2/test33.png",
+      "station": "Spittelmarkt",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 27,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 4,
+        "size": [
+          15000,
+          4344
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 71-95 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – Sanitary installation (Grundriss) plan for the side rooms and the \"Spittelmarkt\" exit of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"Rekonstruktion U-Bhf. 'Spittelmarkt'\", \"Nebenräume - Ausgang Spittelmarkt\", \"TP: Sanitäre Installation\", \"Grundriss\", \"VEB BAUHOF BAD DOBERAN\", \"Reg.-Nr. C1-1-1-1-061-74\", \"A318-005\"; drawing area: \"Ausgang Spittelmarkt\", \"Gleis 1\", \"Gleis 2\", \"Anschluss alt Bstg.-Nr. 52\"\n**Plan date:** 25.6.86 (Zeichner date in title block); project dates 03.07.86 / 04.07.86\n**Title:** \"Rekonstruktion U-Bhf. 'Spittelmarkt' – Nebenräume - Ausgang Spittelmarkt – TP: Sanitäre Installation – Grundriss\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Spittelmarkt\n**Confidence:** high – the station name \"Spittelmarkt\" is explicitly named in the title block and drawing area"
+    },
+    {
+      "document": "plans2/test34.png",
+      "station": "Spittelmarkt",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 22,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 4,
+        "size": [
+          15000,
+          4344
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 67-98 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – Sanitary installation (floor plan) for the side rooms / exit of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"VEB BAUHOF BAD DOBERAN\", \"Rekonstruktion U-Bhf. 'Spittelmarkt'\", \"Nebenräume - Ausgang Spittelmarkt\", \"TP: Sanitäre Installation\", \"Grundriss\", \"S 1\", \"A318-005\"; drawing area: \"Ausgang Spittelmarkt\", \"Gleis 1\", \"Gleis 2\", \"Abluftrohre NW 60 mit Haube\"; notes: \"Bemerkung...\"\n**Plan date:** 25.6.86 (drawer date in title block); project dates 03.07.86 / 04.07.86\n**Title:** \"Rekonstruktion U-Bhf. 'Spittelmarkt' – Nebenräume - Ausgang Spittelmarkt – TP: Sanitäre Installation – Grundriss\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Spittelmarkt\n**Confidence:** high – station name \"Spittelmarkt\" is explicitly stated in the title block\n\n"
+    },
+    {
+      "document": "plans2/test35.png",
+      "station": "Spittelmarkt",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 6,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 5,
+        "size": [
+          15000,
+          4344
+        ],
+        "title_block": true,
+        "title_block_box": "x 49-81 %, y 67-94 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – Sanitary installation (TP) floor plan for the side rooms / exit of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"Rekonstruktion U-Bhf. 'Spittelmarkt' / Nebenräume - Ausgang Spittelmarkt / TP: Sanitäre Installation\"; drawing area: \"Ausgang Spittelmarkt\", \"Gleis 1\", \"Gleis 2\"; notes: \"Bemerkung\", \"Zeichenerklärung\"\n**Plan date:** 25.6.86 (Zeichner), 03.7.86 (Projektiert), 04.7.86 (Gepr.) in the title block\n**Title:** Rekonstruktion U-Bhf. \"Spittelmarkt\" – Nebenräume - Ausgang Spittelmarkt, TP: Sanitäre Installation (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Spittelmarkt\n**Confidence:** high – station name \"Spittelmarkt\" is explicitly in the title block and drawing area"
+    },
+    {
+      "document": "plans2/test36.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 77,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 1,
+        "size": [
+          12386,
+          6236
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-95 %, y 64-95 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – the plan depicts a \"Betriebs-Anstalt\" (workshop/operational facility) with a heating room, boiler, and ventilation, which is a standalone facility not part of a station or the line.\n**Recognized text:** \"B 115-035\" (sheet number, top corners); \"U-Bw. T2861\" (bottom left); \"NEUBAU ... GRUNDRIS\" (New construction ... floor plan, right margin); \"DIE INNERE AUSSTATTUNG DER BETRIEBS-ANSTALT...\" (The interior equipment of the operational facility..., center); \"HEIZUNGS-ANLAGE\" (Heating plant, right side).\n**Plan date:** 1953 (date \"27. 11. 53\" found in a note in the bottom right area).\n**Title:** NEUBAU ... GRUNDRIS (New construction ... floor plan)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan explicitly identifies the subject as a \"Betriebs-Anstalt\" (workshop/facility), which is a standalone facility."
+    },
+    {
+      "document": "plans2/test37.png",
+      "station": "Theodor-Heuss-Platz",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 66,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 0,
+        "size": [
+          12386,
+          6236
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-95 %, y 67-95 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – floor plan of a U-Bahn station building (platforms, staircases, technical rooms)\n**Recognized text:** \"NEUBAU U-BAHNZUGANG THOMASCKEPLATZ GRUNDRISSE M 1:200\" (right margin, stamped); \"U-Bw 12/661\" (bottom left and bottom right); \"ANDERUNG DER TÜR ZUM P.P. RAUM 27.11.53\" (bottom right)\n**Plan date:** 1953 (note \"27.11.53\" in bottom right margin)\n**Title:** NEUBAU U-BAHNZUGANG THOMASCKEPLATZ (right margin stamp)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Theodor-Heuss-Platz\n**Confidence:** high – the title names the station (Thomas-Keck-Platz, the former name of Theodor-Heuss-Platz, which carried that name from 1933 to 1963, matching the 1953 plan date)"
+    },
+    {
+      "document": "plans2/test38.png",
+      "station": null,
+      "confidence": "low",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 63,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 0,
+        "size": [
+          12386,
+          6236
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-100 %, y 70-91 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a technical plan (longitudinal section / detail) of a U-Bahn line structure (tunnel/track section with dimensions and construction notes)\n**Recognized text:** \"U-Bahn 12861\" (bottom-left and bottom-right corners); \"B 115-035\" (top-left and top-right corners); \"M 1:20\" scale and \"GRUNDRISS\" (bottom-right); \"STÄHLE FALLOHR 90/140\" and \"MNSTSTEIN-PLATTE\" (drawing area, right side)\n**Plan date:** not found\n**Title:** not identifiable (no bordered title block; only sheet number \"B 115-035\" and project code \"U-Bahn 12861\")\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** low – no station name in the title and no street/address/location clue to tie the line section to a specific station"
+    },
+    {
+      "document": "plans2/test39.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 112,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 0,
+        "size": [
+          12386,
+          6236
+        ],
+        "title_block": true,
+        "title_block_box": "x 68-100 %, y 63-98 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – the plan depicts a standalone rectifier substation (Gleichrichterwerk)\n**Recognized text:** \"GLEICHRICHTERWERK\" (title block, bottom left); \"U-BM 15801\" and \"B 112-032\" (drawing numbers, bottom right); various technical notes and dimensions in the drawing area\n**Plan date:** not found\n**Title:** GLEICHRICHTERWERK (in the title block at the bottom left)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the title explicitly names a standalone rectifier substation, which is not part of any station"
+    },
+    {
+      "document": "plans2/test40.png",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 70,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 0,
+        "size": [
+          12386,
+          6236
+        ],
+        "title_block": true,
+        "title_block_box": "x 65-95 %, y 70-90 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – a standalone rectifier substation (Gleichrichterwerk)\n**Recognized text:** \"GLEICHTICHERWERK\" (rectifier substation) in the title block at the top-left; \"BAUW. 2 715 DER B.V.G.\" and \"U-BHN 12 881\" in the top-left margin; sheet number \"B135-035\" at the top-right; structural labels (Stütze, Treppen, etc.) in the drawing area\n**Plan date:** not found\n**Title:** \"GLEICHTICHERWERK\" (rectifier substation), in the title block at the top-left\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the plan explicitly depicts a standalone rectifier substation, which is not part of any station"
+    },
+    {
+      "document": "plans2/test41.tiff",
+      "station": "Alexanderplatz [Bstg.A]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 25,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          5040,
+          3906
+        ],
+        "title_block": true,
+        "title_block_box": "x 62-93 %, y 71-88 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a site/track plan of the U-Bahn line and station area around Alexanderplatz (with the station building shown on the square)\n**Recognized text:** \"Elektrische Hoch- u. Untergrundbahn\" (top left header); \"Blatt 9\" (top right); \"Frenzelplatz\" and \"Alexanderplatz\" (drawing area, central); \"ALEXANDERPLATZ\" (cut-out #7, #3); \"FRIEDRICHSTR.\", \"GRUNERSTR.\", \"DIREKSENSTR.\", \"KÖNIGSTR.\", \"PRENZLAUER STR.\", \"SCHÜTZENSTR.\", \"KEIBELSTR.\" (street labels); \"Maßstab 1:1000\" (bottom left)\n**Plan date:** not found\n**Title:** \"Elektrische Hoch- u. Untergrundbahn\" (top-left header); the sheet is a plan of the Alexanderplatz area\n**Match type:** direct (station named in the plan header/drawing area)\n**Nearby stations:** n/a\n**Station:** Alexanderplatz [Bstg.A]\n**Confidence:** high – the plan is centered on Alexanderplatz with the station structure shown on the square; the U2 (Bstg.A) is the line running through the square at this early date"
+    },
+    {
+      "document": "plans2/test42.tiff",
+      "station": "Alexanderplatz [Bstg.A]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 25,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          5040,
+          3906
+        ],
+        "title_block": true,
+        "title_block_box": "x 62-93 %, y 71-88 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a plan of the track separation/divergence and street layout at the Alexanderplatz area (line structure, not a standalone facility)\n**Recognized text:** \"Elektrische Hoch- u. Untergrundbahn\" (top left header); \"Trennanlage und Straßeneintheilung an der ... Alexanderplatz\" (central title); \"Blatt 9\" (top right); street labels \"ALEXANDERPLATZ\", \"ALEXANDERSTR.\", \"KÖNIGSBRÜCKE\", \"SCHÜTZENSTR.\", \"KEIBELSTR.\", \"FRIEDRICHSTR.\", \"GRUNERSTR.\", \"DIREKTENSTR.\", \"PRENZLAUERSTR.\", \"GRABENSTR.\"; \"Maßstab 1:1000\" (bottom left)\n**Plan date:** not found\n**Title:** \"Trennanlage und Straßeneintheilung an der ... Alexanderplatz\" (central drawing title)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Alexanderplatz [Bstg.A]\n**Confidence:** high – the title explicitly names Alexanderplatz, the central interchange shown in the plan"
+    },
+    {
+      "document": "plans2/test43.tiff",
+      "station": "Alexanderplatz [Bstg.A]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 25,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          5040,
+          3906
+        ],
+        "title_block": true,
+        "title_block_box": "x 62-93 %, y 71-88 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a site/track plan of the U-Bahn line and station area around Alexanderplatz (station building, tracks, and surrounding streets shown)\n**Recognized text:** \"Elektrische Hoch- u. Untergrundbahn\" (top left header); \"Blatt 9\" (top right); \"Alexanderplatz\" (top center, drawing area); \"Alexanderplatz\" (center, drawing area); \"Alexanderplatz\" (bottom, drawing area); street names \"Friedrichstr.\", \"Grunerstr.\", \"Dircksenstr.\", \"Königsbrücke\", \"Schützenstr.\", \"Keibelstr.\", \"Prenzlauer Str.\", \"Alexanderstr.\" (drawing area); \"Maßstab 1:1000\" (bottom left)\n**Plan date:** not found\n**Title:** \"Elektrische Hoch- u. Untergrundbahn\" (top left header); the sheet is a plan of the Alexanderplatz area\n**Match type:** direct (station named in the plan header/drawing area)\n**Nearby stations:** n/a\n**Station:** Alexanderplatz [Bstg.A]\n**Confidence:** high – the plan is centered on and repeatedly labels Alexanderplatz, the station location"
+    },
+    {
+      "document": "plans2/test44.tiff",
+      "station": "Alexanderplatz [Bstg.A]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 8,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          5040,
+          3906
+        ],
+        "title_block": true,
+        "title_block_box": "x 60-84 %, y 71-94 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a plan of the elevated (Hoch-) and underground (Untergrund-) track alignment and station structures at Alexanderplatz\n**Recognized text:** Title in Gothic script at bottom right: \"Berliner Hoch- u. Untergrundbahn. Streckenanlage und Oberenhaltung an der Haltestelle Alexanderplatz.\"; street labels in drawing area: \"ALEXANDERPLATZ\", \"KÖNIGSBRÜCKE\", \"KÖLN\", \"GONTARD\", \"FRIEDRICH STR.\", \"KEIBEL STR.\", \"SCHÜTZEN\", \"DIREKTEN\", \"MAUE STR.\"; scale \"Maßstab 1:1000\" top right; \"Blatt 9\" bottom left\n**Plan date:** not found\n**Title:** \"Berliner Hoch- u. Untergrundbahn. Streckenanlage und Oberenhaltung an der Haltestelle Alexanderplatz.\" (bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Alexanderplatz [Bstg.A]\n**Confidence:** high – the title explicitly names the Haltestelle Alexanderplatz, and the plan shows the elevated/underground interchange at that location"
+    },
+    {
+      "document": "plans2/test45.tiff",
+      "station": "Alexanderplatz [Bstg.A]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 0,
+        "corner_crop": true,
+        "found": 2,
+        "images": 4,
+        "regions": 2,
+        "size": [
+          5040,
+          3906
+        ],
+        "title_block": true,
+        "title_block_box": "x 75-81 %, y 98-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a plan of the staircase installation and street division at a U-Bahn station (Treppeanlage und Straßeneinteilung)\n**Recognized text:** \"Elektrische Hoch- u. Untergrundbahn\" (top left header); \"Treppeanlage und Straßeneinteilung an der Haltestelle Alexanderplatz\" (center of drawing area); \"Blatt 3\" (top right); scale \"Maßstab 1:1000\" (bottom left)\n**Plan date:** not found\n**Title:** \"Treppeanlage und Straßeneinteilung an der Haltestelle Alexanderplatz\" (center of the drawing area)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Alexanderplatz [Bstg.A]\n**Confidence:** high – the title explicitly names the station \"Haltestelle Alexanderplatz\""
+    },
+    {
+      "document": "plans2/test46.tiff",
+      "station": "Paradestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 10,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 3,
+        "size": [
+          9979,
+          7019
+        ],
+        "title_block": true,
+        "title_block_box": "x 42-83 %, y 54-78 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – floor plan of the storage/technical rooms (Vorräume) of a U-Bahn station entrance area, with stairs, a gatehouse (Pförtnerhaus) and a park area\n**Recognized text:** title block (bottom right): \"U.-Bhf. Paradestr. Vorräume im Bereich des Flughafengeländes\", \"UBw 13165\", \"Bauw. C 316\", \"Maßstab 1:100\", \"Berliner Verkehrs-Betriebe (BVG)\"; drawing area: \"Parkplatz\", \"Grünanlage\", \"Straße\", \"Pförtnerhaus\", \"Treppe\", \"Kammer\", \"Bordkante\"\n**Plan date:** 1984 (date \"84\" in the title block, bottom right)\n**Title:** \"U.-Bhf. Paradestr. Vorräume im Bereich des Flughafengeländes\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Paradestraße\n**Confidence:** high – the title block explicitly names the station \"U.-Bhf. Paradestr.\""
+    },
+    {
+      "document": "plans2/test47.tiff",
+      "station": "Paradestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 70,
+        "corner_crop": true,
+        "found": 0,
+        "images": 3,
+        "regions": 0,
+        "size": [
+          9979,
+          7019
+        ],
+        "title_block": true,
+        "title_block_box": "x 72-100 %, y 78-96 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – floor plan of the storage/technical rooms (Vorräume) of a U-Bahn station building\n**Recognized text:** Title block (bottom right): \"U.-Bhf. Paradestr. Vorräume im Bereich des Flughafengeländes\", \"UBw 13165\", \"Bauw. C 316\", \"Maßstab 1:100\", \"Berliner Verkehrs-Betriebe (BVG)\"; drawing area: \"Parkplatz\", \"Grünanlage\", \"Straße\", \"Pfoerterhaus\", \"Burgstraße\", \"Treppe\", \"Schnitt a-b\"; date field \"gezeichnet 9.2.61\"\n**Plan date:** 9.2.61 (1961), in the title block revision table\n**Title:** \"U.-Bhf. Paradestr. Vorräume im Bereich des Flughafengeländes\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Paradestraße\n**Confidence:** high – station \"Paradestr.\" (Paradestraße) is named in the title block, consistent with the 1961 date (station opened 1927 as Flughafen, renamed Paradestraße 1937)"
+    },
+    {
+      "document": "plans2/test48.tiff",
+      "station": "Paradestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 59,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 2,
+        "size": [
+          9979,
+          7019
+        ],
+        "title_block": true,
+        "title_block_box": "x 73-100 %, y 71-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – floor plan of the U-Bahn station forecourt/entrance area (Vorräume) with stairs, a park area and a guard house\n**Recognized text:** Title block (bottom right): \"U.-Bhf. Paradestr. Vorräume im Bereich des Flughafengeländes\", \"UBw 13165\", \"Bauw. C 316\", \"Maßstab 1:100\", \"Berliner Verkehrs-Betriebe (BVG)\"; drawing area: \"Parkplatz\", \"Grünanlage\", \"Pförtnerhaus\", \"Straße\", \"Bordsteine\", \"Treppe\", \"Kammer\", \"Schnitt a-b\", \"Schnitt c-d\"\n**Plan date:** 1961 (title block: \"bearbeitet 9.21.61\", \"gezeichnet 61\")\n**Title:** \"U.-Bhf. Paradestr. Vorräume im Bereich des Flughafengeländes\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Paradestraße\n**Confidence:** high – the title block explicitly names the station \"U.-Bhf. Paradestr.\""
+    },
+    {
+      "document": "plans2/test49.tiff",
+      "station": "Paradestraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 74,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 3,
+        "size": [
+          9979,
+          7019
+        ],
+        "title_block": true,
+        "title_block_box": "x 63-100 %, y 53-91 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a floor plan of a U-Bahn station building (entrance hall, stairs, platform area) with a gatehouse (Pförtnerhaus) and surrounding street/park layout.\n**Recognized text:** Title block (bottom right): \"U-Bhf. Paradestr. / Vorhalle / im Bereich des / Flughafengeländes\", \"Ubw 13165\", \"Bauw. C 316\", \"Maßstab 1:100\", \"Berliner Verkehrs-Betriebe (BVG)\"; drawing area: \"Parkplatz\", \"Grünanlage\", \"Pförtnerhaus\", \"Straße\", \"Bordsteine\", \"Therpenstraße\", \"Kammer\", \"Treppe\", \"Schnitt a-b\", \"Schnitt c-d\".\n**Plan date:** 9.2.61 (in the \"bearbeitet\" field of the title block).\n**Title:** \"U-Bhf. Paradestr. Vorhalle im Bereich des Flughafengeländes\" (in the title block, bottom right).\n**Match type:** direct (station named in the title).\n**Nearby stations:** n/a\n**Station:** Paradestraße\n**Confidence:** high – the title block explicitly names the station \"U-Bhf. Paradestr.\" (Paradestraße, U6, opened 10.09.1927 as Flughafen)."
+    },
+    {
+      "document": "plans2/test50.tiff",
+      "station": null,
+      "confidence": "low",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 71,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 2,
+        "size": [
+          9979,
+          7019
+        ],
+        "title_block": true,
+        "title_block_box": "x 73-100 %, y 71-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – floor plan of the storage rooms (Vorräume) of a U-Bahn station in the airport area\n**Recognized text:** Title block (bottom right): \"U.-Bhf. [redacted] Vorräume im Bereich des Flughafengeländes\", \"UBw 13165\", \"Bauw. C 316\", \"Maßstab 1:100\", \"Berlin Verkehrs-Betriebe (BVG)\"; drawing area: \"Parkplatz\", \"Grünanlage\", \"Pförtnerhaus\", \"Straße\", \"Treppe\", \"Kammer\", \"Treppe\", \"Bordsteine\", \"Mietfläche für Behala\"\n**Plan date:** 9.2.61 (in the \"bearbeitet\" field of the title block)\n**Title:** \"U.-Bhf. [redacted] Vorräume im Bereich des Flughafengeländes\" (in the title block, bottom right)\n**Match type:** direct (station named in the title, though the name is redacted; location \"Flughafengeländes\" points to the airport area)\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** low – the station name in the title is redacted, and the only location clue (\"Flughafengeländes\") is ambiguous between the former airport stations (Flughafen I/II, now Paradestraße / Platz der Luftbrücke) and the current airport area, so no specific station can be identified with plausibility."
+    },
+    {
+      "document": "plans2/U_3_POP_B2-212_a.tif",
+      "station": "Potsdamer Platz [II]",
+      "confidence": "low",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 85,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 2,
+        "size": [
+          9546,
+          6717
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-98 %, y 77-100 %"
+      },
+      "corrections": [
+        {
+          "from": "Potsdamer Platz [II]",
+          "note": "line check: the plan mentions U3, but Potsdamer Platz [II] is served by U2 according to the station list",
+          "to": "Potsdamer Platz [II]",
+          "type": "line-flag"
+        }
+      ],
+      "answer": "**Belongs to a station:** yes – S-Bahn crossing with stair installations (east side), ground floor plan of the new U3 level, at the Potsdamer Platz area\n**Recognized text:** Title block (bottom right): \"Verkehrsanlagen im Zentralen Bereich U - Bahnlinie U3\", \"S-Bahnquerung mit Treppenanlagen Ostseite Grundrissplan Neubau U3-Ebene\", \"Zeichnung Nr. U3-POP-B2-212a\"; overview map in title block shows \"Leipziger Platz\" and \"Sony\"; drawing area labels \"Aschinger Grundstück\", \"Kabelkanal\", \"Bahnsteigkante\", \"Treppen\"\n**Plan date:** 15.5.95 (revision table, top of title block); 27.2.95 (signature date); 4.4.1995 (approval date)\n**Title:** S-Bahnquerung mit Treppenanlagen Ostseite Grundrissplan Neubau U3-Ebene (in the title block, bottom right)\n**Match type:** nearby (derived from street names and the overview map)\n**Nearby stations:** Potsdamer Platz [II] (U2, ~100 m, the station at the S-Bahn crossing/Leipziger Platz); rejected: Stadtmitte [unten] (U6, ~300 m, further south on Leipziger Straße)\n**Station:** Potsdamer Platz [II]\n**Confidence:** low – line check: the plan mentions U3, but Potsdamer Platz [II] is served by U2 according to the station list\n**Post-check:** line check: the plan mentions U3, but Potsdamer Platz [II] is served by U2 according to the station list\n"
+    },
+    {
+      "document": "plans2/UBwE374_Bau eines Lüftungsschachtes Baugrubenaussteifung.tif",
+      "station": "Alexanderplatz [Bstg.E]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 119,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 1,
+        "size": [
+          11265,
+          8397
+        ],
+        "title_block": true,
+        "title_block_box": "x 72-100 %, y 80-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – excavation-pit shoring (Baugrubenaussteifung) for a ventilation shaft of the U-Bahn Line E\n**Recognized text:** Title block (bottom right): \"Verkehrslösung Alexanderplatz / Bau eines Lüftungsschachtes / U-Bahn Linie E / Baugrubenaussteifung / Km 0,3+40,4 / UBw E/374\"; \"Teilvorhaben V, Teilprojekt B, Projektteil d\"; \"Im Auftrage des VEB Berlin-Projekt\"; \"BERLINER VERKEHRS-BETRIEBE (BVB)\"; \"GEPRÜFT ... Berlin, den 2.2.67\"; drawing labels \"Schnitt A-A\", \"Schnitt B-B\", \"Grundriss M 1:25\", \"Detail M 1:10\"\n**Plan date:** 2.2.67 (1967), in the GEPRÜFT stamp; revision table shows Dez 66\n**Title:** \"Verkehrslösung Alexanderplatz – Bau eines Lüftungsschachtes, U-Bahn Linie E, Baugrubenaussteifung\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Alexanderplatz [Bstg.E]\n**Confidence:** high – title block explicitly names Alexanderplatz and U-Bahn Line E (platform E)"
+    },
+    {
+      "document": "plans2/WP_Zo_SK-014_Fußstütze_ungültig.pdf",
+      "station": "Zoologischer Garten [oben]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 42,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          7087,
+          4923
+        ],
+        "title_block": true,
+        "title_block_box": "x 71-96 %, y 57-76 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – workshop drawing of foot supports (Fussstütze) for a temporary staircase (Behelfstreppe) at a station exit\n**Recognized text:** Title block (bottom right): \"Projekt: Behelfstreppe - Ausgang II/5, U2, U-Bhf. Zoologischer Garten\"; \"Bauteil: Fussstütze\"; \"Bahnhof: Zoologischer Garten\"; \"Linie: U2\"; \"Zg.-Nr. WP_Zo_SK-014\"; large overlay \"Zeichnung ungültig, Bauteil entfällt\"; Lageplan shows Hardenbergplatz, Hardenbergstr., Zoologischer Garten\n**Plan date:** 18.08.2013 (title block dates); gezeichnet 08.09.2013\n**Title:** Behelfstreppe - Ausgang II/5, U2, U-Bhf. Zoologischer Garten (Fussstütze) – in the title block\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Zoologischer Garten [oben]\n**Confidence:** high – station explicitly named in the title block (U2, Zoologischer Garten)"
+    }
+  ],
+  "meta": {
+    "id": 16,
+    "timestamp": "2026-10-01T09:17:20",
+    "model": "qwen3.8-27b",
+    "max_image_px": 3200,
+    "thinking": false,
+    "station_list": true,
+    "seconds": 736,
+    "stopped": false,
+    "plans_in_folder": 92,
+    "time_limit": 30,
+    "preprocessing": true,
+    "skipped": 0,
+    "ground_truth": "groundtruthtest.csv",
+    "ground_truth_rows": 92
+  },
+  "saved_as": "reports/report_0016_2026-10-01_09-17-20.json"
+}

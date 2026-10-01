@@ -1,0 +1,8 @@
+flask
+openai
+pillow
+pymupdf
+opencv-python-headless
+numpy
+requests
+beautifulsoup4
