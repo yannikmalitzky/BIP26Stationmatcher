@@ -1,15 +1,22 @@
 """Lokale Web-Oberfläche für test_prototype.py.
 
 Benötigt: pip install flask pillow pymupdf openai opencv-python-headless numpy
-Start:    python webapp.py   ->   http://127.0.0.1:5000
+Start:    python webapp.py   ->   http://127.0.0.1:5050
 """
 import csv
+import hashlib
 import io
 import json
 import mimetypes
+import os
 import re
+import shutil
+import subprocess
+import sys
+import tempfile
 import threading
 import time
+from collections import OrderedDict
 from datetime import datetime
 from pathlib import Path
 
@@ -69,8 +76,8 @@ def _encode(img, max_px=None, fmt="PNG", info=None):
     return out.getvalue()
 
 
-def _to_web_image(data, filename, max_px=None, fmt="PNG", info=None):
-    """Gibt (bytes, mime) zurück; PDF (erste Seite) und TIFF werden zu PNG konvertiert."""
+def _to_web_image(data, filename, max_px=None, fmt="PNG", info=None, page=1):
+    """Gibt (bytes, mime) zurück; PDF (gewählte Seite) und TIFF werden zu PNG konvertiert."""
     mime = mimetypes.guess_type(filename)[0] or "image/jpeg"
     if mime in WEB_MIME_TYPES and not max_px:
         return data, mime
@@ -83,9 +90,15 @@ def _to_web_image(data, filename, max_px=None, fmt="PNG", info=None):
             raise RuntimeError("PDF support needs PyMuPDF: pip install pymupdf") from None
 
         with pymupdf.open(stream=data, filetype="pdf") as pdf:
-            img = Image.open(io.BytesIO(pdf[0].get_pixmap(dpi=150).tobytes("png")))
+            idx = min(max(int(page or 1), 1), pdf.page_count) - 1
+            img = Image.open(io.BytesIO(pdf[idx].get_pixmap(dpi=150).tobytes("png")))
             return _encode(img, max_px, fmt, info), MIME[fmt]
     return _encode(Image.open(io.BytesIO(data)), max_px, fmt, info), MIME[fmt]
+
+
+@app.get("/favicon.ico")
+def favicon():
+    return Response(status=204)
 
 
 @app.get("/netmap")
@@ -100,7 +113,7 @@ def preview():
     if not file or not file.filename:
         return jsonify(error="No file."), 400
     try:
-        png, _ = _to_web_image(file.read(), file.filename, max_px=2400)
+        png, _ = _to_web_image(file.read(), file.filename, max_px=2400, page=_page())
     except Exception as exc:
         return jsonify(error=f"{type(exc).__name__}: {exc}"), 500
     return Response(png, mimetype="image/png")
@@ -118,13 +131,64 @@ def _is_none_but_maybe_station(answer):
     return bool(re.match(r"(none|n/a|not\b|unknown|unclear|no station)", station)) and not belongs.startswith("no")
 
 
+_prep_cache = OrderedDict()  # (SHA-1 der Datei [+ "-pN"]) -> Prepared; die Oberfläche ruft /preprocess vor /analyze auf
+_prep_lock = threading.Lock()
+
+
+def _page():
+    """Seite eines PDFs aus dem Formular (ab 1) oder None."""
+    try:
+        return max(1, int(request.form.get("page") or 0)) or None
+    except ValueError:
+        return None
+
+
+def _prepared(data, filename, write_debug=True, page=None):
+    """Preprocessing mit kleinem Cache (Schlüssel: Inhalt der Datei, bei PDF-Seiten mit Seitenzahl);
+    das Debug-Overlay wird nur auf Wunsch geschrieben."""
+    digest = hashlib.sha1(data).hexdigest()
+    suffix = f"-p{page}" if page else ""
+    key = digest + suffix
+    with _prep_lock:
+        if key in _prep_cache:
+            _prep_cache.move_to_end(key)
+            return _prep_cache[key]
+    prep = preprocess.prepare(data, filename, page or 1)
+    prep.plan_id = _store_upload(data, filename, digest) + suffix
+    if write_debug:
+        DEBUG_DIR.mkdir(exist_ok=True)  # Overlay mit den gefundenen Regionen zum Prüfen
+        stem = re.sub(r"[^\w.\-]+", "_", filename) + (f"_p{page}" if page else "")
+        (DEBUG_DIR / (stem + ".jpg")).write_bytes(prep.overlay)
+    with _prep_lock:
+        _prep_cache[key] = prep
+        while len(_prep_cache) > 8:
+            _prep_cache.popitem(last=False)
+    return prep
+
+
+@app.post("/preprocess")
+def preprocess_preview():
+    """Liefert das Debug-Overlay (Plan mit eingezeichneten Textregionen) für die Vorschau während der Analyse."""
+    file = request.files.get("image")
+    if not file or not file.filename:
+        return jsonify(error="No file."), 400
+    try:
+        prep = _prepared(file.read(), file.filename, page=_page())
+    except Exception as exc:
+        return jsonify(error=f"{type(exc).__name__}: {exc}"), 500
+    resp = Response(prep.overlay, mimetype="image/jpeg")
+    resp.headers["X-Plan-Id"] = prep.plan_id
+    return resp
+
+
 class _PreprocessOff(Exception):
     """Marker: Preprocessing wurde in der Oberfläche abgeschaltet."""
 
 
 @app.post("/analyze")
 def analyze():
-    t0 = time.monotonic()
+    # Zeit, die die Oberfläche für das Preprocessing schon verbraucht hat, zählt zum Limit pro Plan
+    t0 = time.monotonic() - float(request.form.get("time_used") or 0)
     file = request.files.get("image")
     if not file or not file.filename:
         return jsonify(error="Please select an image."), 400
@@ -137,17 +201,16 @@ def analyze():
 
     try:
         data = file.read()
-        info = {}
+        page = _page()
+        info = {"plan_id": _store_upload(data, file.filename) + (f"-p{page}" if page else "")}
         try:
             if request.form.get("preprocess") == "0":
                 raise _PreprocessOff()
-            prep = preprocess.prepare(data, file.filename)  # Textregionen in voller Auflösung
+            prep = _prepared(data, file.filename, page=page)  # Textregionen in voller Auflösung (gecacht)
             images = prep.images
             info["preprocess"] = prep.info
-            DEBUG_DIR.mkdir(exist_ok=True)  # Overlay mit den gefundenen Regionen zum Prüfen
-            (DEBUG_DIR / (re.sub(r"[^\w.\-]+", "_", file.filename) + ".jpg")).write_bytes(prep.overlay)
         except Exception as exc:  # abgeschaltet oder fehlgeschlagen: ganzes Blatt wie bisher
-            image, mime = _to_web_image(data, file.filename, max_px=proto.MAX_IMAGE_PX, fmt="JPEG", info=info)
+            image, mime = _to_web_image(data, file.filename, max_px=proto.MAX_IMAGE_PX, fmt="JPEG", info=info, page=page)
             images = [{"caption": "Image 1: the whole sheet.", "data": image, "mime": mime}]
             info["preprocess"] = ({"disabled": True} if isinstance(exc, _PreprocessOff)
                                   else {"error": f"{type(exc).__name__}: {exc}"})
@@ -249,10 +312,247 @@ def report():
     return jsonify(rep)
 
 
+# --- Manuelle Prüfung: Originalpläne, Textregionen, Sortierung in Ordner ------------------------------
+# Hochgeladene Pläne werden im Temp-Ordner abgelegt, damit die Oberfläche sie nach dem Durchlauf in voller
+# Auflösung zeigen und am Ende in Stationsordner sortieren kann (der Browser kennt keine Dateipfade).
+WORK_DIR = Path(tempfile.gettempdir()) / "bip26_stationmatcher"
+PLAN_DIR, VIEW_DIR = WORK_DIR / "plans", WORK_DIR / "views"
+STATE_FILE = WORK_DIR / "state.json"
+DEFAULT_EXPORT_DIR = Path(__file__).parent / "sorted_plans"
+_gray_cache = OrderedDict()  # plan_id -> Graustufenbild in voller Auflösung (LRU, 2 Pläne)
+_gray_lock = threading.Lock()
+
+
+def _init_work_dir(max_age_days=3):
+    PLAN_DIR.mkdir(parents=True, exist_ok=True)
+    VIEW_DIR.mkdir(parents=True, exist_ok=True)
+    cutoff = time.time() - max_age_days * 86400
+    for d in (PLAN_DIR, VIEW_DIR):  # alte Arbeitskopien aufräumen
+        for f in d.iterdir():
+            if f.is_file() and f.stat().st_mtime < cutoff:
+                f.unlink(missing_ok=True)
+
+
+_init_work_dir()
+
+
+def _store_upload(data, filename, digest=None):
+    """Legt den hochgeladenen Plan ab und gibt seine plan_id (SHA-1-Anfang) zurück."""
+    pid = (digest or hashlib.sha1(data).hexdigest())[:20]
+    PLAN_DIR.mkdir(parents=True, exist_ok=True)
+    path = PLAN_DIR / (pid + Path(filename).suffix.lower())
+    if not path.exists():
+        path.write_bytes(data)
+    return pid
+
+
+def _split_pid(pid):
+    """plan_id = SHA-1-Anfang der Datei, bei PDF-Seiten mit Zusatz "-pN" -> (Datei-ID, Seite oder None)."""
+    m = re.fullmatch(r"([0-9a-f]{20})(?:-p(\d{1,4}))?", pid or "")
+    if not m:
+        raise FileNotFoundError("invalid plan id")
+    return m.group(1), int(m.group(2)) if m.group(2) else None
+
+
+def _plan_path(pid):
+    base, _ = _split_pid(pid)
+    found = sorted(PLAN_DIR.glob(base + ".*"))
+    if not found:
+        raise FileNotFoundError("plan not found (the work copy may have been cleaned up)")
+    return found[0]
+
+
+def _gray(pid):
+    with _gray_lock:
+        if pid in _gray_cache:
+            _gray_cache.move_to_end(pid)
+            return _gray_cache[pid]
+    path = _plan_path(pid)
+    img = preprocess.load_gray(path.read_bytes(), path.name, _split_pid(pid)[1] or 1)
+    with _gray_lock:
+        _gray_cache[pid] = img
+        while len(_gray_cache) > 2:
+            _gray_cache.popitem(last=False)
+    return img
+
+
+@app.get("/plan_image/<pid>")
+def plan_image(pid):
+    """Der ganze Plan in voller Auflösung (Graustufen-JPEG) für den Zoom-Betrachter."""
+    cached = VIEW_DIR / f"{pid}.jpg"
+    if not cached.exists():
+        _gray(pid).save(cached, format="JPEG", quality=88)
+    return send_file(cached, mimetype="image/jpeg", max_age=3600)
+
+
+@app.get("/plan_regions/<pid>")
+def plan_regions(pid):
+    """Größe des Bildes und die erkannten Textregionen (Schriftfeld, Ecke, Textblöcke)."""
+    base, page = _split_pid(pid)
+    suffix = f"-p{page}" if page else ""
+    with _prep_lock:
+        prep = next((v for k, v in _prep_cache.items() if k.startswith(base) and k.endswith(suffix)
+                     and (suffix or "-p" not in k)), None)
+    if prep is None:  # Cache verdrängt oder App neu gestartet: neu berechnen (ohne Debug-Overlay zu schreiben)
+        path = _plan_path(pid)
+        prep = _prepared(path.read_bytes(), path.name, write_debug=False, page=page)
+    return jsonify(size=list(prep.size), regions=prep.regions)
+
+
+@app.get("/plan_crop/<pid>")
+def plan_crop(pid):
+    """Ausschnitt in Originalauflösung (PNG); x0, y0, x1, y1 in Pixeln von /plan_image."""
+    img = _gray(pid)
+    x0, y0, x1, y1 = (int(request.args.get(k, 0)) for k in ("x0", "y0", "x1", "y1"))
+    x0, y0, x1, y1 = max(0, x0), max(0, y0), min(img.width, x1), min(img.height, y1)
+    if x1 - x0 < 1 or y1 - y0 < 1 or (x1 - x0) * (y1 - y0) > 80e6:
+        return jsonify(error="invalid crop"), 400
+    out = io.BytesIO()
+    img.crop((x0, y0, x1, y1)).save(out, format="PNG")
+    return Response(out.getvalue(), mimetype="image/png", headers={"Cache-Control": "max-age=3600"})
+
+
+@app.get("/state")
+def get_state():
+    if STATE_FILE.exists():
+        return Response(STATE_FILE.read_text(encoding="utf-8"), mimetype="application/json")
+    return jsonify(rows=[])
+
+
+@app.post("/state")
+def save_state():
+    """Merkt den Stand des Durchlaufs (Ergebnisse, Entscheidungen), damit ein Neuladen der Seite nichts verliert."""
+    STATE_FILE.parent.mkdir(parents=True, exist_ok=True)
+    STATE_FILE.write_text(json.dumps(request.get_json(force=True), ensure_ascii=False), encoding="utf-8")
+    return jsonify(ok=True)
+
+
+def _station_names():
+    """Anzeigenamen der heutigen Stationen (für die Eingabehilfe bei eigenen Namen)."""
+    if not proto.STATIONS_CSV.exists():
+        return []
+    names = evaluation.StationNames(proto.STATIONS_CSV)
+    with open(proto.STATIONS_CSV, newline="", encoding="utf-8") as f:
+        shown = {names.canonical(r["name"])[1] for r in csv.DictReader(f) if not r.get("heute") and r.get("name")}
+    return sorted(n for n in shown if n)
+
+
+_last_export = None
+
+
+@app.post("/reveal")
+def reveal_export():
+    """Öffnet den zuletzt erzeugten Zielordner im Dateimanager (nur dieser Ordner, nur lokal)."""
+    path = Path((request.get_json(force=True) or {}).get("path", ""))
+    if _last_export is None or path != _last_export or not path.is_dir():
+        return jsonify(error="Unknown folder."), 400
+    opener = ["open"] if sys.platform == "darwin" else ["xdg-open"] if sys.platform != "win32" else None
+    if opener:
+        subprocess.Popen(opener + [str(path)])
+    elif hasattr(os, "startfile"):
+        os.startfile(str(path))  # noqa: Windows
+    return jsonify(ok=True)
+
+
+def _folder_name(station):
+    name = re.sub(r'[\\/:*?"<>|\x00-\x1f]', "_", station or "").strip(" .")
+    return name[:80] or "_unassigned"
+
+
+def _facility_folder(facility):
+    """Ordnername für Pläne ohne Station: "_no_station/<Art der Anlage>"."""
+    text = re.sub(r"\s*\(.*?\)", "", facility or "").split("–")[0].split(" - ")[0].strip(" .")
+    text = text if text and text.lower() not in ("n/a", "none", "na") else "unclear location"
+    return "_no_station/" + _folder_name(text[:1].upper() + text[1:])
+
+
+@app.post("/pdf_pages")
+def pdf_pages():
+    """Seitenzahl eines PDFs (jede Seite wird als eigener Plan analysiert)."""
+    file = request.files.get("image")
+    if not file:
+        return jsonify(error="No file."), 400
+    import pymupdf
+
+    with pymupdf.open(stream=file.read(), filetype="pdf") as pdf:
+        return jsonify(pages=pdf.page_count)
+
+
+def _copy_plan(src, pid, target):
+    """Kopiert einen Plan; bei einer Seite eines mehrseitigen PDFs nur diese Seite als eigenes PDF."""
+    _, page = _split_pid(pid)
+    if page and src.suffix.lower() == ".pdf":
+        import pymupdf
+
+        with pymupdf.open(src) as pdf:
+            if pdf.page_count > 1:
+                with pymupdf.open() as out:
+                    out.insert_pdf(pdf, from_page=page - 1, to_page=page - 1)
+                    out.save(target)
+                return
+    shutil.copy2(src, target)
+
+
+@app.post("/export")
+def export_folders():
+    """Kopiert jeden Plan in den Ordner seiner Station(en) bzw. nach "_no_station/<Art>" und schreibt eine Übersicht."""
+    body = request.get_json(force=True)
+    out_dir = Path(os.path.expanduser(body.get("out_dir") or str(DEFAULT_EXPORT_DIR)))
+    if not out_dir.is_absolute():
+        return jsonify(error="Please enter an absolute folder path."), 400
+    names = evaluation.StationNames(proto.STATIONS_CSV) if proto.STATIONS_CSV.exists() else None
+    out_dir.mkdir(parents=True, exist_ok=True)
+    copied, missing, folders, overview = 0, [], set(), []
+    for item in body.get("items", []):
+        stations = item.get("stations")
+        if stations is None:  # ältere Form: ein Feld "station"
+            stations = [item.get("station")] if item.get("station") else []
+        targets = []
+        for st in stations:
+            st = (st or "").strip()
+            if st and names:
+                _, display = names.canonical(st)  # "Alexanderplatz [Bstg.A]" -> "Alexanderplatz", frühere Namen -> heute
+                st = display or st
+            if st and _folder_name(st) not in targets:
+                targets.append(_folder_name(st))
+        if not targets:
+            targets = [_facility_folder(item.get("facility"))]
+        try:
+            src = _plan_path(item.get("plan_id"))
+        except FileNotFoundError:
+            missing.append(item.get("name"))
+            continue
+        name = Path(item.get("name") or src.name).name
+        m = re.fullmatch(r"(.*)\.pdf \(page (\d+)\)", name, re.I)
+        if m:  # "plan.pdf (page 2)" -> "plan (page 2).pdf"
+            name = f"{m.group(1)} (page {m.group(2)}).pdf"
+        for folder in targets:
+            target_dir = out_dir / folder
+            target_dir.mkdir(parents=True, exist_ok=True)
+            target = target_dir / name
+            n = 2
+            while target.exists():  # gleichnamige Pläne aus verschiedenen Unterordnern nicht überschreiben
+                target = target_dir / f"{Path(name).stem} ({n}){Path(name).suffix}"
+                n += 1
+            _copy_plan(src, item.get("plan_id"), target)
+            copied += 1
+            folders.add(folder)
+            overview.append([item.get("name"), folder, item.get("source", ""), item.get("confidence", "")])
+    global _last_export
+    _last_export = out_dir
+    with open(out_dir / "_overview.csv", "w", newline="", encoding="utf-8-sig") as f:
+        w = csv.writer(f)
+        w.writerow(["document", "folder", "decided_by", "model_confidence"])
+        w.writerows(overview)
+    return jsonify(out_dir=str(out_dir), files=copied, folders=len(folders), missing=missing)
+
+
 @app.get("/")
 def index():
     return render_template_string(PAGE, model=proto.MODEL, gt_files=_gt_files(),
-                                  default_gt=DEFAULT_GT.name if DEFAULT_GT.exists() else "")
+                                  default_gt=DEFAULT_GT.name if DEFAULT_GT.exists() else "",
+                                  station_names=_station_names(),
+                                  default_export_dir=str(DEFAULT_EXPORT_DIR / datetime.now().strftime("%Y-%m-%d_%H-%M")))
 
 
 PAGE = """<!doctype html>
@@ -261,6 +561,7 @@ PAGE = """<!doctype html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>U-Bahn Plan Matcher</title>
+<link rel="stylesheet" href="/static/review.css">
 <style>
   :root {
     --bg: #eef1f5; --card: #fff; --text: #14213d; --muted: #66738a;
@@ -365,18 +666,20 @@ PAGE = """<!doctype html>
   pre { white-space: pre-wrap; font: .85rem/1.4 ui-monospace, Menlo, monospace; }
 
   .right { min-width: 0; }
-  .net { margin-top: 20px; padding: 10px 10px 8px; border-radius: 14px; background: #fff; border: 1px solid var(--line); box-shadow: 0 6px 20px rgba(6, 45, 94, .07); }
-  .net[hidden] { display: none; }
+  .net { margin-top: 0; padding: 10px 10px 8px; border-radius: 14px; background: #fff; border: 1px solid var(--line); box-shadow: 0 6px 20px rgba(6, 45, 94, .07); }
+  .net[hidden], #setup[hidden], #running[hidden] { display: none; }
+  #running .ghost { margin-top: 14px; }
+  #thumbnote { margin-top: 6px; }
   .net svg { display: block; width: 100%; height: auto; }
   .netcap { color: #14213d; text-align: center; font-size: .9rem; margin-top: 4px; }
   .netcap .chip { margin-right: 5px; }
   .picked { margin-top: 10px; color: var(--muted); font-size: .9rem; text-align: center; min-height: 1.3em; }
-  .now { margin-top: 18px; display: none; }
+  .now { margin-top: 16px; }
   .now.on { display: block; }
   .now .fn { font-weight: 700; word-break: break-all; }
   .bar2 { height: 8px; background: var(--soft); border: 1px solid var(--line); border-radius: 99px; overflow: hidden; margin: 8px 0; }
   .bar2 > div { height: 100%; width: 0; background: var(--yellow); transition: width .3s; }
-  #thumb { display: block; max-width: 100%; max-height: 260px; margin-top: 8px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
+  #thumb { display: block; max-width: 100%; max-height: 360px; margin-top: 8px; border: 1px solid var(--line); border-radius: 8px; background: #fff; }
   #thumb[hidden] { display: none; }
   .btns { display: flex; gap: 10px; }
   .btns button { flex: 1; }
@@ -387,24 +690,26 @@ PAGE = """<!doctype html>
   th { text-align: left; font-size: .72rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); padding: 0 8px 8px; }
   td { padding: 10px 8px; border-top: 1px solid var(--line); vertical-align: top; }
   td.doc { word-break: break-all; }
+  tr.clickable { cursor: pointer; }
+  tr.clickable:hover td { background: var(--soft); }
+  .chev { display: inline-block; width: 1.1em; color: var(--muted); }
+  tr.detail td { background: var(--soft); border-top: 0; padding: 12px 16px 14px 30px; cursor: default; }
+  .rf { margin-bottom: 8px; word-break: normal; }
+  .rf .label { margin-bottom: 0; }
   tr.run td { background: color-mix(in srgb, var(--yellow) 22%, transparent); }
   tr.wait td, tr.skip td { color: var(--muted); }
   .none { color: var(--muted); font-style: italic; }
   .tools { display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px; }
+  details.settings { margin: 14px 0 4px; border: 1px solid var(--line); border-radius: 10px; padding: 0 14px; background: var(--soft); }
+  details.settings summary { cursor: pointer; padding: 10px 0; font-weight: 600; font-size: .92rem; color: var(--muted); list-style-position: inside; }
+  details.settings[open] summary { color: var(--text); }
+  details.settings .row:last-child { margin-bottom: 14px; }
+  details.settings select { font: inherit; font-size: .9rem; padding: 3px 8px; border-radius: 8px; border: 1px solid var(--line); background: var(--card); color: var(--text); }
   .gt { flex-wrap: wrap; gap: 6px 10px; }
   .gt input[type=file] { font-size: .85rem; max-width: 100%; color: var(--muted); }
   .gt select { font: inherit; font-size: .9rem; padding: 4px 8px; border-radius: 8px; border: 1px solid var(--line);
                background: var(--card); color: var(--text); max-width: 100%; }
   .gt input[type=file][hidden] { display: none; }
-  #report { margin-top: 20px; }
-  #report[hidden] { display: none; }
-  .kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); gap: 10px; margin-bottom: 18px; }
-  .kpi { background: var(--soft); border: 1px solid var(--line); border-radius: 10px; padding: 10px 12px; }
-  .kpi b { display: block; font-size: 1.5rem; line-height: 1.2; color: var(--blue); }
-  .kpi span { font-size: .72rem; text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
-  #report h3 { font-size: .8rem; text-transform: uppercase; letter-spacing: .1em; color: var(--muted); margin: 18px 0 6px; }
-  #report table { font-size: .88rem; }
-  .meta { color: var(--muted); font-size: .85rem; margin-bottom: 14px; }
   .tools h2 { margin: 0; }
   .tools button { width: auto; padding: 5px 12px; font-size: .85rem; }
   .tools button[hidden] { display: none; }
@@ -426,12 +731,15 @@ PAGE = """<!doctype html>
 <main>
   <div class="grid">
     <section class="card">
+      <div id="setup">
       <label class="drop" id="drop">
         <input type="file" id="files" webkitdirectory multiple hidden>
         <div class="ico">🚇</div><strong>Choose a folder with plans</strong>
         <div id="fname">JPG, PNG, TIFF, PDF – subfolders included</div>
       </label>
       <div class="picked" id="picked"></div>
+      <details class="settings">
+        <summary>Settings</summary>
       <div class="row">
         <input type="checkbox" id="uselist" checked>
         <label for="uselist">Include station list (bhfdaten.csv)</label>
@@ -458,19 +766,35 @@ PAGE = """<!doctype html>
         <label for="retry">Second look for "none" answers <span class="hint">(re-checks with deep reasoning)</span></label>
       </div>
       <div class="row">
+        <label for="parallel">Plans analyzed in parallel</label>
+        <select id="parallel"><option value="1">1</option><option value="2" selected>2</option><option value="3">3</option><option value="4">4</option></select>
+      </div>
+      <div class="row">
         <input type="checkbox" id="limit">
         <label for="limit">Skip plans that take longer than
           <input type="number" id="limitsec" value="30" min="5" max="600" style="width:4.2em"> s</label>
       </div>
+      </details>
       <div class="btns">
         <button id="go" disabled>Analyze folder</button>
-        <button id="stop" class="ghost" hidden>Stop</button>
       </div>
-      <div class="now" id="now">
-        <div class="label" id="nowlabel">Now analyzing</div>
-        <div class="fn" id="nowname"></div>
-        <div class="bar2"><div id="bar"></div></div>
-        <a id="thumblink" target="_blank"><img id="thumb" alt="Current plan" hidden></a>
+      </div>
+
+      <div id="running" hidden>
+        <div id="net" class="net">
+          <svg viewBox="0 0 574 348" role="img" aria-label="Berlin U-Bahn network with a moving train">
+            <image href="/netmap" width="574" height="348"/>
+          </svg>
+          <div id="netcap" class="netcap"></div>
+        </div>
+        <div class="now" id="now">
+          <div class="label" id="nowlabel">Now analyzing</div>
+          <div class="fn" id="nowname"></div>
+          <div class="bar2"><div id="bar"></div></div>
+          <a id="thumblink" target="_blank" title="Open full size"><img id="thumb" alt="Current plan" hidden></a>
+          <div class="hint" id="thumbnote" hidden>red: title block · yellow: corner · blue: text regions</div>
+        </div>
+        <button id="stop" class="ghost">Stop</button>
       </div>
     </section>
 
@@ -478,17 +802,13 @@ PAGE = """<!doctype html>
     <section class="card">
       <div class="tools">
         <h2>Results</h2>
-        <button id="csv" class="ghost" hidden>Download CSV</button>
+        <div style="display:flex;gap:8px"><button id="folders" class="ghost" hidden>Create folders</button>
+          <button id="csv" class="ghost" hidden>Download CSV</button></div>
       </div>
+      <div id="restorebar" class="rbar info" hidden></div>
+      <div id="reviewbar" class="rbar" hidden></div>
       <div id="out" class="empty">No analysis yet.</div>
     </section>
-    <section class="card" id="report" hidden></section>
-    <div id="net" class="net" hidden>
-      <svg viewBox="0 0 574 348" role="img" aria-label="Berlin U-Bahn network with a moving train">
-        <image href="/netmap" width="574" height="348"/>
-      </svg>
-      <div id="netcap" class="netcap"></div>
-    </div>
   </div>
   </div>
 </main>
@@ -568,7 +888,7 @@ function renderTable() {
   if (!rows.length) return;
   $("out").className = "";
   $("out").innerHTML = `<table><thead><tr><th>Document</th><th>Station</th><th>Confidence</th></tr></thead><tbody>` +
-    rows.map(r => {
+    rows.map((r, i) => {
       let st, cf;
       if (r.state === "wait") st = cf = "queued";
       else if (r.state === "run") st = cf = "analyzing …";
@@ -579,23 +899,52 @@ function renderTable() {
         cf = r.level ? `<span class="badge ${r.level}">${r.level}</span>` : "–";
       }
       const sc = r.scaled ? `<div class="hint">downscaled ${r.scaled.from.join("×")} → ${r.scaled.to.join("×")} px</div>` : "";
-      const chk = (r.corr || []).map(c => `<div class="hint">${esc(c.type === "spelling" ? "spelling check" : "line check")}: ${
-        esc(c.type === "spelling" ? c.from + " → " + c.to : "plan line does not fit " + c.from + " (low confidence)")}</div>`).join("");
+      const labels = {spelling: "spelling check", date: "date rule", line: "line check", "line-flag": "line check"};
+      const chk = (r.corr || []).map(c => `<div class="hint">${esc(labels[c.type] || "check")}: ${
+        esc(c.type === "line-flag" ? "plan line does not fit " + c.from + " (low confidence)" : c.from + " → " + c.to)}</div>`).join("");
       const sl = chk + (r.retried ? `<div class="hint">second look with deep reasoning</div>` : "") +
         (r.prep && r.prep.title_block ? `<div class="hint">text regions: title block + ${r.prep.regions} more</div>` :
          r.prep && r.prep.disabled ? "" :
          r.prep && !r.prep.error ? `<div class="hint">no text regions found, whole sheet sent</div>` :
          r.prep ? `<div class="hint error">preprocessing failed, whole sheet sent</div>` : "");
-      return `<tr class="${r.state}"><td class="doc">${esc(r.title)}${sc}${sl}</td><td>${st}</td><td>${cf}</td></tr>`;
+      if (typeof reviewDecorate === "function") ({st, cf} = reviewDecorate(r, st, cf));
+      const extra = typeof reviewDocExtra === "function" ? reviewDocExtra(r, i) : "";
+      const open = r.open && r.answer;
+      const chev = r.answer ? `<span class="chev">${open ? "▾" : "▸"}</span>` : "";
+      return `<tr class="${r.state}${r.answer ? " clickable" : ""}" data-i="${i}"><td class="doc">${chev}${esc(r.title)}${extra}${sc}${sl}</td><td>${st}</td><td>${cf}</td></tr>` +
+        (open ? `<tr class="detail"><td colspan="3">${reasoningHtml(r.answer)}</td></tr>` : "");
     }).join("") + "</tbody></table>";
-  const cur = document.querySelector("tr.run");
-  if (cur) cur.scrollIntoView({block: "nearest"});
 }
+
+// Begründung des Modells (alle Felder der Antwort) für das Klappfeld unter einem Plan
+function reasoningHtml(answer) {
+  const re = /^[\\s*\\-]*\\*\\*(.+?):\\*\\*\\s*(.*)$/;
+  const fields = [];
+  for (const line of answer.split("\\n")) {
+    const m = line.match(re);
+    if (m) fields.push({label: m[1], value: m[2]});
+    else if (fields.length && line.trim()) fields[fields.length - 1].value += "\\n" + line;
+  }
+  if (!fields.length) return `<pre>${esc(answer)}</pre>`;
+  return fields.map(f => `<div class="rf"><div class="label">${esc(f.label)}</div><div>${
+    esc(f.value.replace(/\\*\\*/g, "")).replace(/\\n/g, "<br>")}</div></div>`).join("");
+}
+
+// Klick auf einen analysierten Plan klappt die Begründung auf oder zu
+$("out").addEventListener("click", e => {
+  const tr = e.target.closest("tr[data-i]");
+  const r = tr && rows[Number(tr.dataset.i)];
+  if (!r || !r.answer) return;
+  r.open = !r.open;
+  renderTable();
+});
 
 $("csv").onclick = () => {
   const q = v => `"${String(v ?? "").replace(/"/g, '""')}"`;
-  const lines = [["document", "station", "confidence", "downscaled", "error"].map(q).join(",")]
-    .concat(rows.map(r => [r.title, r.station, r.level, r.scaled ? r.scaled.from.join("x") + " -> " + r.scaled.to.join("x") : "", r.error].map(q).join(",")));
+  const fin = r => typeof effectiveStation === "function" ? effectiveStation(r) : r.station;
+  const lines = [["document", "model_station", "confidence", "final_station", "decided_by", "downscaled", "error"].map(q).join(",")]
+    .concat(rows.map(r => [r.title, r.station, r.level, fin(r), typeof decidedBy === "function" ? decidedBy(r) : "",
+      r.scaled ? r.scaled.from.join("x") + " -> " + r.scaled.to.join("x") : "", r.error].map(q).join(",")));
   const a = document.createElement("a");
   a.href = URL.createObjectURL(new Blob(["\\ufeff" + lines.join("\\n")], {type: "text/csv;charset=utf-8"}));
   a.download = "ubahn_plan_mapping.csv";
@@ -604,7 +953,8 @@ $("csv").onclick = () => {
 
 // ---- Preview of the plan currently being analyzed -----------------------------
 let thumbUrl = null;
-async function showThumb(f) {
+async function showThumb(r) {
+  const f = r.file;
   const img = $("thumb");
   img.hidden = true;
   if (thumbUrl) URL.revokeObjectURL(thumbUrl);
@@ -615,15 +965,45 @@ async function showThumb(f) {
     else {
       const fd = new FormData();
       fd.append("image", f);
+      if (r.page) fd.append("page", r.page);
       const res = await fetch("/preview", {method: "POST", body: fd});
       if (!res.ok) return;
       url = URL.createObjectURL(await res.blob());
     }
-    if (current !== f) { URL.revokeObjectURL(url); return; }  // already on the next plan
+    if (current !== r) { URL.revokeObjectURL(url); return; }  // already on another plan
     thumbUrl = url;
     img.src = $("thumblink").href = url;
     img.hidden = false;
   } catch (e) { /* the preview is optional */ }
+}
+
+// Vorschau mit den erkannten Textregionen (Debug-Overlay des Preprocessings); sonst der Plan selbst
+async function showOverlay(r, prepOn) {
+  const f = r.file;
+  const started = Date.now();
+  if (prepOn) {
+    const img = $("thumb");
+    img.hidden = true; $("thumbnote").hidden = true;
+    if (thumbUrl) URL.revokeObjectURL(thumbUrl);
+    thumbUrl = null;
+    try {
+      const fd = new FormData();
+      fd.append("image", f);
+      if (r.page) fd.append("page", r.page);
+      const res = await fetch("/preprocess", {method: "POST", body: fd});
+      if (res.ok) {
+        const url = URL.createObjectURL(await res.blob());
+        if (current !== r) { URL.revokeObjectURL(url); return (Date.now() - started) / 1000; }
+        thumbUrl = url;
+        img.src = $("thumblink").href = url;
+        img.hidden = false; $("thumbnote").hidden = false;
+        return (Date.now() - started) / 1000;
+      }
+    } catch (e) { /* weiter mit der normalen Vorschau */ }
+  }
+  $("thumbnote").hidden = true;
+  await showThumb(r);
+  return prepOn ? (Date.now() - started) / 1000 : 0;
 }
 
 // --- Ladeanimation: Zug fährt die Linien des Netzplans (ubahnlanes.png) ab -----
@@ -709,64 +1089,112 @@ $("stop").onclick = () => {
   $("nowlabel").textContent = "Stopping after the current plan …";
 };
 
+// A PDF with several pages becomes one row (and one analysis) per page
+async function expandPages(list) {
+  const out = [];
+  for (const f of list) {
+    const base = {file: f, state: "wait", station: "", level: "", error: ""};
+    let pages = 1;
+    if (f.name.toLowerCase().endsWith(".pdf")) {
+      try {
+        const fd = new FormData();
+        fd.append("image", f);
+        const res = await fetch("/pdf_pages", {method: "POST", body: fd});
+        if (res.ok) pages = Math.min((await res.json()).pages || 1, 200);
+      } catch (e) { /* treat as a single page */ }
+    }
+    if (pages > 1) for (let p = 1; p <= pages; p++) out.push(Object.assign({}, base, {page: p, title: `${path(f)} (page ${p})`}));
+    else out.push(Object.assign({}, base, {title: path(f)}));
+  }
+  return out;
+}
+
 $("go").onclick = async () => {
   running = true; cancel = false;
   $("go").disabled = true;
-  $("stop").hidden = false; $("stop").disabled = false;
+  $("stop").disabled = false;
   $("csv").hidden = true;
-  $("now").classList.add("on");
-  rows = files.map(f => ({file: f, title: path(f), state: "wait", station: "", level: "", error: ""}));
-  renderTable();
+  $("setup").hidden = true; $("running").hidden = false;  // Auswahl ausblenden, Ladeansicht zeigen
+  $("nowlabel").textContent = "Preparing …"; $("nowname").textContent = ""; $("bar").style.width = "0%";
   startNet();
+  rows = await expandPages(files);
+  renderTable();
   const use = $("uselist").checked ? "1" : "0", think = $("thinking").checked ? "1" : "0";
   const prepOn = $("prep").checked;
   const limitSec = $("limit").checked ? Math.max(5, parseInt($("limitsec").value) || 30) : 0;
+  const par = Math.max(1, Math.min(4, parseInt($("parallel").value) || 1));
   const started = Date.now();
-  $("report").hidden = true;
+  let next = 0, finished = 0;
+  const active = new Set();
 
-  for (let i = 0; i < rows.length && !cancel; i++) {
-    const r = rows[i];
+  const progress = () => {
+    $("bar").style.width = (finished / rows.length * 100) + "%";
+    let eta = "";
+    if (finished >= 2 && finished < rows.length) {
+      const left = (Date.now() - started) / finished * (rows.length - finished) / 1000;
+      eta = left < 90 ? ` · about ${Math.max(5, Math.round(left / 5) * 5)} s left` : ` · about ${Math.round(left / 60)} min left`;
+    }
+    $("nowlabel").textContent = cancel ? "Stopping after the running plans …" : `Analyzing – ${finished} of ${rows.length} done${eta}`;
+    $("nowname").textContent = [...active].slice(-3).map(x => x.title).join("  ·  ");
+  };
+
+  const work = async r => {
     r.state = "run";
-    renderTable();
-    $("nowlabel").textContent = `Now analyzing – plan ${i + 1} of ${rows.length}`;
-    $("nowname").textContent = r.title;
-    $("bar").style.width = (i / rows.length * 100) + "%";
-    current = r.file;
-    showThumb(r.file);
+    active.add(r);
+    renderTable(); progress();
+    current = r;
     try {
+      const usedSec = await showOverlay(r, prepOn);
       const fd = new FormData();
       fd.append("image", r.file);
+      if (r.page) fd.append("page", r.page);
       fd.append("use_list", use);
       fd.append("thinking", think);
       fd.append("retry", $("retry").checked ? "1" : "0");
       fd.append("time_limit", limitSec);
       fd.append("preprocess", prepOn ? "1" : "0");
+      fd.append("time_used", usedSec.toFixed(1));
       const res = await fetch("/analyze", {method: "POST", body: fd});
       const raw = await res.text();
       let data;
       try { data = JSON.parse(raw); } catch (e) { throw new Error(`Server error ${res.status}: ${raw.slice(0, 120)}`); }
       if (!res.ok) throw new Error(data.error || res.statusText);
-      if (data.skipped) { r.state = "skip"; r.error = data.reason; r.prep = data.preprocess || null; renderTable(); continue; }
-      Object.assign(r, parse(data.result), {state: "done", scaled: data.scaled || null, retried: !!data.retried, prep: data.preprocess || null, corr: data.corrections || [], answer: data.result});
+      if (data.skipped) { r.state = "skip"; r.error = data.reason; r.prep = data.preprocess || null; r.plan_id = data.plan_id; return; }
+      Object.assign(r, parse(data.result), typeof parseExtraFields === "function" ? parseExtraFields(data.result) : {},
+        {state: "done", scaled: data.scaled || null, retried: !!data.retried, prep: data.preprocess || null,
+         corr: data.corrections || [], answer: data.result, plan_id: data.plan_id});
       if (r.retried && r.level === "high") r.level = "medium";  // answer needed a second look: not fully certain
     } catch (err) {
       r.state = "err";
       r.error = err.message;
+    } finally {
+      active.delete(r);
+      finished++;
+      renderTable(); progress();
     }
-    renderTable();
-  }
+  };
+  const worker = async () => {
+    while (!cancel) {
+      const i = next++;
+      if (i >= rows.length) return;
+      await work(rows[i]);
+    }
+  };
+  progress();
+  await Promise.all(Array.from({length: par}, worker));
   rows.forEach(r => { if (r.state === "wait" || r.state === "run") { r.state = "err"; r.error = "not analyzed"; } });
   renderTable();
   current = null;
   $("bar").style.width = "100%";
   $("nowlabel").textContent = cancel ? "Stopped" : "Done";
   $("nowname").textContent = "";
-  $("thumb").hidden = true;
+  $("thumb").hidden = true; $("thumbnote").hidden = true;
   stopNet();
   running = false;
-  $("stop").hidden = true;
+  $("running").hidden = true; $("setup").hidden = false;  // Auswahl wieder zeigen
   $("go").disabled = !files.length;
   $("csv").hidden = false;
+  if (typeof afterRun === "function") afterRun();
   if (rows.some(r => r.state === "done")) {
     await buildReport({thinking: think === "1", station_list: use === "1", seconds: Math.round((Date.now() - started) / 1000),
                        stopped: cancel, plans_in_folder: rows.length,
@@ -774,13 +1202,8 @@ $("go").onclick = async () => {
   }
 };
 
-// ---- Evaluation report ----------------------------------------------------------
-const pct = v => v == null ? "–" : (v * 100).toFixed(1) + " %";
-
+// ---- Report: saved on the server (reports/report_<id>_<time>.json / .csv), not shown in the page ---------
 async function buildReport(meta) {
-  const box = $("report");
-  box.hidden = false;
-  box.innerHTML = "<h2>Analysis report</h2><div class='empty'>Saving report …</div>";
   try {
     const fd = new FormData();
     const choice = $("gtselect").value;
@@ -791,58 +1214,21 @@ async function buildReport(meta) {
         answer: r.answer || "", error: r.state === "err" || r.state === "skip" ? r.error : ""}))));
     fd.append("meta", JSON.stringify(meta));
     const res = await fetch("/report", {method: "POST", body: fd});
-    const raw = await res.text();
-    let d;
-    try { d = JSON.parse(raw); } catch (e) { throw new Error(`Server error ${res.status}: ${raw.slice(0, 120)}`); }
-    if (!res.ok) throw new Error(d.error);
-    box.innerHTML = reportHtml(d);
+    if (!res.ok) console.warn("The report could not be saved:", (await res.text()).slice(0, 200));
   } catch (err) {
-    box.innerHTML = `<h2>Analysis report</h2><div class="error">${esc(err.message)}</div>`;
+    console.warn("The report could not be saved:", err);
   }
-}
-
-function reportHtml(d) {
-  const m = d.meta;
-  const head = `<h2>Analysis report #${m.id}</h2>
-    <div class="meta">${esc(m.timestamp.replace("T", " "))} · model ${esc(m.model)} · reasoning ${m.thinking ? "on" : "off"} · preprocessing ${m.preprocessing === false ? "off" : "on"} ·
-      station list ${m.station_list ? "yes" : "no"} · max ${m.max_image_px} px · ${m.seconds} s${m.stopped ? " · stopped early" : ""}${m.time_limit ? ` · skip plans over ${m.time_limit} s (${m.skipped} skipped)` : ""}<br>
-      ${m.ground_truth ? `ground truth: ${esc(m.ground_truth)} (${m.ground_truth_rows} rows) · ` : ""}saved as ${esc(d.saved_as)}</div>`;
-  if (!d.metrics) {
-    const err = d.ground_truth_error ? `<div class="error">${esc(d.ground_truth_error)}</div>` : "";
-    return head + err + `<div class="hint">${d.n} plans analyzed. No ground truth available, so no metrics were calculated.</div>`;
-  }
-  const c = d.counts;
-  const kpi = (v, l) => `<div class="kpi"><b>${v}</b><span>${l}</span></div>`;
-  const lst = (title, arr) => arr.length
-    ? `<h3>${title} (${arr.length})</h3><div class="hint">${arr.slice(0, 30).map(esc).join(", ")}${arr.length > 30 ? " …" : ""}</div>` : "";
-  return head + `<div class="kpis">
-      ${kpi(pct(d.accuracy), "Accuracy")}${kpi(pct(d.precision), "Precision")}${kpi(pct(d.recall), "Recall")}
-      ${kpi(pct(d.f1), "F1")}${kpi(pct(d.macro_f1), "Macro F1")}${kpi(pct(d.coverage), "Coverage")}
-    </div>
-    <div class="hint">${d.n} plans evaluated · ${c.correct} correct · ${c.tp} of ${c.should_assign} station plans matched ·
-      ${c.fp} wrong or unneeded assignments · ${c.none_correct} of ${c.none_total} no-station plans correctly left open</div>
-    <h3>By confidence</h3>
-    <table><thead><tr><th>Confidence</th><th>Plans</th><th>Correct</th><th>Accuracy</th></tr></thead><tbody>${
-      d.by_confidence.map(b => `<tr><td>${esc(b.level)}</td><td>${b.n}</td><td>${b.correct}</td><td>${pct(b.accuracy)}</td></tr>`).join("")
-    }</tbody></table>
-    <h3>By station</h3>
-    <details><summary>${d.per_station.length} stations</summary>
-    <table><thead><tr><th>Station</th><th>In truth</th><th>Predicted</th><th>Precision</th><th>Recall</th><th>F1</th></tr></thead><tbody>${
-      d.per_station.map(s => `<tr><td>${esc(s.station)}</td><td>${s.support}</td><td>${s.predicted}</td><td>${pct(s.precision)}</td><td>${pct(s.recall)}</td><td>${pct(s.f1)}</td></tr>`).join("")
-    }</tbody></table></details>
-    <h3>Wrong or missing (${d.wrong.length})</h3>
-    ${d.wrong.length ? `<table><thead><tr><th>Document</th><th>Truth</th><th>Predicted</th><th>Conf.</th></tr></thead><tbody>${
-      d.wrong.map(w => `<tr><td class="doc">${esc(w.document)}</td><td>${esc(w.truth || "none")}</td><td>${esc(w.pred || "none")}</td><td>${esc(w.level)}</td></tr>`).join("")
-    }</tbody></table>` : "<div class='hint'>No errors.</div>"}
-    ${lst("Analyzed but not in ground truth", d.without_ground_truth)}
-    ${lst("In ground truth but not analyzed", d.ground_truth_unused)}
-    ${lst("Ground truth stations not in the station list (can never match)", d.ground_truth_stations_not_in_list)}
-    ${lst("Analysis errors and skipped plans (not counted)", d.analysis_errors.map(e => e.document + ": " + e.error))}`;
 }
 </script>
+<script>window.STATION_NAMES = {{ station_names|tojson }}; window.DEFAULT_EXPORT_DIR = {{ default_export_dir|tojson }};</script>
+<script src="/static/review.js"></script>
 </body>
 </html>
 """
 
 if __name__ == "__main__":
-    app.run(host="127.0.0.1", port=5000, debug=False)
+    # Port 5000 belegt unter macOS der AirPlay-Empfänger (antwortet im Browser mit "403 Forbidden"),
+    # daher standardmäßig 5050; mit der Umgebungsvariable PORT änderbar.
+    port = int(os.environ.get("PORT", 5050))
+    print(f"Open http://127.0.0.1:{port}")
+    app.run(host="127.0.0.1", port=port, debug=False)

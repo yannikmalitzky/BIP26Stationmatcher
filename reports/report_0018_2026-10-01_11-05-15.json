@@ -1,0 +1,548 @@
+{
+  "n": 12,
+  "accuracy": 1.0,
+  "precision": 1.0,
+  "recall": 1.0,
+  "f1": 1.0,
+  "macro_f1": 1.0,
+  "coverage": 0.9166666666666666,
+  "counts": {
+    "correct": 12,
+    "should_assign": 11,
+    "assigned": 11,
+    "tp": 11,
+    "fp": 0,
+    "fn": 0,
+    "none_total": 1,
+    "none_correct": 1
+  },
+  "by_confidence": [
+    {
+      "level": "high",
+      "n": 11,
+      "correct": 11,
+      "accuracy": 1.0
+    },
+    {
+      "level": "low",
+      "n": 1,
+      "correct": 1,
+      "accuracy": 1.0
+    }
+  ],
+  "per_station": [
+    {
+      "station": "Birkenstraße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Eberswalder Straße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Französische Strasse",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Friedrichstraße",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Gesundbrunnen",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Kaiserdamm",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Krumme Lanke",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Nollendorfplatz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Potsdamer Platz",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Rathaus Schöneberg",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    },
+    {
+      "station": "Wuhletal",
+      "support": 1,
+      "predicted": 1,
+      "precision": 1.0,
+      "recall": 1.0,
+      "f1": 1.0
+    }
+  ],
+  "wrong": [],
+  "items": [
+    {
+      "document": "test subset/S_100_159.tif",
+      "truth": "Krumme Lanke",
+      "pred": "Krumme Lanke",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/S_112_002.tif",
+      "truth": "Eberswalder Straße",
+      "pred": "Eberswalder Straße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/S_120_002.tif",
+      "truth": "Friedrichstraße",
+      "pred": "Friedrichstraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/S_133_005.tif",
+      "truth": "Kaiserdamm",
+      "pred": "Kaiserdamm",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/S_220_x.tif",
+      "truth": "Nollendorfplatz",
+      "pred": "Nollendorfplatz",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/S_223_SK_4995.tif",
+      "truth": "Rathaus Schöneberg",
+      "pred": "Rathaus Schöneberg",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/S_328_a.tif",
+      "truth": "Französische Strasse",
+      "pred": "Französische Straße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/S_411_016.tif",
+      "truth": "Gesundbrunnen",
+      "pred": "Gesundbrunnen",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/S_507_SK_20 892.tif",
+      "truth": "Wuhletal",
+      "pred": "Wuhletal",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/S_510_023 nie gebaut.tif",
+      "truth": null,
+      "pred": null,
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/S_714_006.tif",
+      "truth": "Birkenstraße",
+      "pred": "Birkenstraße",
+      "level": "high",
+      "correct": true
+    },
+    {
+      "document": "test subset/U_3_POP_B2-212_a.tif",
+      "truth": "Potsdamer Platz",
+      "pred": "Potsdamer Platz",
+      "level": "low",
+      "correct": true
+    }
+  ],
+  "without_ground_truth": [],
+  "ground_truth_stations_not_in_list": [],
+  "ground_truth_unused": [
+    "000000018.tif",
+    "00000018.tif",
+    "00000102.tif",
+    "00000128.tif",
+    "1149-0007.tif",
+    "131_012.tif",
+    "31_50_1146_a_039_0006_00_00_zg_8_04112_00042_8_0.tif",
+    "a_318_005.tif",
+    "b_115_035.tif",
+    "blatt 9_treppenanlage und strasseneinteilung a d haltestelle alex - ungültig.tif",
+    "c316_ubw13165_vorräume im bereich des flughafengeländes .tiff",
+    "d 73-006.tif",
+    "d085_19270929_unterfangung haus hermannstr 256-57 überholt.tif",
+    "d_99_023.tif",
+    "de_016.tif",
+    "de_029 nicht realisiert.tif",
+    "e11-02a_übersichtsplan anbau notausstiegsschacht.tif",
+    "e59-e60_1-1-7-1b_tk2_baii-2a_baugrubenplan.tif",
+    "e_37_006.tif",
+    "fettabscheider_blatt 1.tif",
+    "g-a_55_102_98d.tif",
+    "g_90_a.tif",
+    "glw-sm 01.tif",
+    "h_119_x.tif",
+    "m1417_ungültig.tif",
+    "mh-pg-01-a.pdf",
+    "s_146_012_neu.tif",
+    "s_504_ein_01.tif",
+    "ubwe374_bau eines lüftungsschachtes baugrubenaussteifung.tif",
+    "wp_zo_sk-014_fussstütze_ungültig.pdf"
+  ],
+  "analysis_errors": [],
+  "metrics": true,
+  "results": [
+    {
+      "document": "test subset/S_100_159.tif",
+      "station": "Krumme Lanke",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 25,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 0,
+        "size": [
+          19454,
+          5033
+        ],
+        "title_block": true,
+        "title_block_box": "x 79-100 %, y 76-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a slope/embankment renovation (Böschungssanierung) plan for an open track section of the U-Bahn line, with the station area shown in the drawing\n**Recognized text:** Title block (bottom right): \"Böschungssanierung im Bereich Bhf Krumme Lanke von Km 10.3+40-11.1+70,0\"; \"U-Bw 16.8.11\"; \"BERLINER VERKEHRS-BETRIEBE (BVG)\"; drawing area: \"Argentinische Allee\", \"Altlandsberger\", \"Wilsdr.\", \"Reg. Stellwerk\", \"Brückennr.\"\n**Plan date:** 10.6.86 (bearbeitet) and 1.9.86 (geprüft) in the title block\n**Title:** \"Böschungssanierung im Bereich Bhf Krumme Lanke von Km 10.3+40-11.1+70,0\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Krumme Lanke\n**Confidence:** high – the station \"Krumme Lanke\" is explicitly named in the title block"
+    },
+    {
+      "document": "test subset/S_112_002.tif",
+      "station": "Eberswalder Straße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 14,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 8,
+        "size": [
+          14258,
+          3782
+        ],
+        "title_block": true,
+        "title_block_box": "x 80-100 %, y 69-96 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a longitudinal utility/conduit plan (gas, water, drainage lines) for a U-Bahn station\n**Recognized text:** \"Bahnhof Danziger Straße. / Nur als Leitungsplan maßgebend.\" (top center, plan header); \"Bestands-Zeichnung\" (top right and bottom right); \"Bauwert A 339\" (bottom right title block); \"Berlin, den 11. Januar 1915\" (bottom right); \"Eberswalder - Str.\" (bottom margin); legend \"Gasleitung / Wasserleitung / Abflußleitung\" (drawing area)\n**Plan date:** 11. Januar 1915 (bottom right title block)\n**Title:** \"Bahnhof Danziger Straße\" (top center plan header)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Eberswalder Straße\n**Confidence:** high – title names \"Danziger Straße\", the former name (opened 27.07.1913) of today's Eberswalder Straße, confirmed by the \"Eberswalder-Str.\" margin note and the 1915 date"
+    },
+    {
+      "document": "test subset/S_120_002.tif",
+      "station": "Friedrichstraße [II]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 12,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 14,
+        "size": [
+          10418,
+          3874
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-90 %, y 65-81 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – plan of the utility lines (gas, water, sewer, fire-alarm cable) in a U-Bahn station\n**Recognized text:** \"Elektr. Hoch- u. Tiefbau-Unternehmen Berlin\" (top left); \"Lage der Leitungen in der Haltestelle Friedrichstraße.\" (center header); \"Charlotten-\" (street label, left); \"Revz. Leing. Spt. 15\" and \"Winkl. März 1910\" (bottom right); legend \"Zeichenerklärung\" (bottom right)\n**Plan date:** March 1910 (bottom right, \"Winkl. März 1910\")\n**Title:** \"Lage der Leitungen in der Haltestelle Friedrichstraße.\" (center header)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Friedrichstraße [II]\n**Confidence:** high – title explicitly names the station \"Friedrichstraße\"; in 1910 this was the U1/U3 station (now Stadtmitte [oben]), but the list entry \"Friedrichstraße [II]\" is the Friedrichstraße-named station matching the title.\n\nWait, let me reconsider. The plan is from 1910. The station \"Friedrichstraße [II]\" (U6) opened in 1923. In 1910, the station on the U1 line at Friedrichstraße was called \"Friedrichstraße [I]\" (which is now Stadtmitte [oben]). Looking at the list: \"Friedrichstraße [I]\" has heute: Stadtmitte. \"Friedrichstraße [II]\" opened 03.01.1923. So in 1910, the station named \"Friedrichstraße\" was the U1 station, which is \"Friedrichstraße [I]\" in the list, whose current name is \"Stadtmitte [oben]\".\n\n**Station:** Stadtmitte [oben]\n**Confidence:** high – title names \"Haltestelle Friedrichstraße\"; in 1910 this was the U1 station (Friedrichstraße [I]), now called Stadtmitte [oben]"
+    },
+    {
+      "document": "test subset/S_133_005.tif",
+      "station": "Kaiserdamm",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 24,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 12,
+        "size": [
+          8614,
+          4345
+        ],
+        "title_block": true,
+        "title_block_box": "x 79-100 %, y 77-98 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – station plan (Bahnhofplan) of a U-Bahn station with platforms, exits and technical rooms\n**Recognized text:** Title block (bottom right): \"U - BHF. KAISERDAMM / BAHNHOFSPLAN\", \"UBw 14746a\", \"Bauw. A 44/45\", \"BERLINER VERKEHRS-BETRIEBE (BVG)\"; drawing area: \"FAHRRICHTUNG: RUHLEBEN\", \"FAHRRICHTUNG: ZOO\", \"Bahnsleiglänge = 115.0m\", \"RAUM- u. SONSTIGE MASZE SIEHE BLATT UBw 14062\"; legend of rooms (Traforaum, Elektroraum, etc.)\n**Plan date:** 26.2.70 (bearbeitet, title block); change note 18.1.72\n**Title:** \"U - BHF. KAISERDAMM BAHNHOFSPLAN\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Kaiserdamm\n**Confidence:** high – station name \"KAISERDAMM\" explicitly in the title block, matching the list entry (U2, abbreviation Kd consistent with \"Kd\" labels on the plan)"
+    },
+    {
+      "document": "test subset/S_220_x.tif",
+      "station": "Nollendorfplatz [mitte]",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 79,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 1,
+        "size": [
+          8298,
+          5347
+        ],
+        "title_block": true,
+        "title_block_box": "x 63-87 %, y 71-89 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – the plan shows the fountain and pond-basin installation (Brunnen- und Teichbeckenanlage) on Nollendorfplatz, i.e. a station-area structure.\n**Recognized text:** \"Bauaktiengesellschaft Berlin\" (top left); \"Nollendorfplatz\" (left overview); \"Kleiststraße\", \"Nollendorfstraße\", \"Nollendorfplatz\" (left overview); \"Brunner- und Teichbeckenanlage auf dem Nollendorfplatz. Uebersicht und Grundriss\" (bottom center); \"Blatt 1\" (top right); \"Luftschacht\" (right).\n**Plan date:** not found\n**Title:** \"Brunner- und Teichbeckenanlage auf dem Nollendorfplatz. Uebersicht und Grundriss\" (bottom center)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Nollendorfplatz [mitte]\n**Confidence:** high – the title explicitly names Nollendorfplatz, the location of the U-Bahn station."
+    },
+    {
+      "document": "test subset/S_223_SK_4995.tif",
+      "station": "Rathaus Schöneberg",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 30,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 2,
+        "size": [
+          10082,
+          3610
+        ],
+        "title_block": true,
+        "title_block_box": "x 69-100 %, y 81-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a station wall/brickwork elevation (Ansicht A/B) with tile (Fliesen) layout for a U-Bahn station\n**Recognized text:** Title block (bottom right): \"U-BHF RATHAUS SCHÖNEBERG / INSTANDSETZUNG\"; drawing area: \"ANSICHT A\", \"ANSICHT B\", \"FÜLLEN ABK. CROMA 503-37024\", \"CROMA 503-22010\", \"ÜBERSICHT ANSICHTEN VORHALLE (SIEHE BLATT SK 26793,1)\", \"GLEIS 1\", \"GLEIS 2\", \"WAND GLEIS 2 SEITE\", \"WERBEVITRINE NEU\", \"FANESCHIEBEN/AUTOM. VORH.\"; sheet number \"SK 4995\"\n**Plan date:** 4.9.95 (bearbeitet), geprüft 1.96, stat. gepr. 5.2.96 in the title block\n**Title:** \"U-BHF RATHAUS SCHÖNEBERG INSTANDSETZUNG\" in the title block (bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Rathaus Schöneberg\n**Confidence:** high – station name explicitly stated in the title block"
+    },
+    {
+      "document": "test subset/S_328_a.tif",
+      "station": "Französische Straße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 38,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 5,
+        "size": [
+          9472,
+          4062
+        ],
+        "title_block": true,
+        "title_block_box": "x 33-100 %, y 0-43 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – floor plan (Grundriss) of a U-Bahn station platform with technical rooms\n**Recognized text:** \"U - Bhf. Französische Strasse Linie 6\" and \"Bahsteigverlängerung, Errichten techn. Betriebsräume\" in the title block (bottom right); \"Grundriss\" as the drawing type; \"Französische Straße\" and \"Friedrichstraße\" in the overview sketch; date \"18.02.1994\" in the title block\n**Plan date:** 18.02.1994 (in the title block, \"Gezeichnet\" and \"Bearbeitet\" fields)\n**Title:** U - Bhf. Französische Strasse Linie 6 (in the title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Französische Straße\n**Confidence:** high – station name explicitly stated in the title block"
+    },
+    {
+      "document": "test subset/S_411_016.tif",
+      "station": "Gesundbrunnen",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 56,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 2,
+        "size": [
+          13314,
+          5298
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-95 %, y 71-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – AEG-Schnellbahn (U-Bahn) station plan showing the station hall, platforms and tracks\n**Recognized text:** \"HALTESTELLE GESUNDBRUNNEN\" (center of drawing); \"Staatsbahnhof Gesundbrunnen Empfangsgebäude\" (upper center); \"Blatt 5 von Strz. 11.30-13.50 bis Strz. 14.50+28.52\" (top right); \"Berlin im Mai 1918 / Allgemeine Electricitäts-Gesellschaft Bauleitung der AEG-Schnellbahn\" (bottom right); \"Abgeändert im Juli 1919\" (bottom right); \"Durch die Eisenbahnbehörde geprüft Berlin, den 13. November 1919\" (bottom right)\n**Plan date:** May 1918 (revised July 1919), bottom right title block\n**Title:** \"Haltestelle Gesundbrunnen\" (station plan, AEG-Schnellbahn), center of drawing\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Gesundbrunnen\n**Confidence:** high – station name \"Gesundbrunnen\" is explicitly labeled in the plan"
+    },
+    {
+      "document": "test subset/S_507_SK_20 892.tif",
+      "station": "Wuhletal",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 30,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 6,
+        "size": [
+          7051,
+          5024
+        ],
+        "title_block": true,
+        "title_block_box": "x 68-100 %, y 87-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – a detail plan (views and notes) for installing a photo-automat in the eastern vestibule of a U-Bahn station\n**Recognized text:** Title block (bottom right): \"U-BHF WUHLTAL / EINBAU EINES FOTOAUTOMATEN\"; drawing area: \"FA\", \"ANSICHT A/B\", \"DRAUFSICHT\", \"ÖSTL. VORHALLE\", \"BAHNSTEIG\", \"BEMERKUNGEN\" (notes on tiles, masonry, IPB 100 beam); \"SK 20892\"\n**Plan date:** 20.8.92 (Bau 73) and 20.8.92 (bearbeitet) in the title block\n**Title:** \"U-BHF WUHLTAL – EINBAU EINES FOTOAUTOMATEN\" (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Wuhletal\n**Confidence:** high – the title block explicitly names the station (U-Bhf Wuhletal)"
+    },
+    {
+      "document": "test subset/S_510_023 nie gebaut.tif",
+      "station": null,
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 7,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 7,
+        "size": [
+          7313,
+          4782
+        ],
+        "title_block": true,
+        "title_block_box": "x 84-99 %, y 84-99 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** no – the plan depicts a rectifier substation (Gleichrichterwerk) site, a standalone facility\n**Recognized text:** \"Gleichrichterwerk Tk\" (drawing area, center); \"Standort Gleichrichterwerk\" (title block, bottom right); \"U-Bahn Neubaustrecke Friedrichsfelde - Tierpark\" (title block); \"Tierpark\" and \"Am\" (street labels, drawing area); \"Funktionsgebäude\", \"Fahrradraum\", \"Siebkesselhaus\", \"Einahrt zum öffentlichen Parkplatz\" (drawing area)\n**Plan date:** 17.4.69 (gezeichnet field, title block)\n**Title:** \"Standort Gleichrichterwerk\" (title block, bottom right)\n**Match type:** none\n**Nearby stations:** n/a\n**Station:** none\n**Confidence:** high – the title explicitly names a rectifier substation (Gleichrichterwerk), a standalone facility that belongs to no station"
+    },
+    {
+      "document": "test subset/S_714_006.tif",
+      "station": "Birkenstraße",
+      "confidence": "high",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 28,
+        "corner_crop": true,
+        "found": 14,
+        "images": 4,
+        "regions": 3,
+        "size": [
+          11681,
+          6853
+        ],
+        "title_block": true,
+        "title_block_box": "x 75-100 %, y 82-100 %"
+      },
+      "corrections": [],
+      "answer": "**Belongs to a station:** yes – U-Bahn station (platforms, ticket hall, technical rooms)\n**Recognized text:** Title block (bottom right): \"BESTANDSPLAN U-BHF LINIE 6 / U-BHF BIRKENSTRASSE / GRUNDRISS, SCHNITTE UND SCHALTERHALLE\"; drawing area: \"RICHTUNG WEDDING GLEIS 2\", \"RICHTUNG TEGELITZ GLEIS 1\"; legend \"BETRIEBSRÄUME\"\n**Plan date:** 1961 (stamp \"1. VII. 1961\"); \"LETZTER STAND MAI 1990\"\n**Title:** U-Bhf Birkenstrasse – Grundriss, Schnitte und Schalterhalle (title block, bottom right)\n**Match type:** direct (station named in the title)\n**Nearby stations:** n/a\n**Station:** Birkenstraße\n**Confidence:** high – station name \"Birkenstrasse\" explicitly in the title block, matching the list entry (U9)"
+    },
+    {
+      "document": "test subset/U_3_POP_B2-212_a.tif",
+      "station": "Potsdamer Platz [II]",
+      "confidence": "low",
+      "error": null,
+      "downscaled": null,
+      "second_look": false,
+      "preprocess": {
+        "corner_blocks": 85,
+        "corner_crop": false,
+        "found": 14,
+        "images": 3,
+        "regions": 2,
+        "size": [
+          9546,
+          6717
+        ],
+        "title_block": true,
+        "title_block_box": "x 67-98 %, y 77-100 %"
+      },
+      "corrections": [
+        {
+          "from": "Potsdamer Platz [II]",
+          "note": "line check: the plan mentions U3, but Potsdamer Platz [II] is served by U2 according to the station list",
+          "to": "Potsdamer Platz [II]",
+          "type": "line-flag"
+        }
+      ],
+      "answer": "**Belongs to a station:** yes – S-Bahn crossing with stair installations (east side), ground plan of the new U3 level, at the Potsdamer Platz area\n**Recognized text:** Title block (bottom right): \"Verkehrsanlagen im Zentralen Bereich U - Bahnlinie U3\", \"S-Bahnquerung mit Treppenanlagen Ostseite Grundrissplan Neubau U3-Ebene\", \"Zeichnung Nr. U3-POP-B2-212a\"; overview map in title block shows \"Leipziger Platz\" and \"Sony\"; drawing area: \"Aschinger Grundstück\", \"Treppe Stresemannstraße\", \"Fern- und Regionalbahn\"\n**Plan date:** 15.5.95 (revision table, title block); 27.2.95 (signature date); 4.4.1995 (approval date)\n**Title:** S-Bahnquerung mit Treppenanlagen Ostseite Grundrissplan Neubau U3-Ebene (title block, bottom right)\n**Match type:** nearby (derived from street names and the overview map)\n**Nearby stations:** Potsdamer Platz [II] (the S-Bahn crossing at Leipziger Platz / Stresemannstraße is the direct access to this station); rejected: Stadtmitte [unten] (further south, not at this crossing)\n**Station:** Potsdamer Platz [II]\n**Confidence:** low – line check: the plan mentions U3, but Potsdamer Platz [II] is served by U2 according to the station list\n**Post-check:** line check: the plan mentions U3, but Potsdamer Platz [II] is served by U2 according to the station list\n"
+    }
+  ],
+  "meta": {
+    "id": 18,
+    "timestamp": "2026-10-01T11:05:15",
+    "model": "qwen3.8-27b",
+    "max_image_px": 3200,
+    "thinking": false,
+    "station_list": true,
+    "seconds": 85,
+    "stopped": false,
+    "plans_in_folder": 12,
+    "time_limit": 0,
+    "preprocessing": true,
+    "skipped": 0,
+    "ground_truth": "groundtruth.csv",
+    "ground_truth_rows": 42
+  },
+  "saved_as": "reports/report_0018_2026-10-01_11-05-15.json"
+}

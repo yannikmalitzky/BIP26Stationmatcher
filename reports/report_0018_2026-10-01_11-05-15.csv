@@ -1,0 +1,13 @@
+﻿document,prediction,confidence,ground_truth,correct,downscaled,second_look,error
+test subset/S_100_159.tif,Krumme Lanke,high,Krumme Lanke,True,,False,
+test subset/S_112_002.tif,Eberswalder Straße,high,Eberswalder Straße,True,,False,
+test subset/S_120_002.tif,Friedrichstraße [II],high,Friedrichstraße,True,,False,
+test subset/S_133_005.tif,Kaiserdamm,high,Kaiserdamm,True,,False,
+test subset/S_220_x.tif,Nollendorfplatz [mitte],high,Nollendorfplatz,True,,False,
+test subset/S_223_SK_4995.tif,Rathaus Schöneberg,high,Rathaus Schöneberg,True,,False,
+test subset/S_328_a.tif,Französische Straße,high,Französische Strasse,True,,False,
+test subset/S_411_016.tif,Gesundbrunnen,high,Gesundbrunnen,True,,False,
+test subset/S_507_SK_20 892.tif,Wuhletal,high,Wuhletal,True,,False,
+test subset/S_510_023 nie gebaut.tif,none,high,none,True,,False,
+test subset/S_714_006.tif,Birkenstraße,high,Birkenstraße,True,,False,
+test subset/U_3_POP_B2-212_a.tif,Potsdamer Platz [II],low,Potsdamer Platz,True,,False,

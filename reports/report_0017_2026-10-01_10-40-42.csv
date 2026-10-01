@@ -1,0 +1,6 @@
+﻿document,prediction,confidence,ground_truth,correct,downscaled,second_look,error
+00000018.TIF,Theodor-Heuss-Platz,high,Theodor-Heuss-Platz,True,,False,
+000000018.TIF,Leinestraße,high,Leinestraße,True,,False,
+31_50_1146_A_039_0006_00_00_ZG_8_04112_00042_8_0.tif,Sophie-Charlotte-Platz,high,Sophie-Charlotte-Platz,True,,False,
+00000102.TIF,Otisstraße,medium,Otisstraße,True,,False,
+00000128.TIF,Otisstraße,medium,Otisstraße,True,,False,

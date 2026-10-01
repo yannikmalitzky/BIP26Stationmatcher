@@ -1,5 +1,7 @@
 import os
 
+import config  # loads .env (HTW_API_KEY) into the environment
+
 from openai import OpenAI
 
 # ============================================================

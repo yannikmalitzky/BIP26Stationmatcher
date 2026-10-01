@@ -46,21 +46,26 @@ class Prepared:
     images: list = field(default_factory=list)   # [{"caption": str, "data": bytes, "mime": str}]
     overlay: bytes = b""                         # JPEG mit eingezeichneten Regionen (Debug)
     info: dict = field(default_factory=dict)
+    # Textregionen für die manuelle Prüfung: [{"name": str, "box": [x0, y0, x1, y1]}] in Pixeln des geladenen
+    # Graustufenbildes (load_gray); size = (Breite, Höhe) dieses Bildes
+    regions: list = field(default_factory=list)
+    size: tuple = (0, 0)
 
 
 # ---------------------------------------------------------------------------------------------
 # Laden
 # ---------------------------------------------------------------------------------------------
 
-def load_gray(data, filename):
-    """Bytes (Bild oder PDF) -> Graustufenbild in voller Auflösung."""
+def load_gray(data, filename, page=1):
+    """Bytes (Bild oder PDF) -> Graustufenbild in voller Auflösung. page: Seite eines PDFs (ab 1)."""
     if filename.lower().endswith(".pdf"):
         try:
             import pymupdf
         except ImportError:
             raise RuntimeError("PDF support needs PyMuPDF: pip install pymupdf") from None
         with pymupdf.open(stream=data, filetype="pdf") as pdf:
-            img = Image.open(io.BytesIO(pdf[0].get_pixmap(dpi=200).tobytes("png")))
+            idx = min(max(int(page or 1), 1), pdf.page_count) - 1
+            img = Image.open(io.BytesIO(pdf[idx].get_pixmap(dpi=200).tobytes("png")))
     else:
         img = Image.open(io.BytesIO(data))
     if img.mode != "L":
@@ -277,9 +282,9 @@ def _overlap_share(a, b):
     return (w * h) / float((b[2] - b[0]) * (b[3] - b[1])) if w > 0 and h > 0 else 0.0
 
 
-def prepare(data, filename):
+def prepare(data, filename, page=1):
     """Bytes eines Plans -> Prepared (Bilder für das Modell, Debug-Overlay, Infos)."""
-    gray = load_gray(data, filename)
+    gray = load_gray(data, filename, page)
     W, H = gray.size
 
     # 1) Erkennung über das ganze Blatt auf verkleinerter Kopie -> Koordinaten in Pixeln von "gray"
@@ -305,6 +310,8 @@ def prepare(data, filename):
                             "data": _jpeg(big), "mime": "image/jpeg"})
         prep.overlay = _jpeg(overview.convert("RGB"))
         prep.info = {"title_block": False, "regions": 0, "images": 1, "size": [W, H]}
+        prep.size = (W, H)
+        prep.regions = [{"name": "Corner (bottom right)", "box": list(zone)}]
         return prep
 
     # Übersicht
@@ -356,6 +363,10 @@ def prepare(data, filename):
     for i, box in order:
         d.rectangle([v * f for v in box], outline=(0, 90, 220) if i <= packed else (150, 150, 150), width=2)
     prep.overlay = _jpeg(ov)
+    prep.size = (W, H)
+    prep.regions = [{"name": "Title block", "box": list(title.box)},
+                    {"name": "Corner (bottom right)", "box": list(corner_box)}]
+    prep.regions += [{"name": f"Text region #{i}", "box": list(box)} for i, box in order]
     prep.info = {"title_block": True, "regions": packed, "found": len(order), "images": len(prep.images),
                  "corner_crop": corner_sent, "corner_blocks": len(zone_blocks),
                  "size": [W, H], "title_block_box": _where(title.box, W, H)}

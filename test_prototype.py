@@ -1,5 +1,7 @@
 import os
 
+import config  # loads .env (HTW_API_KEY) into the environment
+
 from openai import OpenAI
 import base64
 import csv
@@ -219,6 +221,8 @@ bullet points or extra formatting:
 **Match type:** <direct (station named in the title) / nearby (derived from street names or addresses) / none>
 **Nearby stations:** <for a nearby match: candidate stations with approximate walking distance; otherwise "n/a">
 **Station:** <name of the station the plan belongs to, exactly as in the list, or "none">
+**Additional stations:** <only if the title or the subject explicitly names more than one station (for example a section between two stations): the other stations exactly as in the list, comma-separated; otherwise "none">
+**Facility type:** <only if Station is "none": what the plan shows, 1-3 words (for example rectifier substation, workshop, river tunnel; use "unclear location" if it belongs to a station that cannot be determined); otherwise "n/a">
 **Confidence:** <high / medium / low> – <one short reason>
 """
 

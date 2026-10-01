@@ -262,6 +262,26 @@ class PostCheck:
                     f"{', '.join(sorted(have))} according to the station list")
         return None
 
+    # -- Weitere Stationen ----------------------------------------------------------------------
+    def clean_extras(self, answer):
+        """Zusatzstationen auf gültige Stationen der Liste beschränken (ohne die Hauptstation, ohne Doppelte)."""
+        raw = _field(answer, "Additional stations")
+        if not raw:
+            return answer, []
+        station = _field(answer, "Station")
+        primary = None if _is_none(station) else self.names.canonical(station)[0]
+        found, seen = [], {primary}
+        if primary is not None:  # ohne Hauptstation gibt es keine Zusatzstationen
+            for part in re.split(r"[;,]|\s+and\s+|\s+&\s+", raw):
+                part = part.strip(" .")
+                if not part or _is_none(part):
+                    continue
+                key, _ = self.names.canonical(part)
+                if key in self.display and key not in seen:
+                    seen.add(key)
+                    found.append(self.display[key])
+        return _replace_field(answer, "Additional stations", ", ".join(found) or "none"), found
+
     # -- Anwenden -------------------------------------------------------------------------------
     def apply(self, answer):
         """Wendet beide Prüfungen an; gibt (Antworttext, [Korrekturen]) zurück."""
@@ -291,6 +311,7 @@ class PostCheck:
                     corrections.append({"type": "line-flag", "from": station, "to": station, "note": note})
                 answer = _replace_field(answer, "Confidence", "low – " + note)
                 notes.append(note)
+        answer, _ = self.clean_extras(answer)
         if notes:
             answer = answer.rstrip() + "\n**Post-check:** " + "; ".join(notes) + "\n"
         return answer, corrections
