@@ -619,9 +619,11 @@ PAGE = """<!doctype html>
 
   .drop {
     display: block; border: 2px dashed var(--line); border-radius: 12px; padding: 30px 16px;
-    text-align: center; color: var(--muted); cursor: pointer; transition: .15s; background: var(--soft);
+    text-align: center; color: var(--muted); cursor: default; transition: .15s; background: var(--soft);
   }
   .drop.over, .drop:hover { border-color: var(--blue); background: color-mix(in srgb, var(--blue) 8%, var(--card)); }
+  .dropbtns { display: flex; gap: 10px; justify-content: center; margin: 12px 0 8px; flex-wrap: wrap; }
+  .dropbtns button { width: auto; padding: 9px 18px; font-size: .92rem; }
   .drop .ico { font-size: 2rem; line-height: 1; color: var(--blue); }
   .drop strong { display: block; color: var(--text); margin-top: 6px; }
   #preview {
@@ -721,7 +723,7 @@ PAGE = """<!doctype html>
     <div class="logo">U</div>
     <div>
       <h1>U-Bahn Plan Matcher</h1>
-      <p>Select a folder of construction plans – {{ model }} maps each document to its Berlin U-Bahn station.</p>
+      <p>Select a folder or single construction plans – {{ model }} maps each document to its Berlin U-Bahn station.</p>
     </div>
     <div class="lines">
       {% for l in ["U1","U2","U3","U4","U5","U6","U7","U8","U9"] %}<span class="chip {{ l|lower }}">{{ l }}</span>{% endfor %}
@@ -732,11 +734,16 @@ PAGE = """<!doctype html>
   <div class="grid">
     <section class="card">
       <div id="setup">
-      <label class="drop" id="drop">
+      <div class="drop" id="drop">
         <input type="file" id="files" webkitdirectory multiple hidden>
-        <div class="ico">🚇</div><strong>Choose a folder with plans</strong>
-        <div id="fname">JPG, PNG, TIFF, PDF – subfolders included</div>
-      </label>
+        <input type="file" id="plainfiles" multiple accept=".jpg,.jpeg,.png,.gif,.webp,.tif,.tiff,.pdf,image/*,application/pdf" hidden>
+        <div class="ico">🚇</div><strong>Drop plans or a folder here</strong>
+        <div class="dropbtns">
+          <button type="button" id="pickfolder" class="ghost">Choose folder</button>
+          <button type="button" id="pickfiles" class="ghost">Choose plan files</button>
+        </div>
+        <div id="fname">JPG, PNG, TIFF, PDF – a whole folder (with subfolders) or single plans</div>
+      </div>
       <div class="picked" id="picked"></div>
       <details class="settings">
         <summary>Settings</summary>
@@ -847,6 +854,9 @@ function setFiles(list) {
 }
 
 $("files").onchange = e => setFiles(e.target.files);
+$("plainfiles").onchange = e => setFiles(e.target.files);
+$("pickfolder").onclick = () => { $("files").value = ""; $("files").click(); };    // allows choosing the same folder again
+$("pickfiles").onclick = () => { $("plainfiles").value = ""; $("plainfiles").click(); };
 const drop = $("drop");
 ["dragenter", "dragover"].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.add("over"); }));
 ["dragleave", "drop"].forEach(ev => drop.addEventListener(ev, e => { e.preventDefault(); drop.classList.remove("over"); }));

@@ -22,7 +22,7 @@ export HTW_API_KEY="..."     # see .env.example
 python webapp.py             # http://127.0.0.1:5050
 ```
 ## Workflow
-1. Choose a folder with plans and start the analysis; the app shows the progress with a preview of the detected text regions.
+1. Choose a folder with plans, single plan files, or drop them onto the page, and start the analysis; the app shows the progress with a preview of the detected text regions.
 2. Plans the model is unsure about (medium/low confidence, no station, corrected by a check, skipped) are listed for manual
    review: full-resolution zoomable plan, title block and text regions, then *use proposed station*, *own name* or *no station*.
 3. *Create folders* copies every plan into a folder named after its station (`sorted_plans/<date>/<station>/`, plus `_overview.csv`).
